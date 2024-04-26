@@ -193,7 +193,7 @@ export default function Component() {
                 <textarea
                   className="block w-full rounded-md border border-gray-600 bg-gray-700 px-3 py-2 text-white focus:border-blue-500 focus:outline-none"
                   id="message"
-                  rows="4"
+                  rows={4}
                 />
               </div>
               <Button className="w-full sm:w-auto" type="submit">
