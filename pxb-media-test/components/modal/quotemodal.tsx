@@ -51,7 +51,7 @@ const QuoteModal: React.FC<QuoteModalType> = ({ isOpen, onRequestClose }) => {
             >
                 ×  {/* Cross symbol as close button */}
             </button>
-            <h2 className="text-xl font-bold">Request a Quote</h2>
+            <h2 className="text-xl font-bold uppercase">Request a Quote</h2>
             <form>
                 <div className="mb-4">
                     <label htmlFor="name" className="block text-sm font-bold mb-2">Name (required)</label>
