@@ -2,6 +2,9 @@
 import { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import QuoteModal from '@/components/modal/quotemodal';
+import VideoCameraBackIcon from '@mui/icons-material/VideoCameraBack';
+import LaptopIcon from '@mui/icons-material/Laptop';
+import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';
 
 export default function Component() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -83,39 +86,46 @@ export default function Component() {
         </section>
 
         <section className="bg-gradient-to-b from-gray-900 to-gray-800 py-12 md:py-20 text-white">
-          <div className="container mx-auto px-4 md:px-0">
-            <h2 className="mb-6 text-3xl font-bold md:mb-8 md:text-4xl">Our Services</h2>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              <div>
+    <div className="container mx-auto px-4 md:px-0">
+        <h2 className="mb-6 text-3xl font-bold md:mb-8 md:text-4xl">Our Services</h2>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div>
                 <img src="/tf.connect-11.jpg" alt="Esports Studio" className="mb-4 h-60 w-full object-cover rounded" />
-                <h3 className="mb-4 text-xl font-bold md:text-2xl">Esports Studio</h3>
+                <div className="flex items-center mb-4">
+                <VideoCameraBackIcon className='pr-2'/>
+                    <h3 className="text-xl font-bold md:text-2xl">Broadcast Production</h3>
+                </div>
                 <p>
-                  Our state-of-the-art esports studio is equipped with the latest technology to provide a professional
-                  and immersive experience for your esports events.
+                    Our state-of-the-art esports studio is equipped with the latest technology to provide a professional and immersive experience for your esports events.
                 </p>
                 <Button className="mt-4" variant="default">Read More</Button>
-              </div>
-              <div>
-                <img src="/tf.connect-11.jpg" alt="Content Creation" className="mb-4 h-60 w-full object-cover rounded" />
-                <h3 className="mb-4 text-xl font-bold md:text-2xl">Content Creation</h3>
-                <p>
-                  From video production to graphic design, our team of creatives can help you craft engaging content to
-                  showcase your brand or esports team.
-                </p>
-                <Button className="mt-4" variant="default">Read More</Button>
-              </div>
-              <div>
-                <img src="/tf.connect-11.jpg" alt="Event Management" className="mb-4 h-60 w-full object-cover rounded" />
-                <h3 className="mb-4 text-xl font-bold md:text-2xl">Event Management</h3>
-                <p>
-                  Let us handle the logistics of your esports event, from venue selection to live streaming, so you can
-                  focus on delivering an unforgettable experience.
-                </p>
-                <Button className="mt-4" variant="default">Read More</Button>
-              </div>
             </div>
-          </div>
-        </section>
+            <div>
+                <img src="/tf.connect-11.jpg" alt="Content Creation" className="mb-4 h-60 w-full object-cover rounded" />
+                <div className="flex items-center mb-4">
+                <LaptopIcon className='pr-2'/>
+                    <h3 className="text-xl font-bold md:text-2xl">Web Development</h3>
+                </div>
+                <p>
+                    From video production to graphic design, our team of creatives can help you craft engaging content to showcase your brand or esports team.
+                </p>
+                <Button className="mt-4" variant="default">Read More</Button>
+            </div>
+            <div>
+                <img src="/tf.connect-11.jpg" alt="Event Management" className="mb-4 h-60 w-full object-cover rounded" />
+                <div className="flex items-center mb-4">
+                <PeopleOutlineIcon className='pr-2'/>
+                    <h3 className="text-xl font-bold md:text-2xl">Esports Event Staffing</h3>
+                </div>
+                <p>
+                    Let us handle the logistics of your esports event, from venue selection to live streaming, so you can focus on delivering an unforgettable experience.
+                </p>
+                <Button className="mt-4" variant="default">Read More</Button>
+            </div>
+        </div>
+    </div>
+</section>
+
         <section className="bg-gradient-to-b from-gray-800 to-black py-12 md:py-20 text-white">
           <div className="container mx-auto px-4 md:px-0">
             <h2 className="mb-6 text-3xl font-bold md:mb-8 md:text-4xl">Trusted By</h2>
