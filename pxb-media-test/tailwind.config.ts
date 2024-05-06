@@ -13,7 +13,7 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      fontFamily: { custom: ['Compton', 'sans-serif'], // Add fallback fonts if necessary 
+      fontFamily: { custom: ['Campton', 'sans-serif'], 
     },
     animation: {
       'bounce': 'bounce 2s infinite',

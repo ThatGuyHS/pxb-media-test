@@ -32,21 +32,20 @@ body {
   }
 }
 
+@layer base {
 @font-face {
-  font-family: 'Compton';
-  src: url('/fonts/campton-black.otf') format('otf'),
-       url('/fonts/campton-bold.otf') format('otf');
+  font-family: 'Campton';
+  src: url(/fonts/campton-black.otf) format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Compton';
-  src: url('/fonts/campton-black.otf') format('otf'),
-       url('/fonts/campton-bold.otf') format('otf');
+  font-family: 'Campton';
+  src: url(/fonts/campton-bold.otf) format('opentype');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
-
+}
