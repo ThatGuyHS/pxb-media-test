@@ -87,7 +87,7 @@ const QuoteModal: React.FC<QuoteModalType> = ({ isOpen, onRequestClose }) => {
                 </div>
                 <div className="mb-4">
                     <label htmlFor="description" className="block text-sm font-bold mb-2">Basic Event or Service Description</label>
-                    <textarea placeholder='Eg: I am hosting a LAN and I want to rent PCs and Screens, or I want a website built' id="description" rows={4} className="w-full p-2 rounded-md bg-gray-700 text-white"></textarea>
+                    <textarea placeholder='E.g.: I am hosting a LAN and I want to rent PCs and Screens, or I want a website built' id="description" rows={4} className="w-full p-2 rounded-md bg-gray-700 text-white"></textarea>
                 </div>
                 <Button type="submit" className="w-full mt-4" variant="default">
                     Submit
