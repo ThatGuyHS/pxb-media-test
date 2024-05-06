@@ -1,14 +1,19 @@
 "use client"
 import { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import QuoteModal from '@/components/modal/quotemodal';
 
 export default function Component() {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const handleToggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const openModal = () => setModalIsOpen(true);
+  const closeModal = () => setModalIsOpen(false);
 
   const handleClickOutside = (event: any) => {
     if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -53,11 +58,12 @@ export default function Component() {
               ABOUT
             </a>
           </div>
-          <Button className="hidden md:inline-flex" size="sm" variant="default">
+          <Button onClick={openModal} className="hidden md:inline-flex" size="sm" variant="default">
             Get a quote
           </Button>
         </nav>
       </header>
+      <QuoteModal isOpen={modalIsOpen} onRequestClose={closeModal} />
       <main>
         <section className="relative h-screen bg-cover bg-center bg-gradient-to-b from-black via-gray-800 to-gray-900"
          style={{ backgroundImage: "url('/tf.connect-11.jpg')" }}>
