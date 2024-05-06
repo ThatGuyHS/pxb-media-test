@@ -35,6 +35,22 @@ const QuoteModal: React.FC<QuoteModalType> = ({ isOpen, onRequestClose }) => {
                 }
             }}
         >
+             <button
+                onClick={onRequestClose}
+                style={{
+                    position: 'absolute',
+                    top: '10px',
+                    right: '10px',
+                    background: 'none',
+                    border: 'none',
+                    color: 'white',
+                    fontSize: '1.5em',
+                    cursor: 'pointer'
+                }}
+                aria-label="Close"
+            >
+                ×  {/* Cross symbol as close button */}
+            </button>
             <h2 className="text-xl font-bold">Request a Quote</h2>
             <form>
                 <div className="mb-4">
@@ -77,9 +93,6 @@ const QuoteModal: React.FC<QuoteModalType> = ({ isOpen, onRequestClose }) => {
                     Submit
                 </Button>
             </form>
-            <Button onClick={onRequestClose} variant="outline" className="mt-4 text-black">
-                Close
-            </Button>
         </Modal>
     );
 };
