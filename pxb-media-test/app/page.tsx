@@ -61,7 +61,7 @@ export default function Component() {
               ABOUT
             </a>
           </div>
-          <Button onClick={openModal} className="hidden md:inline-flex" size="sm" variant="default">
+          <Button onClick={openModal} className="hidden md:inline-flex hover:bg-sky-700" size="sm" variant="default">
             Get a quote
           </Button>
         </nav>
