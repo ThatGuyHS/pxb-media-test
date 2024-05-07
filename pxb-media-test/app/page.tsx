@@ -98,7 +98,7 @@ export default function Component() {
                 <p>
                     Our state-of-the-art esports studio is equipped with the latest technology to provide a professional and immersive experience for your esports events.
                 </p>
-                <Button className="mt-4" variant="default">Read More</Button>
+                <Button className="mt-4 hover:bg-sky-700" variant="default">Read More</Button>
             </div>
             <div>
                 <img src="/tf.connect-11.jpg" alt="Content Creation" className="mb-4 h-60 w-full object-cover rounded" />
@@ -109,7 +109,7 @@ export default function Component() {
                 <p>
                     From video production to graphic design, our team of creatives can help you craft engaging content to showcase your brand or esports team.
                 </p>
-                <Button className="mt-4" variant="default">Read More</Button>
+                <Button className="mt-4 hover:bg-sky-700" variant="default">Read More</Button>
             </div>
             <div>
                 <img src="/tf.connect-11.jpg" alt="Event Management" className="mb-4 h-60 w-full object-cover rounded" />
@@ -120,7 +120,7 @@ export default function Component() {
                 <p>
                     Let us handle the logistics of your esports event, from venue selection to live streaming, so you can focus on delivering an unforgettable experience.
                 </p>
-                <Button className="mt-4" variant="default">Read More</Button>
+                <Button className="mt-4 hover:bg-sky-700" variant="default">Read More</Button>
             </div>
         </div>
     </div>
