@@ -93,7 +93,7 @@ export default function Component() {
                 <img src="/tf.connect-11.jpg" alt="Esports Studio" className="mb-4 h-60 w-full object-cover rounded" />
                 <div className="flex items-center mb-4">
                 <VideoCameraBackIcon fontSize="large" className='pr-2'/>
-                    <h3 className="text-xl font-bold md:text-2xl">Broadcast Production</h3>
+                    <h3 className="text-xl md:text-2xl">Broadcast Production</h3>
                 </div>
                 <p>
                     Our state-of-the-art esports studio is equipped with the latest technology to provide a professional and immersive experience for your esports events.
@@ -104,7 +104,7 @@ export default function Component() {
                 <img src="/tf.connect-11.jpg" alt="Content Creation" className="mb-4 h-60 w-full object-cover rounded" />
                 <div className="flex items-center mb-4">
                 <LaptopIcon fontSize='large' className='pr-2'/>
-                    <h3 className="text-xl font-bold md:text-2xl">Web Development</h3>
+                    <h3 className="text-xl md:text-2xl">Web Development</h3>
                 </div>
                 <p>
                     From video production to graphic design, our team of creatives can help you craft engaging content to showcase your brand or esports team.
@@ -115,7 +115,7 @@ export default function Component() {
                 <img src="/tf.connect-11.jpg" alt="Event Management" className="mb-4 h-60 w-full object-cover rounded" />
                 <div className="flex items-center mb-4">
                 <PeopleOutlineIcon fontSize='large' className='pr-2'/>
-                    <h3 className="text-xl font-bold md:text-2xl">Esports Event Staffing</h3>
+                    <h3 className="text-xl md:text-2xl">Esports Event Staffing</h3>
                 </div>
                 <p>
                     Let us handle the logistics of your esports event, from venue selection to live streaming, so you can focus on delivering an unforgettable experience.
