@@ -92,7 +92,7 @@ export default function Component() {
             <div>
                 <img src="/tf.connect-11.jpg" alt="Esports Studio" className="mb-4 h-60 w-full object-cover rounded" />
                 <div className="flex items-center mb-4">
-                <VideoCameraBackIcon className='pr-2'/>
+                <VideoCameraBackIcon fontSize="large" className='pr-2'/>
                     <h3 className="text-xl font-bold md:text-2xl">Broadcast Production</h3>
                 </div>
                 <p>
@@ -103,7 +103,7 @@ export default function Component() {
             <div>
                 <img src="/tf.connect-11.jpg" alt="Content Creation" className="mb-4 h-60 w-full object-cover rounded" />
                 <div className="flex items-center mb-4">
-                <LaptopIcon className='pr-2'/>
+                <LaptopIcon fontSize='large' className='pr-2'/>
                     <h3 className="text-xl font-bold md:text-2xl">Web Development</h3>
                 </div>
                 <p>
@@ -114,7 +114,7 @@ export default function Component() {
             <div>
                 <img src="/tf.connect-11.jpg" alt="Event Management" className="mb-4 h-60 w-full object-cover rounded" />
                 <div className="flex items-center mb-4">
-                <PeopleOutlineIcon className='pr-2'/>
+                <PeopleOutlineIcon fontSize='large' className='pr-2'/>
                     <h3 className="text-xl font-bold md:text-2xl">Esports Event Staffing</h3>
                 </div>
                 <p>
