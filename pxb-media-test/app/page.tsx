@@ -35,10 +35,10 @@ export default function Component() {
     
     <>
       <header className="bg-black text-white transition-colors duration-300 sticky top-0 z-50">
-        <nav className="container mx-auto flex flex-wrap items-center justify-between py-6 px-4 md:px-0">
-          <div className="flex items-center space-x-8">
+      <nav className="container mx-auto flex flex-wrap items-center justify-between py-1 px-4 md:px-0">
+          <div className="flex items-center space-x-6">
             <a className="text-xl font-bold" href="#">
-              PXB MEDIA
+            <img src="/vertical_logo.svg" alt="PXB Media Logo" className="h-10" /> 
             </a>
             <button
               className="md:hidden rounded border px-4 py-2 text-sm hover:bg-white hover:text-black transition-colors duration-300"
@@ -61,7 +61,7 @@ export default function Component() {
               ABOUT
             </a>
           </div>
-          <Button onClick={openModal} className="hidden md:inline-flex hover:bg-sky-700" size="sm" variant="default">
+          <Button onClick={openModal} className="hidden md:inline-flex color-primary hover:bg-primaryAlt" size="sm" variant="default">
             Get a quote
           </Button>
         </nav>
@@ -85,7 +85,7 @@ export default function Component() {
           </div>
         </section>
 
-        <section className="bg-gradient-to-b from-gray-800 to-black py-12 md:py-20 text-white">
+        <section className="bg-[#040407] py-12 md:py-20 text-white">
     <div className="container mx-auto px-4 md:px-0">
         <h2 className="mb-6 text-3xl font-bold md:mb-8 md:text-4xl">Our Services</h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -98,7 +98,7 @@ export default function Component() {
                 <p>
                     Our state-of-the-art esports studio is equipped with the latest technology to provide a professional and immersive experience for your esports events.
                 </p>
-                <Button className="mt-4 hover:bg-sky-700" variant="default">Read More</Button>
+                <Button className="mt-4 bg-primary hover:bg-primaryAlt" variant="default">Read More</Button>
             </div>
             <div>
                 <img src="/tf.connect-11.jpg" alt="Content Creation" className="mb-4 h-60 w-full object-cover rounded" />
@@ -109,7 +109,7 @@ export default function Component() {
                 <p>
                     From video production to graphic design, our team of creatives can help you craft engaging content to showcase your brand or esports team.
                 </p>
-                <Button className="mt-4 hover:bg-sky-700" variant="default">Read More</Button>
+                <Button className="mt-4 bg-primary hover:bg-primaryAlt" variant="default">Read More</Button>
             </div>
             <div>
                 <img src="/tf.connect-11.jpg" alt="Event Management" className="mb-4 h-60 w-full object-cover rounded" />
@@ -120,13 +120,13 @@ export default function Component() {
                 <p>
                     Let us handle the logistics of your esports event, from venue selection to live streaming, so you can focus on delivering an unforgettable experience.
                 </p>
-                <Button className="mt-4 hover:bg-sky-700" variant="default">Read More</Button>
+                <Button className="mt-4 bg-primary hover:bg-primaryAlt" variant="default">Read More</Button>
             </div>
         </div>
     </div>
 </section>
 
-        <section className="bg-gradient-to-b from-gray-800 to-black py-12 md:py-20 text-white">
+        <section className="bg-element py-12 md:py-20 text-white">
           <div className="container mx-auto px-4 md:px-0">
             <h2 className="mb-6 text-3xl font-bold md:mb-8 md:text-4xl">Trusted By</h2>
             <div className="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
@@ -145,7 +145,7 @@ export default function Component() {
             </div>
           </div>
         </section>
-        <section className="bg-gradient-to-b from-gray-800 to-black py-12 md:py-20 text-white">
+        <section className="bg-[#040407] py-12 md:py-20 text-white">
     <div className="container mx-auto px-4 md:px-0">
         <h2 className="mb-6 text-3xl font-bold md:mb-8 md:text-4xl">Recent Works</h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -225,7 +225,7 @@ export default function Component() {
     </div>
 </section>
 
-<section className="bg-gradient-to-b from-gray-800 to-black py-12 md:py-20 text-white">
+<section className="bg-element py-12 md:py-20 text-white">
     <div className="container mx-auto px-4 md:px-0 text-center">
         <h2 className="mb-6 text-3xl font-bold md:mb-8 md:text-4xl">Contact Us</h2>
         <p className="text-xl md:text-2xl">Reach out to us at:</p>
@@ -253,7 +253,7 @@ export default function Component() {
 
 
       </main>
-      <footer className="bg-black text-gray-400 py-4 text-center">
+      <footer className="bg-[#040407] text-gray-400 py-4 text-center">
         <div className="container mx-auto px-4">
           <p>&copy; {new Date().getFullYear()} PXB Media. All rights reserved.</p>
           <div className="flex justify-center space-x-4 mt-2">

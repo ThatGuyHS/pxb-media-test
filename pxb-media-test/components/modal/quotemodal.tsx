@@ -22,7 +22,7 @@ const QuoteModal: React.FC<QuoteModalType> = ({ isOpen, onRequestClose }) => {
                     bottom: 'auto',
                     marginRight: '-50%',
                     transform: 'translate(-50%, -10%)', // Adjusted translate to align properly
-                    backgroundColor: '#1A1A1A', // Dark background
+                    backgroundColor: '#0B0B16', // Dark background
                     color: 'white', // Text color
                     borderRadius: '10px',
                     border: '1px solid #ccc',
@@ -89,7 +89,7 @@ const QuoteModal: React.FC<QuoteModalType> = ({ isOpen, onRequestClose }) => {
                     <label htmlFor="description" className="block text-sm font-bold mb-2">Basic Event or Service Description</label>
                     <textarea placeholder='E.g.: I am hosting a LAN and I want to rent PCs and Screens, or I want a website built' id="description" rows={4} className="w-full p-2 rounded-md bg-gray-700 text-white"></textarea>
                 </div>
-                <Button type="submit" className="w-full mt-4" variant="default">
+                <Button type="submit" className="w-full mt-4 bg-primary hover:bg-primaryAlt" variant="default">
                     Submit
                 </Button>
             </form>
