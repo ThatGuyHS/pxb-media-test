@@ -48,20 +48,20 @@ export default function Component() {
             </button>
           </div>
           <div ref={menuRef} className={`${menuOpen ? 'flex' : 'hidden'} flex-col absolute bg-black w-full mt-2 pb-4 md:pb-0 md:w-auto md:static md:flex md:flex-row md:space-x-6`}>
-            <a className="px-4 py-2 hover:text-gray-300 transition-colors duration-300" href="#">
+            <a className="px-4 py-2 hover:text-gray-300 hover:underline decoration-primary transition-colors duration-300" href="#">
               SERVICES
             </a>
-            <a className="px-4 py-2 hover:text-gray-300 transition-colors duration-300" href="#">
+            <a className="px-4 py-2 hover:text-gray-300 hover:underline decoration-primary transition-colors duration-300" href="#">
               SHOWREEL
             </a>
-            <a className="px-4 py-2 hover:text-gray-300 transition-colors duration-300" href="#">
+            <a className="px-4 py-2 hover:text-gray-300 hover:underline decoration-primary transition-colors duration-300" href="#">
               CONTACT
             </a>
-            <a className="px-4 py-2 hover:text-gray-300 transition-colors duration-300" href="#">
+            <a className="px-4 py-2 hover:text-gray-300 hover:underline decoration-primary transition-colors duration-300" href="#">
               ABOUT
             </a>
           </div>
-          <Button onClick={openModal} className="hidden md:inline-flex color-primary hover:bg-primaryAlt" size="sm" variant="default">
+          <Button onClick={openModal} className="hidden text-[#E3E3E3] md:inline-flex color-primary hover:bg-primaryAlt" size="sm" variant="default">
             Get a quote
           </Button>
         </nav>
@@ -128,7 +128,6 @@ export default function Component() {
 
         <section className="bg-element py-12 md:py-20 text-white">
           <div className="container mx-auto px-4 md:px-0">
-            <h2 className="mb-6 text-3xl font-bold md:mb-8 md:text-4xl">Trusted By</h2>
             <div className="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
               <div>
                 <img alt="Client Logo" className="h-12 w-auto" src="/Logo-esu-border.jpg" />
