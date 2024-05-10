@@ -87,44 +87,45 @@ export default function Component() {
 
         <section className="bg-[#040407] py-12 md:py-20 text-white">
     <div className="container mx-auto px-4 md:px-0">
-        <h2 className="mb-6 text-3xl font-bold md:mb-8 md:text-4xl">Our Services</h2>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <div>
-                <img src="/tf.connect-11.jpg" alt="Esports Studio" className="mb-4 h-60 w-full object-cover rounded" />
-                <div className="flex items-center mb-4">
-                <VideoCameraBackIcon fontSize="large" className='pr-2'/>
+        <h2 className="text-center mb-8 text-3xl font-bold md:text-4xl">Our Services</h2>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="flex flex-col items-center text-center">
+                <img src="/tf.connect-11.jpg" alt="Broadcast Production" className="mb-4 h-60 w-full object-cover rounded" />
+                <div className="flex flex-col items-center">
+                    <VideoCameraBackIcon fontSize="large" className='mb-2'/>
                     <h3 className="text-xl md:text-2xl">Broadcast Production</h3>
                 </div>
-                <p>
+                <p className="px-4">
                     Our state-of-the-art esports studio is equipped with the latest technology to provide a professional and immersive experience for your esports events.
                 </p>
-                <Button className="mt-4 bg-primary hover:bg-primaryAlt" variant="default">Read More</Button>
+                <Button className="mt-4 bg-blue-500 hover:bg-blue-600" variant="default">Read More</Button>
             </div>
-            <div>
-                <img src="/tf.connect-11.jpg" alt="Content Creation" className="mb-4 h-60 w-full object-cover rounded" />
-                <div className="flex items-center mb-4">
-                <LaptopIcon fontSize='large' className='pr-2'/>
+            <div className="flex flex-col items-center text-center">
+                <img src="/tf.connect-11.jpg" alt="Web Development" className="mb-4 h-60 w-full object-cover rounded" />
+                <div className="flex flex-col items-center">
+                    <LaptopIcon fontSize='large' className='mb-2'/>
                     <h3 className="text-xl md:text-2xl">Web Development</h3>
                 </div>
-                <p>
+                <p className="px-4">
                     From video production to graphic design, our team of creatives can help you craft engaging content to showcase your brand or esports team.
                 </p>
-                <Button className="mt-4 bg-primary hover:bg-primaryAlt" variant="default">Read More</Button>
+                <Button className="mt-4 bg-blue-500 hover:bg-blue-600" variant="default">Read More</Button>
             </div>
-            <div>
-                <img src="/tf.connect-11.jpg" alt="Event Management" className="mb-4 h-60 w-full object-cover rounded" />
-                <div className="flex items-center mb-4">
-                <PeopleOutlineIcon fontSize='large' className='pr-2'/>
+            <div className="flex flex-col items-center text-center">
+                <img src="/tf.connect-11.jpg" alt="Esports Event Staffing" className="mb-4 h-60 w-full object-cover rounded" />
+                <div className="flex flex-col items-center">
+                    <PeopleOutlineIcon fontSize='large' className='mb-2'/>
                     <h3 className="text-xl md:text-2xl">Esports Event Staffing</h3>
                 </div>
-                <p>
+                <p className="px-4">
                     Let us handle the logistics of your esports event, from venue selection to live streaming, so you can focus on delivering an unforgettable experience.
                 </p>
-                <Button className="mt-4 bg-primary hover:bg-primaryAlt" variant="default">Read More</Button>
+                <Button className="mt-4 bg-blue-500 hover:bg-blue-600" variant="default">Read More</Button>
             </div>
         </div>
     </div>
 </section>
+
 <section className="bg-element py-12 md:py-20 text-white no-scrollbar">
   <div className="container mx-auto px-4 md:px-0">
     <div style={{ display: 'flex', overflowX: 'auto', alignItems: 'center', whiteSpace: 'nowrap' }} className="no-scrollbar">
