@@ -67,7 +67,7 @@ export default function Component() {
         </nav>
       </header>
       <QuoteModal isOpen={modalIsOpen} onRequestClose={closeModal} />
-      <main>
+      <main className='no-scrollbar'>
         <section className="relative h-screen bg-cover bg-center bg-gradient-to-b from-black via-gray-800 to-gray-900"
          style={{ backgroundImage: "url('/tf.connect-11.jpg')" }}>
           <div className="absolute inset-0 bg-black opacity-50" />
