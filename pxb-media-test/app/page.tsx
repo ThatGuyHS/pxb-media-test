@@ -54,7 +54,7 @@ export default function Component() {
             <a className="px-4 py-2 hover:text-gray-300 hover:underline decoration-primary transition-colors duration-300" href="#">
               SHOWREEL
             </a>
-            <a className="px-4 py-2 hover:text-gray-300 hover:underline decoration-primary transition-colors duration-300" href="#">
+            <a className="px-4 py-2 hover:text-gray-300 hover:underline decoration-primary transition-colors duration-300" href="#contact">
               CONTACT
             </a>
             <a className="px-4 py-2 hover:text-gray-300 hover:underline decoration-primary transition-colors duration-300" href="#">
@@ -125,25 +125,40 @@ export default function Component() {
         </div>
     </div>
 </section>
+<section className="bg-element py-12 md:py-20 text-white no-scrollbar">
+  <div className="container mx-auto px-4 md:px-0">
+    <div style={{ display: 'flex', overflowX: 'auto', alignItems: 'center', whiteSpace: 'nowrap' }} className="no-scrollbar">
+      <div style={{ flexShrink: 0, minWidth: '200px', marginRight: '10px' }}>
+        <img alt="Client Logo" className="h-12 w-auto" src="/Logo-esu-border.jpg" />
+      </div>
+      <div style={{ flexShrink: 0, minWidth: '200px', marginRight: '10px' }}>
+        <img alt="Client Logo" className="h-12 w-auto" src="/SOL_Logo.svg" />
+      </div>
+      <div style={{ flexShrink: 0, minWidth: '200px', marginRight: '10px' }}>
+        <img alt="Client Logo" className="h-12 w-auto" src="/Raketligan-White.png" />
+      </div>
+      <div style={{ flexShrink: 0, minWidth: '200px', marginRight: '10px' }}>
+        <img alt="Client Logo" className="h-12 w-auto" src="/riotlogo.jpg" />
+      </div>
+      <div style={{ flexShrink: 0, minWidth: '200px', marginRight: '10px' }}>
+        <img alt="Client Logo" className="h-12 w-auto" src="/riotlogo.jpg" />
+      </div>
+      <div style={{ flexShrink: 0, minWidth: '200px', marginRight: '10px' }}>
+        <img alt="Client Logo" className="h-12 w-auto" src="/riotlogo.jpg" />
+      </div>
+      <div style={{ flexShrink: 0, minWidth: '200px', marginRight: '10px' }}>
+        <img alt="Client Logo" className="h-12 w-auto" src="/riotlogo.jpg" />
+      </div>
+      <div style={{ flexShrink: 0, minWidth: '200px', marginRight: '10px' }}>
+        <img alt="Client Logo" className="h-12 w-auto" src="/riotlogo.jpg" />
+      </div>
+     
+    </div>
+  </div>
+</section>
 
-        <section className="bg-element py-12 md:py-20 text-white">
-          <div className="container mx-auto px-4 md:px-0">
-            <div className="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
-              <div>
-                <img alt="Client Logo" className="h-12 w-auto" src="/Logo-esu-border.jpg" />
-              </div>
-              <div>
-                <img alt="Client Logo" className="h-12 w-auto" src="/SOL_Logo.svg" />
-              </div>
-              <div>
-                <img alt="Client Logo" className="h-12 w-auto" src="/Raketligan-White.png" />
-              </div>
-              <div>
-                <img alt="Client Logo" className="h-12 w-auto" src="/riotlogo.jpg" />
-              </div>
-            </div>
-          </div>
-        </section>
+
+
         <section className="bg-[#040407] py-12 md:py-20 text-white">
     <div className="container mx-auto px-4 md:px-0">
         <h2 className="mb-6 text-3xl font-bold md:mb-8 md:text-4xl">Recent Works</h2>
@@ -224,7 +239,7 @@ export default function Component() {
     </div>
 </section>
 
-<section className="bg-element py-12 md:py-20 text-white">
+<section id="contact" className="bg-element py-12 md:py-20 text-white">
     <div className="container mx-auto px-4 md:px-0 text-center">
         <h2 className="mb-6 text-3xl font-bold md:mb-8 md:text-4xl">Contact Us</h2>
         <p className="text-xl md:text-2xl">Reach out to us at:</p>
