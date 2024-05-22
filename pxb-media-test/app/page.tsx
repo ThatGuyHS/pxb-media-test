@@ -85,7 +85,7 @@ export default function Component() {
           </div>
         </section>
 
-        <section className="bg-[#040407] py-12 md:py-20 text-white">
+        <section className="bg-[#040407] py-12 md:py-20 text-white font-semibold">
     <div className="container mx-auto px-4 md:px-0">
         <h2 className="text-center mb-8 text-3xl font-bold md:text-4xl">Our Services</h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
