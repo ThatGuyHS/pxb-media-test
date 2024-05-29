@@ -98,7 +98,7 @@ const ServicesComponent: React.FC = () => {
         <div className="text-center px-8 pb-8">
           <h2 className="text-4xl font-bold mb-4">Live Broadcast Production</h2>
           <p className="text-lg max-w-4xl mx-auto">
-            <b>Highlight of Live Broadcast Production:</b><br/><br/>
+            <b>Highlight of Live Broadcast Production: Highlight of Live Broadcast Production:Highlight of Live Broadcast Production:Highlight of Live Broadcast Production:Highlight of Live Broadcast Production:</b><br/><br/>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id mauris commodo, tempus leo in, congue urna. Sed in justo vitae mi rutrum eleifend finibus non nulla.
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id mauris commodo, tempus leo in, congue urna. Sed in justo vitae mi rutrum eleifend finibus non nulla.
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id mauris commodo, tempus leo in, congue urna. Sed in justo vitae mi rutrum eleifend finibus non nulla.
@@ -120,23 +120,23 @@ const ServicesComponent: React.FC = () => {
             <img src='/tf.connect-11.jpg' alt="Feature A" className="w-full h-64 object-cover rounded-lg" />
           </div>
         </div>
+{/* Features Grid Section */}
+<div className="px-8 py-16 bg-black text-white">
+  <h2 className="text-4xl font-bold mb-8 text-center">Our Features</h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {featuresData.map((feature, index) => (
+      <div key={index} className="p-6">
+        <img src={feature.icon} alt={`${feature.title} icon`} className="h-16 mb-2" />
+        <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+        <p className="text-base font-semibold mb-2">Key Points of {feature.title}:</p>
+        <p className="text-sm">{feature.description}</p>
+      </div>
+    ))}
+  </div>
+</div>
 
-        {/* Features Grid Section */}
-        <div className="text-center px-8 py-16">
-          <h2 className="text-4xl font-bold mb-8">Our Features</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuresData.map((feature, index) => (
-              <div key={index} className="p-6 rounded-lg shadow-lg">
-                <img src={feature.icon} alt={`${feature.title} icon`} className="h-16 mx-auto mb-4" />
-                <h3 className="text-2xl font-semibold mb-4">{feature.title}</h3>
-                <p className="text-base">
-                  <b>Key Points of {feature.title}:</b><br/><br/>
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
+
+
 
         {/* Feature B Section */}
         <div className="bg-element flex flex-col md:flex-row items-center md:items-start text-center md:text-left px-8 py-16">
