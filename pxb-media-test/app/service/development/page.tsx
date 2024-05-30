@@ -84,9 +84,6 @@ const ServicesComponent: React.FC = () => {
                 <a className="block px-4 py-2 hover:bg-gray-800" href="/service/development">DEVELOPMENT</a>
               </div>
             </div>
-            <a className="px-4 py-2 hover:text-gray-300 hover:underline decoration-primary transition-colors duration-300" href="#">
-              SHOWREEL
-            </a>
             <a className="px-4 py-2 hover:text-gray-300 hover:underline decoration-primary transition-colors duration-300" href="#contact">
               CONTACT
             </a>
@@ -114,7 +111,7 @@ const ServicesComponent: React.FC = () => {
       <div className="w-full px-4 pt-16">
         {/* Live Broadcast Production Section */}
         <div className="w-full py-16 bg-black text-white">
-          <div className="container mx-auto text-center px-8 pb-8">
+          <div className="container mx-auto text-center px-4 md:px-0 pb-8">
             <h2 className="text-4xl font-bold mb-4">Live Broadcast Production</h2>
             <p className="text-lg">
               <b>Highlight of Live Broadcast Production: Highlight of Live Broadcast Production:Highlight of Live Broadcast Production:Highlight of Live Broadcast Production:Highlight of Live Broadcast Production:</b><br/><br/>
@@ -127,7 +124,7 @@ const ServicesComponent: React.FC = () => {
 
         {/* Feature A Section */}
         <div className="w-full py-16 bg-element text-white">
-          <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left px-8">
+          <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left px-4 md:px-0">
             <div className="md:w-1/2">
               <h3 className="text-3xl font-semibold mb-4">Feature A</h3>
               <p className="text-base mb-4">
@@ -145,7 +142,7 @@ const ServicesComponent: React.FC = () => {
 
         {/* Features Grid Section */}
         <div className="w-full py-16 bg-black text-white">
-          <div className="container mx-auto px-8">
+          <div className="container mx-auto px-4 md:px-0">
             <h2 className="text-4xl font-bold mb-8 text-center">Our Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuresData.map((feature, index) => (
@@ -162,7 +159,7 @@ const ServicesComponent: React.FC = () => {
 
         {/* Feature B Section */}
         <div className="w-full py-16 bg-element text-white">
-          <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left px-8">
+          <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left px-4 md:px-0">
             <div className="md:w-1/2">
               <img src='/tf.connect-11.jpg' alt="Feature B" className="w-full h-64 object-cover rounded-lg" />
             </div>
@@ -200,7 +197,7 @@ const ServicesComponent: React.FC = () => {
 
         {/* Feature C Section */}
         <div className="w-full py-16 bg-element text-white">
-          <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left px-8">
+          <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left px-4 md:px-0">
             <div className="md:w-1/2">
               <h3 className="text-3xl font-semibold mb-4">Feature C</h3>
               <p className="text-base mb-4">
