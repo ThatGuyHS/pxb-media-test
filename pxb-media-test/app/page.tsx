@@ -46,7 +46,7 @@ export default function Component() {
       <header className="bg-black text-white transition-colors duration-300 sticky top-0 z-50">
       <nav className="container mx-auto flex flex-wrap items-center justify-between py-1 px-4 md:px-0">
           <div className="flex items-center space-x-6">
-            <a className="text-xl font-bold" href="#">
+            <a className="text-xl font-bold" href="/">
             <img src="/vertical_logo.svg" alt="PXB Media Logo" className="h-10" /> 
             </a>
             <button
