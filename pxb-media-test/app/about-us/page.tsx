@@ -3,22 +3,23 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 
 const teamMembers = [
+ 
   {
-    name: 'Team Member 1',
-    role: 'Role',
-    email: 'team1@example.com',
-    image: '/adam.png',
+    name: 'Viktor Erlandsson',
+    role: 'Founder',
+    email: 'viktor@pxbmedia.com',
+    image: '/headshot_viktor.jpg',
   },
   {
-    name: 'Team Member 2',
-    role: 'Role',
-    email: 'team2@example.com',
-    image: '/adam.png',
+    name: 'Guido Andriol',
+    role: 'Head Tech Boi & Co-Founder',
+    email: 'guido@pxbmedia.com',
+    image: '/guiDO.jpg',
   },
   {
-    name: 'Team Member 3',
-    role: 'Role',
-    email: 'team3@example.com',
+    name: 'Adam Peleback',
+    role: 'Web Developer / Co-owner',
+    email: 'adam@pxbmedia.com',
     image: '/adam.png',
   },
   {
