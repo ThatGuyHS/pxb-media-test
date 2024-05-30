@@ -1,8 +1,7 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import QuoteModal from '@/components/modal/quotemodal';
-import { useRef } from 'react';
 
 const featuresData = [
   {
@@ -67,8 +66,6 @@ const ServicesComponent: React.FC = () => {
       setServicesDropdownOpen(false);
     }
   };
-
-
 
   return (
     <div className="bg-black text-white font-custom">
@@ -155,7 +152,9 @@ const ServicesComponent: React.FC = () => {
               </p>
             </div>
             <div className="md:w-1/2">
-              <img src='/tf.connect-11.jpg' alt="Feature A" className="w-full h-64 object-cover rounded-lg" />
+              <div className="relative" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
+                <img src='/tf.connect-11.jpg' alt="Feature A" className="absolute top-0 left-0 w-full h-full object-cover rounded-lg" />
+              </div>
             </div>
           </div>
         </div>
@@ -181,7 +180,9 @@ const ServicesComponent: React.FC = () => {
         <div className="w-full py-16 bg-element text-white">
           <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left px-4 md:px-0">
             <div className="md:w-1/2">
-              <img src='/tf.connect-11.jpg' alt="Feature B" className="w-full h-64 object-cover rounded-lg" />
+              <div className="relative" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
+                <img src='/tf.connect-11.jpg' alt="Feature B" className="absolute top-0 left-0 w-full h-full object-cover rounded-lg" />
+              </div>
             </div>
             <div className="md:w-1/2">
               <h3 className="text-3xl font-semibold mb-4 pl-2">Feature B</h3>
@@ -228,7 +229,9 @@ const ServicesComponent: React.FC = () => {
               </p>
             </div>
             <div className="md:w-1/2">
-              <img src='/tf.connect-11.jpg' alt="Feature C" className="w-full h-64 object-cover rounded-lg" />
+              <div className="relative" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
+                <img src='/tf.connect-11.jpg' alt="Feature C" className="absolute top-0 left-0 w-full h-full object-cover rounded-lg" />
+              </div>
             </div>
           </div>
         </div>
