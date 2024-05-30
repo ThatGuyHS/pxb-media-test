@@ -1,7 +1,8 @@
 "use client";
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import QuoteModal from '@/components/modal/quotemodal';
+import { useRef } from 'react';
 
 const featuresData = [
   {
@@ -38,22 +39,36 @@ const featuresData = [
 
 const ServicesComponent: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 
   const handleToggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const handleToggleServicesDropdown = () => {
-    setServicesDropdownOpen(!servicesDropdownOpen);
-  };
-
   const openModal = () => setModalIsOpen(true);
   const closeModal = () => setModalIsOpen(false);
 
-  const menuRef = useRef<HTMLDivElement>(null);
+  const handleMouseEnter = () => {
+    setServicesDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setServicesDropdownOpen(false);
+  };
+
+  const handleClickOutside = (event: any) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setMenuOpen(false);
+    }
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setServicesDropdownOpen(false);
+    }
+  };
+
+
 
   return (
     <div className="bg-black text-white font-custom">
@@ -70,15 +85,20 @@ const ServicesComponent: React.FC = () => {
               {menuOpen ? 'CLOSE' : 'MENU'}
             </button>
           </div>
-          <div ref={menuRef} className={`${menuOpen ? 'flex' : 'hidden'} flex-col absolute top-full left-0 bg-black w-full mt-6 pb-4 md:pb-0 md:w-auto md:static md:flex md:flex-row md:space-x-6`}>
-          <div className="relative" ref={dropdownRef}>
+          <div ref={menuRef} className={`${menuOpen ? 'flex' : 'hidden'} flex-col absolute bg-black w-full mt-2 pb-4 md:pb-0 md:w-auto md:static md:flex md:flex-row md:space-x-6`}>
+            <div
+              className="relative"
+              ref={dropdownRef}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
               <button
                 className="px-4 py-2 hover:text-gray-300 hover:underline decoration-primary transition-colors duration-300"
-                onClick={handleToggleServicesDropdown}
               >
                 SERVICES
               </button>
-              <div className={`${servicesDropdownOpen ? 'block' : 'hidden'} absolute left-0 mt-2 w-48 bg-black border border-gray-700 rounded-md shadow-lg`}>
+              <div className={`${servicesDropdownOpen ? 'block' : 'hidden'} absolute left-0 w-48 bg-black border border-gray-700 rounded-md shadow-lg`}>
+                <div className="invisible absolute -top-4 left-0 w-full h-4"></div> {/* Invisible div to bridge the gap */}
                 <a className="block px-4 py-2 hover:bg-gray-800" href="/service/production">PRODUCTION</a>
                 <a className="block px-4 py-2 hover:bg-gray-800" href="/service/event-staffing">EVENT STAFFING</a>
                 <a className="block px-4 py-2 hover:bg-gray-800" href="/service/development">DEVELOPMENT</a>
