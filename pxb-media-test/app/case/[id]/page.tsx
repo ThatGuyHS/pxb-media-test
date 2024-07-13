@@ -193,7 +193,7 @@ const ArticleComponent: React.FC = () => {
             {Object.entries(data.servicesProvided).map(([category, services]) => (
               <div className='pb-4' key={category}>
                 <h4 className="bg-primary px-2 text-white justify-center font-bold mb-1">{formatCategoryName(category)}</h4>
-                <ul className="text-sm text-gray-300 list-disc list-inside mb-2">
+                <ul className="text-sm text-gray-300 list-disc pl-4 mb-2">
                   {services.map((service, index) => (
                     <li key={index}>{service}</li>
                   ))}
