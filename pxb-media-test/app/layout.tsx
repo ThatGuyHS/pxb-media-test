@@ -4,8 +4,11 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "PXB Media",
-  metadataBase: new URL('https://pxb-media-test.vercel.app/'),
+  title: {
+    template: '%s | PXB Media - Solving all your event and broadcast needs',
+    default: 'PXB Media - Solving all your event and broadcast needs',
+  },
+  metadataBase: new URL('https://pxbmedia.com/'),
   description: "Your partner for all things Live Production",
   openGraph: {
     images: "/tf.connect-11.jpg",

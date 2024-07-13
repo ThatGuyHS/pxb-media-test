@@ -5,6 +5,10 @@ import { Button } from '@/components/ui/button';
 import { useRef } from 'react';
 import QuoteModal from '@/components/modal/quotemodal';
 
+
+
+
+
 type ArticleData = {
   id: string;
   title: string;
