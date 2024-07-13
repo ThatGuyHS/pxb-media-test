@@ -5,6 +5,7 @@ import QuoteModal from '@/components/modal/quotemodal';
 import VideoCameraBackIcon from '@mui/icons-material/VideoCameraBack';
 import LaptopIcon from '@mui/icons-material/Laptop';
 import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';
+import { SocialIcon } from "react-social-icons";
 
 export default function Component() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -85,7 +86,7 @@ export default function Component() {
               ABOUT
             </a>
           </div>
-          <Button onClick={openModal} className="hidden text-[#E3E3E3] md:inline-flex color-primary hover:bg-primaryAlt" size="sm" variant="default">
+          <Button onClick={openModal} className="hidden text-[#E3E3E3] md:inline-flex bg-primary hover:bg-primaryAlt" size="sm" variant="default">
             Get a quote
           </Button>
         </nav>
@@ -122,7 +123,7 @@ export default function Component() {
                 <p className="px-4">
                   Our state-of-the-art esports studio is equipped with the latest technology to provide a professional and immersive experience for your esports events.
                 </p>
-                <Button className="mt-4 bg-blue-500 hover:bg-blue-600" variant="default">Read More</Button>
+                <Button className="mt-4 bg-primary hover:bg-primaryAlt" variant="default">Read More</Button>
               </div>
               <div className="flex flex-col items-center text-center">
                 <img src="/tf.connect-11.jpg" alt="Web Development" className="mb-4 h-60 w-full object-cover rounded" />
@@ -133,7 +134,7 @@ export default function Component() {
                 <p className="px-4">
                   From video production to graphic design, our team of creatives can help you craft engaging content to showcase your brand or esports team.
                 </p>
-                <Button className="mt-4 bg-blue-500 hover:bg-blue-600" variant="default">Read More</Button>
+                <Button className="mt-4 bg-primary hover:bg-primaryAlt" variant="default">Read More</Button>
               </div>
               <div className="flex flex-col items-center text-center">
                 <img src="/tf.connect-11.jpg" alt="Esports Event Staffing" className="mb-4 h-60 w-full object-cover rounded" />
@@ -144,13 +145,13 @@ export default function Component() {
                 <p className="px-4">
                   Let us handle the logistics of your esports event, from venue selection to live streaming, so you can focus on delivering an unforgettable experience.
                 </p>
-                <Button className="mt-4 bg-blue-500 hover:bg-blue-600" variant="default">Read More</Button>
+                <Button className="mt-4 bg-primary hover:bg-primaryAlt" variant="default">Read More</Button>
               </div>
             </div>
           </div>
         </section>
 
-       
+        
 
         <section className="bg-[#040407] py-12 md:py-20 text-white no-scrollbar">
           <div className="container mx-auto px-4 md:px-0">
@@ -183,10 +184,11 @@ export default function Component() {
           </div>
         </section>
 
+  
 
         <section className="bg-[#040407] py-12 md:py-20 text-white">
           <div className="container mx-auto px-4 md:px-0">
-            <h2 className="mb-6 text-3xl font-bold md:mb-8 md:text-4xl">Recent Works</h2>
+            <h2 className="mb-6 text-3xl font-bold md:mb-8 md:text-4xl"> Cases </h2>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               <a href="/project-1" className="group relative block overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
                 <img
@@ -264,7 +266,7 @@ export default function Component() {
           </div>
         </section>
 
-      
+   
 
         <section id="contact" className="bg-[#040407] py-12 md:py-20 text-white">
           <div className="container mx-auto px-4 md:px-0 text-center">
@@ -294,9 +296,21 @@ export default function Component() {
         <div className="container mx-auto px-4">
           <p>&copy; {new Date().getFullYear()} PXB Media. All rights reserved.</p>
           <div className="flex justify-center space-x-4 mt-2">
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300">Twitter</a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300">Facebook</a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300">Instagram</a>
+          <SocialIcon
+            url="https://facebook.com/svenskesport"
+            bgColor="#101737"
+            fgColor="#3ABCF9"
+          />
+          <SocialIcon
+            url="https://twitter.com/svenskesport"
+            bgColor="#101737"
+            fgColor="#3ABCF9"
+          />
+          <SocialIcon
+            url="https://discord.gg/RshFVxJpHp"
+            bgColor="#101737"
+            fgColor="#3ABCF9"
+          />
           </div>
         </div>
       </footer>

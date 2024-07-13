@@ -2,6 +2,7 @@
 import React, { useState, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import QuoteModal from '@/components/modal/quotemodal';
+import { SocialIcon } from "react-social-icons";
 
 const featuresData = [
   {
@@ -263,9 +264,21 @@ const ServicesComponent: React.FC = () => {
         <div className="container mx-auto px-4">
           <p>&copy; {new Date().getFullYear()} PXB Media. All rights reserved.</p>
           <div className="flex justify-center space-x-4 mt-2">
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300">Twitter</a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300">Facebook</a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300">Instagram</a>
+          <SocialIcon
+            url="https://facebook.com/svenskesport"
+            bgColor="#101737"
+            fgColor="#3ABCF9"
+          />
+          <SocialIcon
+            url="https://twitter.com/svenskesport"
+            bgColor="#101737"
+            fgColor="#3ABCF9"
+          />
+          <SocialIcon
+            url="https://discord.gg/RshFVxJpHp"
+            bgColor="#101737"
+            fgColor="#3ABCF9"
+          />
           </div>
         </div>
       </footer>
