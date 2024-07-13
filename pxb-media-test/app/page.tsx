@@ -267,15 +267,15 @@ export default function Component() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  img: "/tf.connect-11.jpg",
-                  logo: "/event-logo-1.png",
-                  title: "Project 1",
-                  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                  img: "/dh1.jpg",
+                  logo: "/dreamhack-logo.png",
+                  title: "Dreamhack Summer and Winter",
+                  desc: "We have provided broadcasting services for Dreamhack LAN stage, BYOC admins and admins for free play areas.",
                 },
                 {
                   img: "/tf.connect-11.jpg",
-                  logo: "/event-logo-2.png",
-                  title: "Project 2",
+                  logo: "/tfconnect-logo.png",
+                  title: "TF Connect",
                   desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                 },
                 {
@@ -316,7 +316,7 @@ export default function Component() {
                     <img
                       src={project.logo}
                       alt={`${project.title} Logo`}
-                      className="h-8 mb-2"
+                      className="h-auto w-auto mb-2"
                     />
                     <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                     <p className="text-sm">{project.desc}</p>

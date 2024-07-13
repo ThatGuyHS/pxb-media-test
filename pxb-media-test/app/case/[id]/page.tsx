@@ -20,6 +20,9 @@ type ArticleData = {
   secondaryImageUrl: string;
   imageCredit: string;
   paragraphs: string[];
+  servicesProvided: {
+    [category: string]: string[];
+  };
 };
 
 const ArticleComponent: React.FC = () => {
@@ -58,6 +61,11 @@ const ArticleComponent: React.FC = () => {
   const handleMouseLeave = () => {
     setServicesDropdownOpen(false);
   };
+
+  // Function to convert camel case or Pascal case to space-separated format
+const formatCategoryName = (category: string) => {
+  return category.replace(/([a-z])([A-Z])/g, '$1 $2').toUpperCase();
+};
 
   useEffect(() => {
     if (id) {
@@ -144,6 +152,23 @@ const ArticleComponent: React.FC = () => {
           </div>
         </div>
       </div>
+
+       {/* Services Provided Section */}
+       {data.servicesProvided && (
+            <div className="absolute left-10 top-4/4 bg-black bg-opacity-70 p-4 rounded-lg">
+              <h3 className="text-primary text-lg font-bold mb-2">SERVICES PROVIDED</h3>
+              {Object.entries(data.servicesProvided).map(([category, services]) => (
+                <div key={category}>
+                  <h4 className="bg-primary text-white font-bold mb-1">{formatCategoryName(category)}</h4>
+                  <ul className="text-sm text-gray-300 list-disc list-inside mb-2">
+                    {services.map((service, index) => (
+                      <li key={index}>{service}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          )}
 
       {/* Author and Categories Section */}
       <div className="flex flex-col items-center px-8 py-4 text-center">

@@ -12,6 +12,27 @@ const dataCases = [
     imageUrl: "/dh-stage.jpg",
     secondaryImageUrl: "/dh1.jpg",
     imageCredit: "Rikard Fagerberg",
+    servicesProvided: {
+      broadcastProduction: [
+        "Production Planning",
+        "Technical Direction",
+        "Technical Ops Management",
+        "Replay Operation",
+        "In-game Direction",
+        "Audio Engineering",
+        "IMAG Playout",
+        "Camera Operation",
+        "Stage Hosting & Desk commentating",
+        "Overlay Design & Implementation"
+      ],
+      operations: [
+        "Project Management",
+        "Server Administration",
+        "Server Management",
+        "Stage Management",
+        "Competition Administration"
+      ]
+    },
     paragraphs: [
       "For multiple years, PXB Media has been a trusted partner of Dreamhack, delivering top-tier services for their Summer and Winter events. We have been responsible for a wide range of activities, ranging from the Free play Area, the BYOC LAN tournaments to our flagship, the LAN tournament stage. Our comprehensive broadcast production services include production planning, technical direction, replay operations, in-game direction, audio engineering, and camera operation.",
       "We run the full show at the LAN tournament stage, ranging from Cosplay competitions, to the main BYOC tournaments, to the award ceremonies. Our team is responsible for the entire broadcast production, ensuring a seamless viewing experience for both the live audience and online viewers.",
@@ -32,7 +53,27 @@ const dataCases = [
     imageUrl: "/tf.connect-136.jpg",
     secondaryImageUrl: "/tf.connect-205.jpg",
     imageCredit: "Simon Aatig",
-
+    servicesProvided: {
+      broadcastProduction: [
+        "Technical Direction",
+        "Replay Operation",
+        "Audio Engineering",
+        "Camera Operation"
+      ],
+      studioServices: [
+        "Set Design",
+        "Studio Setup"
+      ],
+      eventManagement: [
+        "Production Planning",
+        "Project Management",
+        "Talent Management"
+      ],
+      contentCreation: [
+        "Video Editing",
+        "Event Photography"
+      ]
+    },
     paragraphs: [
       "For TFConnect, a charity fundraising event originating from the Team Fortress 2 community, PXB Media provided a comprehensive suite of broadcast production services. Our team expertly handled technical direction, replay operation, audio engineering, and camera operation, ensuring a seamless viewing experience for both in-person and online attendees. This event, which has raised over $80,000 since 2018 in support of various charities such as SpecialEffect, benefited greatly from our technical expertise and dedication.",
       "A standout feature of this project was our custom-built studio setup. Our set designers and builders created an innovative, tech-themed environment that perfectly complemented the event's forward-thinking atmosphere. This studio became the hub for interviews, panel discussions, and product demonstrations throughout the event, providing a dynamic and engaging space for all activities.",
@@ -52,6 +93,24 @@ const dataCases = [
     imageUrl: "/tf.connect-13.jpg",
     secondaryImageUrl: "/tf.connect-13.jpg",
     imageCredit: "Photographer Name",
+    servicesProvided: {
+      broadcastProduction: [
+        "Technical Direction",
+        "Replay Operations",
+        "In-game Direction",
+        "Audio Engineering",
+        "Overlay Design"
+      ],
+      studioServices: [
+        "Studio Rental",
+        "Set Design",
+        "Lighting Design"
+      ],
+      competitionManagement: [
+        "Competition Area Design",
+        "Player Station Setup"
+      ]
+    },
     paragraphs: [
       "For the Svenska Onlineligan (Swedish Online League) Season 7 Playoffs, PXB Media delivered a comprehensive production package that elevated the event to new heights. Our services spanned broadcast production, studio facilities, and competition area design.",
       "Our broadcast team, led by experienced Technical Directors, managed all aspects of the production. This included replay operations, in-game direction, audio engineering, and implementation of custom-designed overlays. The result was a polished, professional broadcast that captivated viewers and highlighted the skills of Swedens top esports talent.",
@@ -71,6 +130,23 @@ const dataCases = [
     imageUrl: "/tf.connect-14.jpg",
     secondaryImageUrl: "/tf.connect-14.jpg",
     imageCredit: "Photographer Name",
+    servicesProvided: {
+      broadcastProduction: [
+        "Technical Direction",
+        "Replay Operations",
+        "In-game Direction",
+        "Audio Engineering",
+        "IMAG Playout"
+      ],
+      leagueOperations: [
+        "Competition Management",
+        "Game Server Administration"
+      ],
+      eventManagement: [
+        "Stage Management",
+        "Floor Administration"
+      ]
+    },
     paragraphs: [
       "The Subzero E-games in Östersund presented a unique challenge that PXB Media was eager to tackle. Our team provided a full range of services, from broadcast production to league operations, transforming a traditional sports arena into an esports haven.",
       "Our broadcast production team, led by seasoned Technical Directors and Operations Managers, set up a comprehensive system that included replay operations, in-game direction, and audio engineering. A standout feature was our use of the arenas jumbotron for IMAG (Image Magnification) playout, providing spectators with an immersive viewing experience.",
@@ -90,6 +166,25 @@ const dataCases = [
     imageUrl: "/tf.connect-15.jpg",
     secondaryImageUrl: "/tf.connect-15.jpg",
     imageCredit: "Photographer Name",
+    servicesProvided: {
+      eventManagement: [
+        "Production Management",
+        "Project Management"
+      ],
+      broadcastProduction: [
+        "Technical Direction",
+        "Replay Operations",
+        "IMAG Playout"
+      ],
+      graphicsDesign: [
+        "Motion Graphics",
+        "Broadcast Overlays"
+      ],
+      leagueOperations: [
+        "Tournament Management",
+        "Competitive Integrity"
+      ]
+    },
     paragraphs: [
       "For E-sport SM 2023 (Swedish Championships in Esports), PXB Media provided end-to-end event and broadcast management services, creating a flagship event for the Swedish esports scene.",
       "Our Production and Project Managers oversaw all aspects of the event, ensuring seamless coordination between broadcast, competition, and audience experiences. Technical Directors led our broadcast team, managing everything from replay operations to IMAG playout.",
@@ -109,6 +204,19 @@ const dataCases = [
     imageUrl: "/tf.connect-16.jpg",
     secondaryImageUrl: "/tf.connect-16.jpg",
     imageCredit: "Photographer Name",
+    servicesProvided: {
+      productionSetup: [
+        "Technical System Design",
+        "Equipment Rental"
+      ],
+      technicalOperations: [
+        "Technical Direction",
+        "Audio Engineering"
+      ],
+      contentCreation: [
+        "Video Podcast Production"
+      ]
+    },
     paragraphs: [
       "For ABAX, a leading telematics company, PXB Media created a streamlined production setup for their internal ABAX Talks video podcast. This project showcased our ability to adapt our high-end production capabilities to a more intimate, corporate-focused environment.",
       "Our Technical Directors designed a flexible system that could be easily set up and operated, while still delivering professional-quality output. This allowed ABAX to produce regular content without the need for a full-scale studio setup.",
