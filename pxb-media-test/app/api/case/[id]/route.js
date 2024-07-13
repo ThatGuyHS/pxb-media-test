@@ -3,11 +3,11 @@ import { NextResponse } from 'next/server';
 const dataCases = [
   {
     id: '1',
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    author: 'NAME NAME',
-    date: 'DD/MM/YYYY',
-    categories: ['Sports', 'Rocket League', 'Casters', 'Events', 'Case Study'],
-    intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id mauris commodo, tempus leo in, congue urna. Sed in justo vitae mi rutrum eleifend finibus non nulla.',
+    title: 'Dreamhack Summer and Winter',
+    author: 'Adam Peleback',
+    date: '13/07/2024',
+    categories: ['Events', 'Case Study'],
+    intro:  'Proin pretium iaculis eros, interdum pretium diam...',
     imageUrl: '/tf.connect-11.jpg',
     secondaryImageUrl: '/tf.connect-11.jpg',
     imageCredit: 'Photographer Name',
