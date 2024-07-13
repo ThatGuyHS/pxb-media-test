@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-custom no-scrollbar">{children}</body>
+      <body className="font-inter no-scrollbar">{children}</body>
     </html>
   );
 }

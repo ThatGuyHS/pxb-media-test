@@ -29,6 +29,7 @@ const config: Config = {
       },
       fontFamily: {
         custom: ['Campton', 'sans-serif'], 
+        inter: ['Inter', 'sans-serif'],
       },
       animation: {
         'bounce': 'bounce 2s infinite',
