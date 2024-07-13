@@ -186,23 +186,28 @@ const AboutUs = () => {
         </section>
         <footer className="bg-[#040407] text-gray-400 py-4 text-center">
         <div className="container mx-auto px-4">
-          <p>&copy; {new Date().getFullYear()} PXB Media. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} PXB Media. All rights reserved.
+          </p>
+          <p>
+            Contact us: hi@pxbmedia.com
+          </p>
           <div className="flex justify-center space-x-4 mt-2">
-          <SocialIcon
-            url="https://facebook.com/svenskesport"
-            bgColor="#101737"
-            fgColor="#3ABCF9"
-          />
-          <SocialIcon
-            url="https://twitter.com/svenskesport"
-            bgColor="#101737"
-            fgColor="#3ABCF9"
-          />
-          <SocialIcon
-            url="https://discord.gg/RshFVxJpHp"
-            bgColor="#101737"
-            fgColor="#3ABCF9"
-          />
+            <SocialIcon
+              url="https://facebook.com/svenskesport"
+              bgColor="#151C38"
+              fgColor="#3ABCF9"
+            />
+            <SocialIcon
+              url="https://twitter.com/svenskesport"
+              bgColor="#151C38"
+              fgColor="#3ABCF9"
+            />
+            <SocialIcon
+              url="https://discord.gg/RshFVxJpHp"
+              bgColor="#151C38"
+              fgColor="#3ABCF9"
+            />
           </div>
         </div>
       </footer>
