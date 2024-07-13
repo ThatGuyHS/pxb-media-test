@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 const dataCases = [
   {
     id: "1",
-    title: "Dreamhack Summer and Winter",
+    title: "DreamHack Summer and Winter",
     author: "Adam Peleback",
     date: "13/07/2024",
     categories: ["Events", "Case Study"],

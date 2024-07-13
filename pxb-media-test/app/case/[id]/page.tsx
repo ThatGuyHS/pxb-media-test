@@ -158,8 +158,8 @@ const formatCategoryName = (category: string) => {
             <div className="absolute left-10 top-4/4 bg-black bg-opacity-70 p-4 rounded-lg">
               <h3 className="text-primary text-lg font-bold mb-2">SERVICES PROVIDED</h3>
               {Object.entries(data.servicesProvided).map(([category, services]) => (
-                <div key={category}>
-                  <h4 className="bg-primary text-white font-bold mb-1">{formatCategoryName(category)}</h4>
+                <div className='pb-4' key={category}>
+                  <h4 className="bg-primary px-2 text-white justify-center font-bold mb-1">{formatCategoryName(category)}</h4>
                   <ul className="text-sm text-gray-300 list-disc list-inside mb-2">
                     {services.map((service, index) => (
                       <li key={index}>{service}</li>
