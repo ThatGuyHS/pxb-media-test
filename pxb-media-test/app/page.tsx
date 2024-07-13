@@ -150,7 +150,9 @@ export default function Component() {
           </div>
         </section>
 
-        <section className="bg-element py-12 md:py-20 text-white no-scrollbar">
+       
+
+        <section className="bg-[#040407] py-12 md:py-20 text-white no-scrollbar">
           <div className="container mx-auto px-4 md:px-0">
             <div style={{ display: 'flex', overflowX: 'auto', alignItems: 'center', whiteSpace: 'nowrap' }} className="no-scrollbar">
               <div style={{ flexShrink: 0, minWidth: '200px', marginRight: '10px' }}>
@@ -180,6 +182,7 @@ export default function Component() {
             </div>
           </div>
         </section>
+
 
         <section className="bg-[#040407] py-12 md:py-20 text-white">
           <div className="container mx-auto px-4 md:px-0">
@@ -261,7 +264,9 @@ export default function Component() {
           </div>
         </section>
 
-        <section id="contact" className="bg-element py-12 md:py-20 text-white">
+      
+
+        <section id="contact" className="bg-[#040407] py-12 md:py-20 text-white">
           <div className="container mx-auto px-4 md:px-0 text-center">
             <h2 className="mb-6 text-3xl font-bold md:mb-8 md:text-4xl">Contact Us</h2>
             <p className="text-xl md:text-2xl">Reach out to us at:</p>

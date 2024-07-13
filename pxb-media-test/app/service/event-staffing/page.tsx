@@ -259,6 +259,16 @@ const ServicesComponent: React.FC = () => {
           </div>
         </div>
       </section>
+      <footer className="bg-[#040407] text-gray-400 py-4 text-center">
+        <div className="container mx-auto px-4">
+          <p>&copy; {new Date().getFullYear()} PXB Media. All rights reserved.</p>
+          <div className="flex justify-center space-x-4 mt-2">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300">Twitter</a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300">Facebook</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300">Instagram</a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };

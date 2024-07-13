@@ -12,7 +12,7 @@ const teamMembers = [
   },
   {
     name: 'Guido Andriol',
-    role: 'Head Tech Boi & Co-Founder',
+    role: 'Head of Broadcast Tech & Co-Founder',
     email: 'guido@pxbmedia.com',
     image: '/guiDO.jpg',
   },
@@ -23,22 +23,10 @@ const teamMembers = [
     image: '/adam.png',
   },
   {
-    name: 'Team Member 1',
-    role: 'Role',
-    email: 'team1@example.com',
-    image: '/adam.png',
-  },
-  {
-    name: 'Team Member 2',
-    role: 'Role',
-    email: 'team2@example.com',
-    image: '/adam.png',
-  },
-  {
-    name: 'Team Member 3',
-    role: 'Role',
-    email: 'team3@example.com',
-    image: '/adam.png',
+    name: 'Daniel Kauppinen',
+    role: 'Project Manager',
+    email: 'daniel@pxbmedia.com',
+    image: '/kappez.jpg',
   },
 ];
 
@@ -81,7 +69,7 @@ const AboutUs = () => {
       <header className="bg-black text-white transition-colors duration-300 sticky top-0 z-50">
         <nav className="container mx-auto flex flex-wrap items-center justify-between py-1 px-4 md:px-0">
           <div className="flex items-center space-x-6">
-            <a className="text-xl font-bold" href="#">
+            <a className="text-xl font-bold" href="/">
               <img src="/vertical_logo.svg" alt="PXB Media Logo" className="h-10" />
             </a>
             <button
@@ -172,6 +160,39 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+      <section id="contact" className="bg-element py-12 md:py-20 text-white">
+          <div className="container mx-auto px-4 md:px-0 text-center">
+            <h2 className="mb-6 text-3xl font-bold md:mb-8 md:text-4xl">Contact Us</h2>
+            <p className="text-xl md:text-2xl">Reach out to us at:</p>
+            <div className="text-3xl md:text-4xl font-bold mt-6 md:mt-8 flex justify-center space-x-1">
+              <span className="inline-block animate-pulse">h</span>
+              <span className="inline-block animate-pulse" style={{ animationDelay: '0.1s' }}>i</span>
+              <span className="inline-block">@</span>
+              <span className="inline-block animate-pulse" style={{ animationDelay: '0.2s' }}>p</span>
+              <span className="inline-block animate-pulse" style={{ animationDelay: '0.3s' }}>x</span>
+              <span className="inline-block animate-pulse" style={{ animationDelay: '0.4s' }}>b</span>
+              <span className="inline-block animate-pulse" style={{ animationDelay: '0.5s' }}>m</span>
+              <span className="inline-block animate-pulse" style={{ animationDelay: '0.6s' }}>e</span>
+              <span className="inline-block animate-pulse" style={{ animationDelay: '0.7s' }}>d</span>
+              <span className="inline-block animate-pulse" style={{ animationDelay: '0.8s' }}>i</span>
+              <span className="inline-block animate-pulse" style={{ animationDelay: '0.9s' }}>a</span>
+              <span className="inline-block">.</span>
+              <span className="inline-block animate-pulse" style={{ animationDelay: '1s' }}>c</span>
+              <span className="inline-block animate-pulse" style={{ animationDelay: '1.1s' }}>o</span>
+              <span className="inline-block animate-pulse" style={{ animationDelay: '1.2s' }}>m</span>
+            </div>
+          </div>
+        </section>
+        <footer className="bg-[#040407] text-gray-400 py-4 text-center">
+        <div className="container mx-auto px-4">
+          <p>&copy; {new Date().getFullYear()} PXB Media. All rights reserved.</p>
+          <div className="flex justify-center space-x-4 mt-2">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300">Twitter</a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300">Facebook</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300">Instagram</a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };

@@ -28,6 +28,8 @@ const ArticleComponent: React.FC = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
   const openModal = () => setModalIsOpen(true);
   const closeModal = () => setModalIsOpen(false);
 
@@ -37,6 +39,20 @@ const ArticleComponent: React.FC = () => {
     if (menuRef.current && !menuRef.current.contains(event.target)) {
       setMenuOpen(false);
     }
+  };
+
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+
+  const handleToggleServicesDropdown = () => {
+    setServicesDropdownOpen(!servicesDropdownOpen);
+  };
+
+  const handleMouseEnter = () => {
+    setServicesDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setServicesDropdownOpen(false);
   };
 
   useEffect(() => {
@@ -54,10 +70,10 @@ const ArticleComponent: React.FC = () => {
 
   return (
     <div className="bg-black text-white font-custom">
-      <header className="bg-black text-white transition-colors duration-300 sticky top-0 z-50">
+     <header className="bg-black text-white transition-colors duration-300 sticky top-0 z-50">
         <nav className="container mx-auto flex flex-wrap items-center justify-between py-1 px-4 md:px-0">
           <div className="flex items-center space-x-6">
-            <a className="text-xl font-bold" href="#">
+            <a className="text-xl font-bold" href="/">
               <img src="/vertical_logo.svg" alt="PXB Media Logo" className="h-10" />
             </a>
             <button
@@ -68,13 +84,28 @@ const ArticleComponent: React.FC = () => {
             </button>
           </div>
           <div ref={menuRef} className={`${menuOpen ? 'flex' : 'hidden'} flex-col absolute bg-black w-full mt-2 pb-4 md:pb-0 md:w-auto md:static md:flex md:flex-row md:space-x-6`}>
-            <a className="px-4 py-2 hover:text-gray-300 hover:underline decoration-primary transition-colors duration-300" href="#">
-              SERVICES
-            </a>
+            <div
+              className="relative"
+              ref={dropdownRef}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button
+                className="px-4 py-2 hover:text-gray-300 hover:underline decoration-primary transition-colors duration-300"
+              >
+                SERVICES
+              </button>
+              <div className={`${servicesDropdownOpen ? 'block' : 'hidden'} absolute left-0 w-48 bg-black border border-gray-700 rounded-md shadow-lg`}>
+                <div className="invisible absolute -top-4 left-0 w-full h-4"></div> {/* Invisible div to bridge the gap */}
+                <a className="block px-4 py-2 hover:bg-gray-800" href="/service/production">PRODUCTION</a>
+                <a className="block px-4 py-2 hover:bg-gray-800" href="/service/event-staffing">EVENT STAFFING</a>
+                <a className="block px-4 py-2 hover:bg-gray-800" href="/service/development">DEVELOPMENT</a>
+              </div>
+            </div>
             <a className="px-4 py-2 hover:text-gray-300 hover:underline decoration-primary transition-colors duration-300" href="#contact">
               CONTACT
             </a>
-            <a className="px-4 py-2 hover:text-gray-300 hover:underline decoration-primary transition-colors duration-300" href="#">
+            <a className="px-4 py-2 hover:text-gray-300 hover:underline decoration-primary transition-colors duration-300" href="/about-us">
               ABOUT
             </a>
           </div>
@@ -83,6 +114,7 @@ const ArticleComponent: React.FC = () => {
           </Button>
         </nav>
       </header>
+
       <QuoteModal isOpen={modalIsOpen} onRequestClose={closeModal} />
 
       {/* Banner Image Section */}
