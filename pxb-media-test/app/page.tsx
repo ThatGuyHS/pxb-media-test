@@ -93,24 +93,33 @@ export default function Component() {
       </header>
       <QuoteModal isOpen={modalIsOpen} onRequestClose={closeModal} />
       <main className='no-scrollbar'>
-        <section className="relative h-screen bg-cover bg-center bg-gradient-to-b from-black via-gray-800 to-gray-900"
-          style={{ backgroundImage: "url('/tf.connect-11.jpg')" }}>
-          <div className="absolute inset-0 bg-black opacity-50" />
-          <div className="relative flex h-full items-center justify-center">
-            <h2 className="max-w-2xl text-center uppercase text-4xl font-bold text-white sm:text-5xl md:text-6xl">
-              Your partner for all things Live Production
-            </h2>
-          </div>
-          <div className="absolute inset-x-0 bottom-20 flex justify-center">
-            <div className="animate-bounce">
-              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
-                <path d="M6 9l6 6 6-6" />
-              </svg>
-            </div>
-          </div>
-        </section>
+      <section className="relative h-screen bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('/tf.connect-11.jpg')" }}>
+  <div className="absolute inset-0 bg-black opacity-50" />
+  <div className="relative flex flex-col h-full items-center justify-center text-center px-4">
+    <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 animate-fadeIn">
+      Your Partner for All Things Live Production
+    </h1>
+    <p className="text-xl md:text-2xl text-gray-200 mb-8 animate-fadeIn animation-delay-300">
+      Elevating your events with cutting-edge technology and expertise
+    </p>
+    <Button 
+      onClick={openModal} 
+      className="text-[#E3E3E3] bg-primary hover:bg-primaryAlt transition-all duration-300 transform hover:scale-105 animate-fadeIn animation-delay-600" 
+      size="lg"
+    >
+      Get a Free Quote
+    </Button>
+  </div>
+  <div className="absolute inset-x-0 bottom-10 flex justify-center animate-bounce">
+    <a href="#services" className="text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M6 9l6 6 6-6" />
+      </svg>
+    </a>
+  </div>
+</section>
 
-        <section className="bg-[#040407] py-12 md:py-20 text-white font-semibold">
+        <section id='services' className="bg-[#040407] py-12 md:py-20 text-white font-semibold">
           <div className="container mx-auto px-4 md:px-0">
             <h2 className="text-center mb-8 text-3xl font-bold md:text-4xl">Our Services</h2>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
