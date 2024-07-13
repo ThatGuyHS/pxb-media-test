@@ -104,7 +104,7 @@ export default function Component() {
     </p>
     <Button 
       onClick={openModal} 
-      className="text-[#E3E3E3] bg-primary hover:bg-primaryAlt transition-all duration-300 transform hover:scale-105 animate-fadeIn animation-delay-600" 
+      className="text-[#E3E3E3] bg-[#0B0B16] hover:bg-primaryAlt transition-all duration-300 transform hover:scale-105 animate-fadeIn animation-delay-600" 
       size="lg"
     >
       Get a Free Quote
@@ -119,161 +119,115 @@ export default function Component() {
   </div>
 </section>
 
-        <section id='services' className="bg-[#040407] py-12 md:py-20 text-white font-semibold">
-          <div className="container mx-auto px-4 md:px-0">
-            <h2 className="text-center mb-8 text-3xl font-bold md:text-4xl">Our Services</h2>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-              <div className="flex flex-col items-center text-center">
-                <img src="/tf.connect-11.jpg" alt="Broadcast Production" className="mb-4 h-60 w-full object-cover rounded" />
-                <div className="flex flex-col items-center">
-                  <VideoCameraBackIcon fontSize="large" className='mb-2' />
-                  <h3 className="text-xl md:text-2xl">Broadcast Production</h3>
-                </div>
-                <p className="px-4">
-                  Our state-of-the-art esports studio is equipped with the latest technology to provide a professional and immersive experience for your esports events.
-                </p>
-                <Button className="mt-4 bg-primary hover:bg-primaryAlt" variant="default">Read More</Button>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <img src="/tf.connect-11.jpg" alt="Web Development" className="mb-4 h-60 w-full object-cover rounded" />
-                <div className="flex flex-col items-center">
-                  <LaptopIcon fontSize='large' className='mb-2' />
-                  <h3 className="text-xl md:text-2xl">Web Development</h3>
-                </div>
-                <p className="px-4">
-                  From video production to graphic design, our team of creatives can help you craft engaging content to showcase your brand or esports team.
-                </p>
-                <Button className="mt-4 bg-primary hover:bg-primaryAlt" variant="default">Read More</Button>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <img src="/tf.connect-11.jpg" alt="Esports Event Staffing" className="mb-4 h-60 w-full object-cover rounded" />
-                <div className="flex flex-col items-center">
-                  <PeopleOutlineIcon fontSize='large' className='mb-2' />
-                  <h3 className="text-xl md:text-2xl">Esports Event Staffing</h3>
-                </div>
-                <p className="px-4">
-                  Let us handle the logistics of your esports event, from venue selection to live streaming, so you can focus on delivering an unforgettable experience.
-                </p>
-                <Button className="mt-4 bg-primary hover:bg-primaryAlt" variant="default">Read More</Button>
-              </div>
-            </div>
+<section id="services" className="bg-[#040407] py-16 md:py-24 text-white">
+  <div className="container mx-auto px-4 md:px-0">
+    <h2 className="text-center mb-12 text-4xl font-bold md:text-5xl">Our Services</h2>
+    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {[
+        { 
+          icon: <VideoCameraBackIcon fontSize="large" />, 
+          title: "Broadcast Production", 
+          description: "State-of-the-art esports studio equipped with the latest technology for immersive experiences.",
+          image: "/tf.connect-11.jpg",
+          link: "/services/broadcast-production"
+        },
+        { 
+          icon: <LaptopIcon fontSize="large" />, 
+          title: "Web Development", 
+          description: "Crafting engaging content from video production to graphic design to showcase your brand.",
+          image: "/tf.connect-11.jpg",
+          link: "/services/web-development"
+        },
+        { 
+          icon: <PeopleOutlineIcon fontSize="large" />, 
+          title: "Esports Event Staffing", 
+          description: "Handling logistics from venue selection to live streaming for unforgettable events.",
+          image: "/tf.connect-11.jpg",
+          link: "/services/event-staffing"
+        }
+      ].map((service, index) => (
+        <a 
+          key={index} 
+          href={service.link}
+          className="block bg-gray-900 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/50 hover:-translate-y-2 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50"
+        >
+          <div className="h-48 overflow-hidden">
+            <img 
+              src={service.image} 
+              alt={service.title} 
+              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+            />
           </div>
-        </section>
-
+          <div className="p-6">
+            <div className="flex items-center mb-4">
+              <div className="text-primary mr-3">{service.icon}</div>
+              <h3 className="text-2xl font-semibold">{service.title}</h3>
+            </div>
+            <p className="mb-4">{service.description}</p>
+            <span className="inline-block bg-primary hover:bg-primaryAlt transition-colors duration-300 text-white font-bold py-2 px-4 rounded">
+              Learn More
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
         
 
-        <section className="bg-[#040407] py-12 md:py-20 text-white no-scrollbar">
-          <div className="container mx-auto px-4 md:px-0">
-            <div style={{ display: 'flex', overflowX: 'auto', alignItems: 'center', whiteSpace: 'nowrap' }} className="no-scrollbar">
-              <div style={{ flexShrink: 0, minWidth: '200px', marginRight: '10px' }}>
-                <img alt="Client Logo" className="h-12 w-auto" src="/Logo-esu-border.jpg" />
-              </div>
-              <div style={{ flexShrink: 0, minWidth: '200px', marginRight: '10px' }}>
-                <img alt="Client Logo" className="h-12 w-auto" src="/SOL_Logo.svg" />
-              </div>
-              <div style={{ flexShrink: 0, minWidth: '200px', marginRight: '10px' }}>
-                <img alt="Client Logo" className="h-12 w-auto" src="/Raketligan-White.png" />
-              </div>
-              <div style={{ flexShrink: 0, minWidth: '200px', marginRight: '10px' }}>
-                <img alt="Client Logo" className="h-12 w-auto" src="/riotlogo.jpg" />
-              </div>
-              <div style={{ flexShrink: 0, minWidth: '200px', marginRight: '10px' }}>
-                <img alt="Client Logo" className="h-12 w-auto" src="/riotlogo.jpg" />
-              </div>
-              <div style={{ flexShrink: 0, minWidth: '200px', marginRight: '10px' }}>
-                <img alt="Client Logo" className="h-12 w-auto" src="/riotlogo.jpg" />
-              </div>
-              <div style={{ flexShrink: 0, minWidth: '200px', marginRight: '10px' }}>
-                <img alt="Client Logo" className="h-12 w-auto" src="/riotlogo.jpg" />
-              </div>
-              <div style={{ flexShrink: 0, minWidth: '200px', marginRight: '10px' }}>
-                <img alt="Client Logo" className="h-12 w-auto" src="/riotlogo.jpg" />
-              </div>
-            </div>
-          </div>
-        </section>
+<section className="bg-[#040407] py-16 text-white">
+  <div className="container mx-auto px-4 md:px-0">
+    <h2 className="text-center mb-12 text-3xl font-bold md:text-4xl">Trusted By</h2>
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center">
+      {[
+        "/Logo-esu-border.jpg",
+        "/SOL_Logo.svg",
+        "/Raketligan-White.png",
+        "/riotlogo.jpg",
+        // Add more logo paths as needed
+      ].map((logo, index) => (
+        <div key={index} className="flex justify-center">
+          <img 
+            src={logo} 
+            alt={`Client Logo ${index + 1}`} 
+            className="h-12 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
   
-
-        <section className="bg-[#040407] py-12 md:py-20 text-white">
-          <div className="container mx-auto px-4 md:px-0">
-            <h2 className="mb-6 text-3xl font-bold md:mb-8 md:text-4xl"> Cases </h2>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              <a href="/project-1" className="group relative block overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                <img
-                  alt="Project 1"
-                  className="h-60 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  src="/tf.connect-11.jpg"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-70 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
-                  <img src="/event-logo-1.png" alt="Event Logo" className="h-8 mb-2" />
-                  <h3 className="text-xl font-bold">Project 1</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-              </a>
-              <a href="/project-2" className="group relative block overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                <img
-                  alt="Project 2"
-                  className="h-60 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  src="/tf.connect-11.jpg"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-70 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
-                  <img src="/event-logo-2.png" alt="Event Logo" className="h-8 mb-2" />
-                  <h3 className="text-xl font-bold">Project 2</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-              </a>
-              <a href="/project-3" className="group relative block overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                <img
-                  alt="Project 3"
-                  className="h-60 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  src="/tf.connect-11.jpg"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-70 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
-                  <img src="/event-logo-3.png" alt="Event Logo" className="h-8 mb-2" />
-                  <h3 className="text-xl font-bold">Project 3</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-              </a>
-              <a href="/project-4" className="group relative block overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                <img
-                  alt="Project 4"
-                  className="h-60 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  src="/tf.connect-11.jpg"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-70 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
-                  <img src="/event-logo-4.png" alt="Event Logo" className="h-8 mb-2" />
-                  <h3 className="text-xl font-bold">Project 4</h3>
-                  <p>Pellentesque habitant morbi tristique senectus.</p>
-                </div>
-              </a>
-              <a href="/project-5" className="group relative block overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                <img
-                  alt="Project 5"
-                  className="h-60 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  src="/tf.connect-11.jpg"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-70 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
-                  <img src="/event-logo-5.png" alt="Event Logo" className="h-8 mb-2" />
-                  <h3 className="text-xl font-bold">Project 5</h3>
-                  <p>Etiam porta sem malesuada magna mollis euismod.</p>
-                </div>
-              </a>
-              <a href="/project-6" className="group relative block overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                <img
-                  alt="Project 6"
-                  className="h-60 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  src="/tf.connect-11.jpg"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-70 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
-                  <img src="/event-logo-6.png" alt="Event Logo" className="h-8 mb-2" />
-                  <h3 className="text-xl font-bold">Project 6</h3>
-                  <p>Nulla vitae elit libero, a pharetra augue.</p>
-                </div>
-              </a>
-            </div>
+<section className="bg-[#040407] py-16 md:py-24 text-white">
+  <div className="container mx-auto px-4 md:px-0">
+    <h2 className="mb-12 text-4xl font-bold md:text-5xl text-center">Our Cases</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {[
+        { img: "/tf.connect-11.jpg", logo: "/event-logo-1.png", title: "Project 1", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+        { img: "/tf.connect-11.jpg", logo: "/event-logo-2.png", title: "Project 2", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+        { img: "/tf.connect-11.jpg", logo: "/event-logo-3.png", title: "Project 3", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+        { img: "/tf.connect-11.jpg", logo: "/event-logo-4.png", title: "Project 4", desc: "Pellentesque habitant morbi tristique senectus." },
+        { img: "/tf.connect-11.jpg", logo: "/event-logo-5.png", title: "Project 5", desc: "Etiam porta sem malesuada magna mollis euismod." },
+        { img: "/tf.connect-11.jpg", logo: "/event-logo-6.png", title: "Project 6", desc: "Nulla vitae elit libero, a pharetra augue." }
+      ].map((project, index) => (
+        <div key={index} className="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-2xl hover:shadow-primary/30">
+          <img src={project.img} alt={project.title} className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <img src={project.logo} alt={`${project.title} Logo`} className="h-8 mb-2" />
+            <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+            <p className="text-sm">{project.desc}</p>
           </div>
-        </section>
+        </div>
+      ))}
+    </div>
+    <div className="text-center mt-12">
+      <Button className="bg-primary hover:bg-primaryAlt transition-colors duration-300 text-lg" variant="default">
+        View All Projects
+      </Button>
+    </div>
+  </div>
+</section>
 
    
 
@@ -307,17 +261,17 @@ export default function Component() {
           <div className="flex justify-center space-x-4 mt-2">
           <SocialIcon
             url="https://facebook.com/svenskesport"
-            bgColor="#101737"
+            bgColor="#151C38"
             fgColor="#3ABCF9"
           />
           <SocialIcon
             url="https://twitter.com/svenskesport"
-            bgColor="#101737"
+            bgColor="#151C38"
             fgColor="#3ABCF9"
           />
           <SocialIcon
             url="https://discord.gg/RshFVxJpHp"
-            bgColor="#101737"
+            bgColor="#151C38"
             fgColor="#3ABCF9"
           />
           </div>
