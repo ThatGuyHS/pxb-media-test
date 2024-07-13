@@ -260,7 +260,7 @@ const ServicesComponent: React.FC = () => {
           </div>
         </div>
       </section>
-      <footer className="bg-[#040407] text-gray-400 py-4 text-center">
+      <footer id='contact' className="bg-[#040407] text-gray-400 py-4 text-center">
         <div className="container mx-auto px-4">
           <p>
             &copy; {new Date().getFullYear()} PXB Media. All rights reserved.
