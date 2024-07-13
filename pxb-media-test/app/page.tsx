@@ -342,7 +342,7 @@ export default function Component() {
             &copy; {new Date().getFullYear()} PXB Media. All rights reserved.
           </p>
           <p>
-            Contact us: hi@pxbmedia.com
+            Contact: hi@pxbmedia.com
           </p>
           <div className="flex justify-center space-x-4 mt-2">
             <SocialIcon
