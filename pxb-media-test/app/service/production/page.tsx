@@ -237,29 +237,7 @@ const ServicesComponent: React.FC = () => {
           </div>
         </div>
       </div>
-      <section id="contact" className="w-full py-16 bg-black text-white">
-        <div className="container mx-auto px-4 md:px-0 text-center">
-          <h2 className="mb-6 text-3xl font-bold md:mb-8 md:text-4xl">Contact Us</h2>
-          <p className="text-xl md:text-2xl">Reach out to us at:</p>
-          <div className="text-3xl md:text-4xl font-bold mt-6 md:mt-8 flex justify-center space-x-1">
-            <span className="inline-block animate-pulse">h</span>
-            <span className="inline-block animate-pulse" style={{ animationDelay: '0.1s' }}>i</span>
-            <span className="inline-block">@</span>
-            <span className="inline-block animate-pulse" style={{ animationDelay: '0.2s' }}>p</span>
-            <span className="inline-block animate-pulse" style={{ animationDelay: '0.3s' }}>x</span>
-            <span className="inline-block animate-pulse" style={{ animationDelay: '0.4s' }}>b</span>
-            <span className="inline-block animate-pulse" style={{ animationDelay: '0.5s' }}>m</span>
-            <span className="inline-block animate-pulse" style={{ animationDelay: '0.6s' }}>e</span>
-            <span className="inline-block animate-pulse" style={{ animationDelay: '0.7s' }}>d</span>
-            <span className="inline-block animate-pulse" style={{ animationDelay: '0.8s' }}>i</span>
-            <span className="inline-block animate-pulse" style={{ animationDelay: '0.9s' }}>a</span>
-            <span className="inline-block">.</span>
-            <span className="inline-block animate-pulse" style={{ animationDelay: '1s' }}>c</span>
-            <span className="inline-block animate-pulse" style={{ animationDelay: '1.1s' }}>o</span>
-            <span className="inline-block animate-pulse" style={{ animationDelay: '1.2s' }}>m</span>
-          </div>
-        </div>
-      </section>
+     
       <footer className="bg-[#040407] text-gray-400 py-4 text-center">
         <div className="container mx-auto px-4">
           <p>
