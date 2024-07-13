@@ -102,13 +102,12 @@ export default function Component() {
     <p className="text-xl md:text-2xl text-gray-200 mb-8 animate-fadeIn animation-delay-300">
       Elevating your events with cutting-edge technology and expertise
     </p>
-    <Button 
+    <button 
       onClick={openModal} 
-      className="text-[#E3E3E3] bg-[#0B0B16] hover:bg-primaryAlt transition-all duration-300 transform hover:scale-105 animate-fadeIn animation-delay-600" 
-      size="lg"
+      className="h-11 rounded-md px-8 bg-primary text-white dark:bg-white dark:text-black dark:hover:bg-element/90 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-gray-950 dark:focus-visible:ring-gray-300 text-[#E3E3E3] bg-primaryAlt hover:bg-primary transition-all duration-300 transform hover:scale-105 animate-fadeIn animation-delay-600" 
     >
       Get a Free Quote
-    </Button>
+    </button>
   </div>
   <div className="absolute inset-x-0 bottom-10 flex justify-center animate-bounce">
     <a href="#services" className="text-white">
