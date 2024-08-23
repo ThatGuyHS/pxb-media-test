@@ -55,19 +55,28 @@ const dataCases = [
     imageCredit: "Simon Aatig",
     servicesProvided: {
       broadcastProduction: [
+        "Production Planning",
         "Technical Direction",
+        "Technical Ops Management",
         "Replay Operation",
+        "In-game Direction",
         "Audio Engineering",
-        "Camera Operation"
+        "IMAG Playout",
+        "Camera Operation",
+        "Broadcast talent and hosting",
+        "Overlay Design & Implementation"
+
       ],
       studioServices: [
-        "Set Design",
-        "Studio Setup"
+        "Set Design and build",
       ],
       eventManagement: [
-        "Production Planning",
-        "Project Management",
-        "Talent Management"
+       "Project Management",
+       "Segment Coordination",
+       "Talent Management",
+        "Video Editing",
+        "Event Photography", 
+        "Hospitality"
       ],
       contentCreation: [
         "Video Editing",
@@ -85,30 +94,36 @@ const dataCases = [
   {
     id: "3",
     title: "Svenska Onlineligan Season 7 Playoffs: Elevating Swedish Esports",
-    author: "Sven Andersson",
+    author: "Adam Peleback",
     date: "20/09/2024",
     categories: ["Esports", "Broadcasting", "Case Study"],
     intro:
       "PXB Media transformed the Svenska Onlineligan Season 7 Playoffs into a professional, studio-based esports spectacle.",
-    imageUrl: "/tf.connect-13.jpg",
-    secondaryImageUrl: "/tf.connect-13.jpg",
-    imageCredit: "Photographer Name",
+    imageUrl: "/SOLplayoffs.jpg",
+    secondaryImageUrl: "/SOLplayoffs2.jpg",
+    imageCredit: "Simon Aatig",
     servicesProvided: {
       broadcastProduction: [
         "Technical Direction",
+        "Technical Ops Management",
         "Replay Operations",
         "In-game Direction",
+        "Replay Observing", 
         "Audio Engineering",
-        "Overlay Design"
+        "IMAG Playout",
+        "Overlay Design & Implementation"
       ],
       studioServices: [
         "Studio Rental",
-        "Set Design",
-        "Lighting Design"
+        "Set Design and Build",
+        "Lighting Design", 
+        "Broadcast equipment rental"
       ],
       competitionManagement: [
         "Competition Area Design",
-        "Player Station Setup"
+        "Player Station Setup",
+        "Player Warm-up Area Design",
+        "Spectator Viewing Area Design"
       ]
     },
     paragraphs: [
@@ -122,21 +137,26 @@ const dataCases = [
   {
     id: "4",
     title: "Subzero E-games: Bringing Esports to Östersund",
-    author: "Lena Bergström",
+    author: "Adam Peleback",
     date: "05/11/2024",
     categories: ["Esports", "Event Management", "Case Study"],
     intro:
       "PXB Media brought world-class esports production to Östersund with the Subzero E-games, utilizing a sports arena for a unique gaming experience.",
-    imageUrl: "/tf.connect-14.jpg",
-    secondaryImageUrl: "/tf.connect-14.jpg",
-    imageCredit: "Photographer Name",
+    imageUrl: "/subzero1.jpg",
+    secondaryImageUrl: "/subzero2.jpg",
+    imageCredit: "Kirsty Meek",
     servicesProvided: {
       broadcastProduction: [
+       "Broadcast Project Management",
         "Technical Direction",
+        "Technical Ops Management",
         "Replay Operations",
         "In-game Direction",
         "Audio Engineering",
-        "IMAG Playout"
+        "Replay Observing",
+        "IMAG Playouot on Jumbotron",
+        "Overlay Design & Implementation", 
+        "Broadcast Equipment Rental"
       ],
       leagueOperations: [
         "Competition Management",
@@ -158,31 +178,33 @@ const dataCases = [
   {
     id: "5",
     title: "E-sport SM 2023: Championing Swedish Esports",
-    author: "Karl Johansson",
+    author: "Adam Peleback",
     date: "18/12/2024",
     categories: ["Esports", "Event Production", "Case Study"],
     intro:
       "PXB Media delivered a world-class production for E-sport SM 2023, showcasing the best of Swedish esports talent.",
-    imageUrl: "/tf.connect-15.jpg",
-    secondaryImageUrl: "/tf.connect-15.jpg",
-    imageCredit: "Photographer Name",
+    imageUrl: "/esportsm1.png",
+    secondaryImageUrl: "/esportsm2.png",
+    imageCredit: "?",
     servicesProvided: {
-      eventManagement: [
-        "Production Management",
-        "Project Management"
-      ],
+      
       broadcastProduction: [
+        "Broadcast and Event Project Management",
         "Technical Direction",
+        "Technical Ops Management",
         "Replay Operations",
-        "IMAG Playout"
-      ],
-      graphicsDesign: [
-        "Motion Graphics",
-        "Broadcast Overlays"
+        "In-game Direction",
+        "IMAG Playout",
+        "Replay Observing",
+        "Audio Engineering",
+        "Motion Graphics Design",
+        "Overlay Design & Implementation",
+        "Broadcast Equipment Rental"
       ],
       leagueOperations: [
-        "Tournament Management",
-        "Competitive Integrity"
+       "Competition Management",
+        "Game Server Administration",
+        "Player Support"
       ]
     },
     paragraphs: [
@@ -196,13 +218,13 @@ const dataCases = [
   {
     id: "6",
     title: "ABAX Webinar: Streamlined Corporate Communication",
-    author: "Astrid Lindqvist",
+    author: "Adam Peleback",
     date: "22/01/2025",
     categories: ["Corporate", "Webinar Production", "Case Study"],
     intro:
       "PXB Media developed a flexible, high-quality production solution for ABAXs internal ABAX Talks video podcast series.",
-    imageUrl: "/tf.connect-16.jpg",
-    secondaryImageUrl: "/tf.connect-16.jpg",
+    imageUrl: "/abaximg.png",
+    secondaryImageUrl: "/abaximg.png",
     imageCredit: "Photographer Name",
     servicesProvided: {
       productionSetup: [
