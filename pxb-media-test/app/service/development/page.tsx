@@ -133,7 +133,7 @@ const ServicesComponent: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">Web Development Services</h2>
             <p className="text-lg">
               <b>Elevate Your Digital Presence with Our Cutting-Edge Web Solutions</b><br/><br/>
-              At PXB Media, we specialize in creating powerful, innovative web applications that drive your business forward. Our expert team combines creativity with technical prowess to deliver custom solutions that meet your unique needs. From responsive designs to complex web applications, we're committed to helping you achieve your digital goals and stand out in the online landscape.
+              At PXB Media, we specialize in creating powerful, innovative web applications that drive your business forward. Our expert team combines creativity with technical prowess to deliver custom solutions that meet your unique needs. From responsive designs to complex web applications, we are committed to helping you achieve your digital goals and stand out in the online landscape.
             </p>
           </div>
         </div>
@@ -185,7 +185,7 @@ const ServicesComponent: React.FC = () => {
               <h3 className="text-3xl font-semibold mb-4 pl-2">Responsive Web Design</h3>
               <p className="text-base mb-4 pl-2">
                 <b>Advantages of Responsive Web Design:</b><br/><br/>
-                In today's multi-device world, responsive design is crucial. Our approach ensures your website looks stunning and functions flawlessly across all screen sizes. We prioritize mobile-first design, fast loading times, and intuitive navigation to provide an exceptional user experience. This not only improves user engagement but also boosts your search engine rankings, helping you reach a wider audience and drive conversions.
+                In todays multi-device world, responsive design is crucial. Our approach ensures your website looks stunning and functions flawlessly across all screen sizes. We prioritize mobile-first design, fast loading times, and intuitive navigation to provide an exceptional user experience. This not only improves user engagement but also boosts your search engine rankings, helping you reach a wider audience and drive conversions.
               </p>
             </div>
           </div>

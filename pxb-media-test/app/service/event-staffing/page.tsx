@@ -218,7 +218,7 @@ const ServicesComponent: React.FC = () => {
               <h3 className="text-3xl font-semibold mb-4">Broadcast Staff</h3>
               <p className="text-base mb-4">
                 <b>Highlights of Our Broadcast Team:</b><br/><br/>
-                Our professional broadcast staff ensures your event reaches audiences worldwide with top-notch production quality. From camera operators and sound technicians to directors and producers, our team handles every aspect of your live broadcast. We utilize cutting-edge technology and industry best practices to deliver seamless streams, engaging graphics, and immersive viewer experiences. Whether it's managing multiple camera feeds, coordinating with casters, or troubleshooting technical issues, our broadcast team guarantees your event shines on screen.
+                Our professional broadcast staff ensures your event reaches audiences worldwide with top-notch production quality. From camera operators and sound technicians to directors and producers, our team handles every aspect of your live broadcast. We utilize cutting-edge technology and industry best practices to deliver seamless streams, engaging graphics, and immersive viewer experiences. Whether its managing multiple camera feeds, coordinating with casters, or troubleshooting technical issues, our broadcast team guarantees your event shines on screen.
               </p>
             </div>
             <div className="md:w-1/2">

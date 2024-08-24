@@ -132,7 +132,7 @@ const ServicesComponent: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">Live Broadcast Production</h2>
             <p className="text-lg">
               <b>Elevate Your Content with Professional Live Broadcasting</b><br/><br/>
-              At PXB Media, we specialize in delivering high-quality live broadcast productions that captivate audiences and elevate your brand. Our team of experts combines cutting-edge technology with creative storytelling to bring your vision to life. Whether you're hosting a corporate event, streaming a live performance, or producing a webinar series, we have the skills and experience to ensure your broadcast stands out in today's digital landscape. From pre-production planning to real-time execution and post-event analytics, we're committed to making your live broadcast a resounding success.
+              At PXB Media, we specialize in delivering high-quality live broadcast productions that captivate audiences and elevate your brand. Our team of experts combines cutting-edge technology with creative storytelling to bring your vision to life. Whether you are hosting a corporate event, streaming a live performance, or producing a webinar series, we have the skills and experience to ensure your broadcast stands out in todays digital landscape. From pre-production planning to real-time execution and post-event analytics, we are committed to making your live broadcast a resounding success.
             </p>
           </div>
         </div>
@@ -143,7 +143,7 @@ const ServicesComponent: React.FC = () => {
               <h3 className="text-3xl font-semibold mb-4">Multi-Camera Production</h3>
               <p className="text-base mb-4">
                 <b>Key Benefits of Multi-Camera Production:</b><br/><br/>
-                Our multi-camera setup allows for dynamic and engaging broadcasts that keep viewers glued to their screens. By utilizing multiple camera angles, we can capture every important moment from the best perspective, whether it's a speaker on stage, audience reactions, or product demonstrations. This versatility enables smooth transitions between shots, creating a professional and polished look that rivals traditional television broadcasts. Additionally, our multi-camera approach provides redundancy, ensuring uninterrupted coverage even in the unlikely event of technical issues with one camera.
+                Our multi-camera setup allows for dynamic and engaging broadcasts that keep viewers glued to their screens. By utilizing multiple camera angles, we can capture every important moment from the best perspective, whether it is a speaker on stage, audience reactions, or product demonstrations. This versatility enables smooth transitions between shots, creating a professional and polished look that rivals traditional television broadcasts. Additionally, our multi-camera approach provides redundancy, ensuring uninterrupted coverage even in the unlikely event of technical issues with one camera.
               </p>
             </div>
             <div className="md:w-1/2">
