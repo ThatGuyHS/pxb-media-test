@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 const dataCases = [
   {
-    id: "1",
+    id: "dreamhack",
     title: "DreamHack Summer and Winter",
     author: "Adam Peleback",
     date: "13/07/2024",
@@ -43,7 +43,7 @@ const dataCases = [
     ],
   },
   {
-    id: "2",
+    id: "tfconnect",
     title: "TFConnect: Gaming for Charity",
     author: "Adam Peleback",
     date: "15/08/2024",
@@ -92,7 +92,7 @@ const dataCases = [
     ],
   },
   {
-    id: "3",
+    id: "svenkaonlineligan",
     title: "Svenska Onlineligan Season 7 Playoffs: Elevating Swedish Esports",
     author: "Adam Peleback",
     date: "20/09/2024",
@@ -135,7 +135,7 @@ const dataCases = [
     ],
   },
   {
-    id: "4",
+    id: "subzero",
     title: "Subzero E-games: Bringing Esports to Östersund",
     author: "Adam Peleback",
     date: "05/11/2024",
@@ -176,7 +176,7 @@ const dataCases = [
     ],
   },
   {
-    id: "5",
+    id: "esportsm",
     title: "E-sport SM 2023: Championing Swedish Esports",
     author: "Adam Peleback",
     date: "18/12/2024",
@@ -216,7 +216,7 @@ const dataCases = [
     ],
   },
   {
-    id: "6",
+    id: "abax",
     title: "ABAX Webinar: Streamlined Corporate Communication",
     author: "Adam Peleback",
     date: "22/01/2025",

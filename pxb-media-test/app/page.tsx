@@ -84,8 +84,7 @@ export default function Component() {
                   servicesDropdownOpen ? "block" : "hidden"
                 } absolute left-0 w-48 bg-black border border-gray-700 rounded-md shadow-lg`}
               >
-                <div className="invisible absolute -top-4 left-0 w-full h-4"></div>{" "}
-                {/* Invisible div to bridge the gap */}
+                <div className="invisible absolute -top-4 left-0 w-full h-4"></div>
                 <a
                   className="block px-4 py-2 hover:bg-gray-800"
                   href="/service/production"
@@ -245,7 +244,6 @@ export default function Component() {
                 "/SOL_Logo.svg",
                 "/Raketligan-White.png",
                 "/riotlogo.jpg",
-                // Add more logo paths as needed
               ].map((logo, index) => (
                 <div key={index} className="flex justify-center">
                   <img
@@ -267,44 +265,51 @@ export default function Component() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
+                  id: "dreamhack",
                   img: "/dh1.jpg",
                   logo: "/dreamhack-logo.png",
                   title: "Dreamhack Summer and Winter",
                   desc: "We have provided broadcasting services for Dreamhack LAN stage, BYOC admins and admins for free play areas.",
                 },
                 {
+                  id: "tfconnect",
                   img: "/tf.connect-11.jpg",
                   logo: "/tfconnect-logo.png",
                   title: "TF Connect",
-                  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                  desc: "PXB Media provided a full production service for TF Connect's virtual event.",
                 },
                 {
-                  img: "/tf.connect-11.jpg",
+                  id: "svenskaonlineligan",
+                  img: "/SOLplayoffs.jpg",
                   logo: "/event-logo-3.png",
-                  title: "Project 3",
-                  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                  title: "Svenska Onlineligan",
+                  desc: "PXB Media provided a full LAN broadcast production for the Svenska Onlineligan, as well as project management.",
                 },
                 {
-                  img: "/tf.connect-11.jpg",
+                  id: "subzero",
+                  img: "/subzero1.jpg",
                   logo: "/event-logo-4.png",
-                  title: "Project 4",
-                  desc: "Pellentesque habitant morbi tristique senectus.",
+                  title: "Subzero E-Games",
+                  desc: "PXB Media provided a full-scale esports production, helped plan and build the event, and provided event staffing.",
                 },
                 {
-                  img: "/tf.connect-11.jpg",
+                  id: "esportsm",
+                  img: "/esportsm1.png",
                   logo: "/event-logo-5.png",
-                  title: "Project 5",
-                  desc: "Etiam porta sem malesuada magna mollis euismod.",
+                  title: "E-sport SM 2023",
+                  desc: "Together with the Swedish Esports Federation, we provided a full-scale production for E-sport SM 2023.",
                 },
                 {
-                  img: "/tf.connect-11.jpg",
+                  id: "abax",
+                  img: "/abaximg.png",
                   logo: "/event-logo-6.png",
-                  title: "Project 6",
-                  desc: "Nulla vitae elit libero, a pharetra augue.",
+                  title: "Abax Webinar",
+                  desc: "PXB Media provided a live broadcast production for Abax's webinar.",
                 },
               ].map((project, index) => (
-                <div
+                <a
                   key={index}
+                  href={`/case/${project.id}`}
                   className="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-2xl hover:shadow-primary/30"
                 >
                   <img
@@ -313,15 +318,11 @@ export default function Component() {
                     className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                    <img
-                      src={project.logo}
-                      alt={`${project.title} Logo`}
-                      className="h-auto w-auto mb-2"
-                    />
+                    
                     <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                     <p className="text-sm">{project.desc}</p>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
             <div className="text-center mt-12">

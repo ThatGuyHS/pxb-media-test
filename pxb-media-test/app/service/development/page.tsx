@@ -7,33 +7,33 @@ import { SocialIcon } from "react-social-icons";
 const featuresData = [
   {
     icon: '/tf.connect-11.jpg',
-    title: "Feature Name",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id mauris commodo, tempus leo in, congue urna. Sed in justo vitae mi rutrum eleifend finibus non nulla."
+    title: "Custom Web Applications",
+    description: "We design and develop tailor-made web applications that align perfectly with your business needs, ensuring scalability, performance, and user-friendly interfaces."
   },
   {
     icon: '/tf.connect-11.jpg',
-    title: "Feature Name",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id mauris commodo, tempus leo in, congue urna. Sed in justo vitae mi rutrum eleifend finibus non nulla."
+    title: "Responsive Web Design",
+    description: "Our team creates visually stunning, mobile-first websites that adapt seamlessly to all devices, providing an optimal user experience across desktops, tablets, and smartphones."
   },
   {
     icon: '/tf.connect-11.jpg',
-    title: "Feature Name",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id mauris commodo, tempus leo in, congue urna. Sed in justo vitae mi rutrum eleifend finibus non nulla."
+    title: "E-commerce Solutions",
+    description: "We build robust and secure e-commerce platforms that drive sales, integrate payment gateways, and offer intuitive product management systems to boost your online business."
   },
   {
     icon: '/tf.connect-11.jpg',
-    title: "Feature Name",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id mauris commodo, tempus leo in, congue urna. Sed in justo vitae mi rutrum eleifend finibus non nulla."
+    title: "Content Management Systems",
+    description: "Our custom CMS solutions empower you to easily manage and update your website content, ensuring your site remains fresh and relevant without technical hassle."
   },
   {
     icon: '/tf.connect-11.jpg',
-    title: "Feature Name",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id mauris commodo, tempus leo in, congue urna. Sed in justo vitae mi rutrum eleifend finibus non nulla."
+    title: "Web Application Maintenance",
+    description: "We provide ongoing support and maintenance services to keep your web applications running smoothly, including updates, security patches, and performance optimizations."
   },
   {
     icon: '/tf.connect-11.jpg',
-    title: "Feature Name",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id mauris commodo, tempus leo in, congue urna. Sed in justo vitae mi rutrum eleifend finibus non nulla."
+    title: "API Development and Integration",
+    description: "Our team specializes in creating robust APIs and seamlessly integrating third-party services to enhance your web application's functionality and connectivity."
   }
 ];
 
@@ -96,7 +96,7 @@ const ServicesComponent: React.FC = () => {
                 SERVICES
               </button>
               <div className={`${servicesDropdownOpen ? 'block' : 'hidden'} absolute left-0 w-48 bg-black border border-gray-700 rounded-md shadow-lg`}>
-                <div className="invisible absolute -top-4 left-0 w-full h-4"></div> {/* Invisible div to bridge the gap */}
+                <div className="invisible absolute -top-4 left-0 w-full h-4"></div>
                 <a className="block px-4 py-2 hover:bg-gray-800" href="/service/production">PRODUCTION</a>
                 <a className="block px-4 py-2 hover:bg-gray-800" href="/service/event-staffing">EVENT STAFFING</a>
                 <a className="block px-4 py-2 hover:bg-gray-800" href="/service/development">DEVELOPMENT</a>
@@ -127,15 +127,13 @@ const ServicesComponent: React.FC = () => {
       </div>
 
       <div className="w-full px-4 pt-16">
-        {/* Live Broadcast Production Section */}
+        {/* Web Development Services Section */}
         <div className="w-full py-16 bg-black text-white">
           <div className="container mx-auto text-center px-4 md:px-0 pb-8">
-            <h2 className="text-4xl font-bold mb-4">Live Broadcast Production</h2>
+            <h2 className="text-4xl font-bold mb-4">Web Development Services</h2>
             <p className="text-lg">
-              <b>Highlight of Live Broadcast Production: Highlight of Live Broadcast Production:Highlight of Live Broadcast Production:Highlight of Live Broadcast Production:Highlight of Live Broadcast Production:</b><br/><br/>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id mauris commodo, tempus leo in, congue urna. Sed in justo vitae mi rutrum eleifend finibus non nulla.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id mauris commodo, tempus leo in, congue urna. Sed in justo vitae mi rutrum eleifend finibus non nulla.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id mauris commodo, tempus leo in, congue urna. Sed in justo vitae mi rutrum eleifend finibus non nulla.
+              <b>Elevate Your Digital Presence with Our Cutting-Edge Web Solutions</b><br/><br/>
+              At PXB Media, we specialize in creating powerful, innovative web applications that drive your business forward. Our expert team combines creativity with technical prowess to deliver custom solutions that meet your unique needs. From responsive designs to complex web applications, we're committed to helping you achieve your digital goals and stand out in the online landscape.
             </p>
           </div>
         </div>
@@ -144,17 +142,15 @@ const ServicesComponent: React.FC = () => {
         <div className="w-full py-16 bg-element text-white">
           <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left px-4 md:px-0">
             <div className="md:w-1/2">
-              <h3 className="text-3xl font-semibold mb-4">Feature A</h3>
+              <h3 className="text-3xl font-semibold mb-4">Custom Web Applications</h3>
               <p className="text-base mb-4">
-                <b>Key Benefits of Feature A:</b><br/><br/>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id mauris commodo, tempus leo in, congue urna. Sed in justo vitae mi rutrum eleifend finibus non nulla.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id mauris commodo, tempus leo in, congue urna. Sed in justo vitae mi rutrum eleifend finibus non nulla.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id mauris commodo, tempus leo in, congue urna. Sed in justo vitae mi rutrum eleifend finibus non nulla.
+                <b>Key Benefits of Custom Web Applications:</b><br/><br/>
+                Our bespoke web applications are tailored to your specific business requirements, offering unparalleled flexibility and efficiency. We employ cutting-edge technologies and best practices to ensure your application is scalable, secure, and high-performing. From customer portals to complex management systems, we bring your vision to life with intuitive interfaces and robust functionality that streamline your operations and enhance user engagement.
               </p>
             </div>
             <div className="md:w-1/2">
               <div className="relative" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
-                <img src='/tf.connect-11.jpg' alt="Feature A" className="absolute top-0 left-0 w-full h-full object-cover rounded-lg" />
+                <img src='/tf.connect-11.jpg' alt="Custom Web Applications" className="absolute top-0 left-0 w-full h-full object-cover rounded-lg" />
               </div>
             </div>
           </div>
@@ -163,7 +159,7 @@ const ServicesComponent: React.FC = () => {
         {/* Features Grid Section */}
         <div className="w-full py-16 bg-black text-white">
           <div className="container mx-auto px-4 md:px-0">
-            <h2 className="text-4xl font-bold mb-8 text-center">Our Features</h2>
+            <h2 className="text-4xl font-bold mb-8 text-center">Our Web Development Expertise</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuresData.map((feature, index) => (
                 <div key={index} className="p-6">
@@ -182,16 +178,14 @@ const ServicesComponent: React.FC = () => {
           <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left px-4 md:px-0">
             <div className="md:w-1/2">
               <div className="relative" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
-                <img src='/tf.connect-11.jpg' alt="Feature B" className="absolute top-0 left-0 w-full h-full object-cover rounded-lg" />
+                <img src='/tf.connect-11.jpg' alt="Responsive Web Design" className="absolute top-0 left-0 w-full h-full object-cover rounded-lg" />
               </div>
             </div>
             <div className="md:w-1/2">
-              <h3 className="text-3xl font-semibold mb-4 pl-2">Feature B</h3>
+              <h3 className="text-3xl font-semibold mb-4 pl-2">Responsive Web Design</h3>
               <p className="text-base mb-4 pl-2">
-                <b>Advantages of Feature B:</b><br/><br/>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id mauris commodo, tempus leo in, congue urna. Sed in justo vitae mi rutrum eleifend finibus non nulla.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id mauris commodo, tempus leo in, congue urna. Sed in justo vitae mi rutrum eleifend finibus non nulla.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id mauris commodo, tempus leo in, congue urna. Sed in justo vitae mi rutrum eleifend finibus non nulla.
+                <b>Advantages of Responsive Web Design:</b><br/><br/>
+                In today's multi-device world, responsive design is crucial. Our approach ensures your website looks stunning and functions flawlessly across all screen sizes. We prioritize mobile-first design, fast loading times, and intuitive navigation to provide an exceptional user experience. This not only improves user engagement but also boosts your search engine rankings, helping you reach a wider audience and drive conversions.
               </p>
             </div>
           </div>
@@ -202,16 +196,16 @@ const ServicesComponent: React.FC = () => {
           <div className="container mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
-                <h3 className="text-4xl font-bold mb-2">48+</h3>
-                <p className="text-lg">Something</p>
+                <h3 className="text-4xl font-bold mb-2">100+</h3>
+                <p className="text-lg">Successful Projects</p>
               </div>
               <div>
-                <h3 className="text-4xl font-bold mb-2">4</h3>
-                <p className="text-lg">Something</p>
+                <h3 className="text-4xl font-bold mb-2">98%</h3>
+                <p className="text-lg">Client Satisfaction</p>
               </div>
               <div>
-                <h3 className="text-4xl font-bold mb-2">900,000+</h3>
-                <p className="text-lg">Something</p>
+                <h3 className="text-4xl font-bold mb-2">24/7</h3>
+                <p className="text-lg">Support Available</p>
               </div>
             </div>
           </div>
@@ -221,17 +215,15 @@ const ServicesComponent: React.FC = () => {
         <div className="w-full py-16 bg-element text-white">
           <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left px-4 md:px-0">
             <div className="md:w-1/2">
-              <h3 className="text-3xl font-semibold mb-4">Feature C</h3>
+              <h3 className="text-3xl font-semibold mb-4">E-commerce Solutions</h3>
               <p className="text-base mb-4">
-                <b>Highlights of Feature C:</b><br/><br/>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id mauris commodo, tempus leo in, congue urna. Sed in justo vitae mi rutrum eleifend finibus non nulla.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id mauris commodo, tempus leo in, congue urna. Sed in justo vitae mi rutrum eleifend finibus non nulla.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id mauris commodo, tempus leo in, congue urna. Sed in justo vitae mi rutrum eleifend finibus non nulla.
+                <b>Highlights of Our E-commerce Solutions:</b><br/><br/>
+                Our e-commerce platforms are built to drive sales and grow your online business. We integrate secure payment gateways, implement user-friendly product management systems, and optimize the checkout process for maximum conversions. Our solutions include features like inventory management, customer accounts, and detailed analytics to help you make data-driven decisions. We ensure your online store is not just a sales channel, but a powerful tool for customer engagement and brand building.
               </p>
             </div>
             <div className="md:w-1/2">
               <div className="relative" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
-                <img src='/tf.connect-11.jpg' alt="Feature C" className="absolute top-0 left-0 w-full h-full object-cover rounded-lg" />
+                <img src='/tf.connect-11.jpg' alt="E-commerce Solutions" className="absolute top-0 left-0 w-full h-full object-cover rounded-lg" />
               </div>
             </div>
           </div>
