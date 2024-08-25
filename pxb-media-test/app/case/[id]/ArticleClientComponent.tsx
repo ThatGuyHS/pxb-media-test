@@ -105,7 +105,7 @@ const ArticleClientComponent: React.FC<{ initialData: ArticleData }> = ({ initia
             className="w-full object-cover shadow-lg rounded-lg"
           />
           <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black via-black/70 to-transparent rounded-lg">
-            <h1 className="text-5xl font-bold mb-4">{data.title}</h1>
+            <h1 className="text-3xl md:text-5xl font-bold mb-4">{data.title}</h1>
           </div>
         </div>
       </div>
@@ -121,14 +121,14 @@ const ArticleClientComponent: React.FC<{ initialData: ArticleData }> = ({ initia
         </p>
       </div>
 
-      <div className="px-8 py-12 max-w-4xl mx-auto md:flex md:gap-8">
+      <div className="px-8 py-12 pt-20 max-w-4xl mx-auto md:flex md:gap-8">
         {data.servicesProvided && (
           <div className="md:w-1/3 mt-8 md:mt-0 hidden md:block">
             <div className="bg-black bg-opacity-70 p-4 rounded-lg">
               <h3 className="text-primary text-lg font-bold mb-2">SERVICES PROVIDED</h3>
               {Object.entries(data.servicesProvided).map(([category, services]) => (
                 <div className='pb-4' key={category}>
-                  <h4 className="bg-primary px-2 text-white justify-center font-bold mb-1">{formatCategoryName(category)}</h4>
+                  <h4 className="bg-primary px-2 text-white flex items-center font-bold mb-1 h-8">{formatCategoryName(category)}</h4>
                   <ul className="text-sm text-gray-300 list-disc list-inside mb-2">
                     {services.map((service, index) => (
                       <li key={index}>{service}</li>
@@ -157,7 +157,7 @@ const ArticleClientComponent: React.FC<{ initialData: ArticleData }> = ({ initia
             <h3 className="text-primary text-lg font-bold mb-2">SERVICES PROVIDED</h3>
             {Object.entries(data.servicesProvided).map(([category, services]) => (
               <div className='pb-4' key={category}>
-                <h4 className="bg-primary px-2 text-white justify-center font-bold mb-1">{formatCategoryName(category)}</h4>
+                <h4 className="bg-primary px-2 text-white flex items-center font-bold mb-1 h-8">{formatCategoryName(category)}</h4>
                 <ul className="text-sm text-gray-300 list-disc pl-4 mb-2">
                   {services.map((service, index) => (
                     <li key={index}>{service}</li>
