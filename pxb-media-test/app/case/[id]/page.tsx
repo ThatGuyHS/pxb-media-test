@@ -44,16 +44,17 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const data = await getArticleData(params.id);
 
-  const previousImages = (await parent).openGraph?.images || []
-
   return {
-    title: data.title,
+    title: {
+      absolute: data.title, // This will overwrite any parent title
+    },
     description: data.intro,
     openGraph: {
-      images: [data.imageUrl, ...previousImages],
+      images: [data.imageUrl], // Only use this page's image
+      title: data.title,
       description: data.intro,
     },
-  }
+  };
 }
 
 export default async function Page({ params }: Props) {

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-
-
 export const metadata: Metadata = {
   title: {
     template: '%s | PXB Media - Solving all your event and broadcast needs',
@@ -11,7 +9,11 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://pxbmedia.com/'),
   description: "Your partner for all things Live Production",
   openGraph: {
-    images: "/tf.connect-11.jpg",
+    type: 'website',
+    siteName: 'PXB Media',
+    images: ["/tf.connect-11.jpg"],
+    title: 'PXB Media - Solving all your event and broadcast needs',
+    description: "Your partner for all things Live Production",
   }
 };
 
