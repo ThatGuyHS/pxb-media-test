@@ -258,84 +258,85 @@ export default function Component() {
         </section>
 
         <section className="bg-[#040407] py-16 md:py-24 text-white">
-          <div className="container mx-auto px-4 md:px-0">
-            <h2 className="mb-12 text-4xl font-bold md:text-5xl text-center">
-              Our Cases
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  id: "dreamhack",
-                  img: "/dh1.jpg",
-                  logo: "/dreamhack-logo.png",
-                  title: "Dreamhack Summer and Winter",
-                  desc: "We have provided broadcasting services for Dreamhack LAN stage, BYOC admins and admins for free play areas.",
-                },
-                {
-                  id: "tfconnect",
-                  img: "/tf.connect-11.jpg",
-                  logo: "/tfconnect-logo.png",
-                  title: "TF Connect",
-                  desc: "PXB Media provided a full production service for TF Connect's virtual event.",
-                },
-                {
-                  id: "svenskaonlineligan",
-                  img: "/SOLplayoffs.jpg",
-                  logo: "/event-logo-3.png",
-                  title: "Svenska Onlineligan",
-                  desc: "PXB Media provided a full LAN broadcast production for the Svenska Onlineligan, as well as project management.",
-                },
-                {
-                  id: "subzero",
-                  img: "/subzero1.jpg",
-                  logo: "/event-logo-4.png",
-                  title: "Subzero E-Games",
-                  desc: "PXB Media provided a full-scale esports production, helped plan and build the event, and provided event staffing.",
-                },
-                {
-                  id: "esportsm",
-                  img: "/esportsm1.png",
-                  logo: "/event-logo-5.png",
-                  title: "E-sport SM 2023",
-                  desc: "Together with the Swedish Esports Federation, we provided a full-scale production for E-sport SM 2023.",
-                },
-                {
-                  id: "abax",
-                  img: "/abaximg.png",
-                  logo: "/event-logo-6.png",
-                  title: "Abax Webinar",
-                  desc: "PXB Media provided a live broadcast production for Abax's webinar.",
-                },
-              ].map((project, index) => (
-                <a
-                  key={index}
-                  href={`/case/${project.id}`}
-                  className="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-2xl hover:shadow-primary/30"
-                >
-                  <img
-                    src={project.img}
-                    alt={project.title}
-                    className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                    
-                    <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                    <p className="text-sm">{project.desc}</p>
-                  </div>
-                </a>
-              ))}
-            </div>
-            <div className="text-center mt-12">
-              <Button
-                size={"lg"}
-                className="bg-primary hover:bg-primaryAlt transition-colors duration-300 text-lg"
-                variant="default"
-              >
-                View All Projects
-              </Button>
+  <div className="container mx-auto px-4 md:px-0">
+    <h2 className="mb-12 text-4xl font-bold md:text-5xl text-center">
+      Our Cases
+    </h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {[
+        {
+          id: "dreamhack",
+          img: "/dh1.jpg",
+          logo: "/dreamhack-logo.png",
+          title: "Dreamhack Summer and Winter",
+          desc: "We have provided broadcasting services for Dreamhack LAN stage, BYOC admins and admins for free play areas.",
+        },
+        {
+          id: "tfconnect",
+          img: "/tf.connect-11.jpg",
+          logo: "/tfconnect-logo.png",
+          title: "TF Connect",
+          desc: "PXB Media provided a full production service for TF Connect's virtual event.",
+        },
+        {
+          id: "svenskaonlineligan",
+          img: "/SOLplayoffs.jpg",
+          logo: "/event-logo-3.png",
+          title: "Svenska Onlineligan",
+          desc: "PXB Media provided a full LAN broadcast production for the Svenska Onlineligan, as well as project management.",
+        },
+        {
+          id: "subzero",
+          img: "/subzero1.jpg",
+          logo: "/event-logo-4.png",
+          title: "Subzero E-Games",
+          desc: "PXB Media provided a full-scale esports production, helped plan and build the event, and provided event staffing.",
+        },
+        {
+          id: "esportsm",
+          img: "/esportsm1.png",
+          logo: "/event-logo-5.png",
+          title: "E-sport SM 2023",
+          desc: "Together with the Swedish Esports Federation, we provided a full-scale production for E-sport SM 2023.",
+        },
+        {
+          id: "abax",
+          img: "/abaximg.png",
+          logo: "/event-logo-6.png",
+          title: "Abax Webinar",
+          desc: "PXB Media provided a live broadcast production for Abax's webinar.",
+        },
+      ].map((project, index) => (
+        <a
+          key={index}
+          href={`/case/${project.id}`}
+          className="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:shadow-2xl hover:shadow-primary/30"
+        >
+          <img
+            src={project.img}
+            alt={project.title}
+            className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent flex flex-col justify-end p-6">
+            <div className="opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+              <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+              <p className="text-sm">{project.desc}</p>
             </div>
           </div>
-        </section>
+        </a>
+      ))}
+    </div>
+    <div className="text-center mt-12">
+      <Button
+        size="lg"
+        className="bg-primary hover:bg-primaryAlt transition-colors duration-300 text-lg"
+        variant="default"
+      >
+        View All Projects
+      </Button>
+    </div>
+  </div>
+</section>
       </main>
       <footer id='contact' className="bg-[#040407] text-gray-400 py-8">
   <div className="container mx-auto px-4">
