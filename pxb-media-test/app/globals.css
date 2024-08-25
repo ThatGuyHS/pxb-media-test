@@ -188,7 +188,7 @@ body {
 
   @font-face {
     font-family: 'Inter';
-    src: url(/fonts/Inter-black.otf);
+    src: url(/fonts/Inter-black.ttf);
     font-weight: 900;
     font-style: normal;
     font-display: swap;
