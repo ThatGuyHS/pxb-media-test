@@ -1,5 +1,6 @@
 import { Metadata, ResolvingMetadata } from 'next';
 import ArticleClientComponent from './ArticleClientComponent';
+import { headers } from 'next/headers';
 
 type ArticleData = {
   id: string;
@@ -21,28 +22,6 @@ type Props = {
   params: { id: string }
 }
 
-export async function generateMetadata(
-  { params }: Props,
-  parent: ResolvingMetadata
-): Promise<Metadata> {
-  const id = params.id;
-  const response = await fetch(`http://localhost:3000/api/case/${id}`);
-  const data: ArticleData = await response.json();
-
-  const previousImages = (await parent).openGraph?.images || []
-
-  return {
-    title: data.title,
-    description: data.intro,
-    openGraph: {
-      images: [data.imageUrl, ...previousImages],
-      description: data.intro,
-    },
-  }
-}
-
-import { headers } from 'next/headers';
-
 async function getArticleData(id: string): Promise<ArticleData> {
   const headersList = headers();
   const domain = headersList.get('host') || '';
@@ -57,6 +36,24 @@ async function getArticleData(id: string): Promise<ArticleData> {
   }
   
   return res.json();
+}
+
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const data = await getArticleData(params.id);
+
+  const previousImages = (await parent).openGraph?.images || []
+
+  return {
+    title: data.title,
+    description: data.intro,
+    openGraph: {
+      images: [data.imageUrl, ...previousImages],
+      description: data.intro,
+    },
+  }
 }
 
 export default async function Page({ params }: Props) {
