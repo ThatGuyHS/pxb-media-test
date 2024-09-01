@@ -34,7 +34,7 @@ const featuresData = [
   {
     icon: LanguageIcon,
     title: "Remote Production",
-    description: "We offer remote production capabilities, allowing us to produce high-quality broadcasts from multiple locations. This flexibility is perfect for distributed events or when on-site production isn't feasible."
+    description: "We offer remote production capabilities, allowing us to produce high-quality broadcasts from multiple locations. This flexibility is perfect for distributed events or when on-site production is not feasible."
   },
   {
     icon: MovieFilterIcon,
