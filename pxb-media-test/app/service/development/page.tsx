@@ -3,35 +3,43 @@ import React, { useState, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import QuoteModal from '@/components/modal/quotemodal';
 import { SocialIcon } from "react-social-icons";
+import LaptopIcon from "@mui/icons-material/Laptop";
+import CodeIcon from "@mui/icons-material/Code";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import ArticleIcon from "@mui/icons-material/Article";
+import BuildIcon from "@mui/icons-material/Build";
+import ApiIcon from "@mui/icons-material/Api";
+
+
 
 const featuresData = [
   {
-    icon: '/tf.connect-11.jpg',
+    icon: CodeIcon,
     title: "Custom Web Applications",
     description: "We design and develop tailor-made web applications that align perfectly with your business needs, ensuring scalability, performance, and user-friendly interfaces."
   },
   {
-    icon: '/tf.connect-11.jpg',
+    icon: LaptopIcon,
     title: "Responsive Web Design",
     description: "Our team creates visually stunning, mobile-first websites that adapt seamlessly to all devices, providing an optimal user experience across desktops, tablets, and smartphones."
   },
   {
-    icon: '/tf.connect-11.jpg',
+    icon: ShoppingCartIcon,
     title: "E-commerce Solutions",
     description: "We build robust and secure e-commerce platforms that drive sales, integrate payment gateways, and offer intuitive product management systems to boost your online business."
   },
   {
-    icon: '/tf.connect-11.jpg',
+    icon: ArticleIcon,
     title: "Content Management Systems",
     description: "Our custom CMS solutions empower you to easily manage and update your website content, ensuring your site remains fresh and relevant without technical hassle."
   },
   {
-    icon: '/tf.connect-11.jpg',
+    icon: BuildIcon,
     title: "Web Application Maintenance",
     description: "We provide ongoing support and maintenance services to keep your web applications running smoothly, including updates, security patches, and performance optimizations."
   },
   {
-    icon: '/tf.connect-11.jpg',
+    icon: ApiIcon,
     title: "API Development and Integration",
     description: "Our team specializes in creating robust APIs and seamlessly integrating third-party services to enhance your web application's functionality and connectivity."
   }
@@ -126,110 +134,112 @@ const ServicesComponent: React.FC = () => {
         </div>
       </div>
 
-      <div className="w-full px-4 pt-16">
+      <div className="w-full px-6 py-20">
         {/* Web Development Services Section */}
-        <div className="w-full py-16 bg-black text-white">
-          <div className="container mx-auto text-center px-4 md:px-0 pb-8">
-            <h2 className="text-4xl font-bold mb-4">Web Development Services</h2>
-            <p className="text-lg">
-              <b>Elevate Your Digital Presence with Our Cutting-Edge Web Solutions</b><br/><br/>
+        <div className="w-full py-20 bg-black text-white">
+          <div className="container mx-auto text-center px-6 md:px-0 pb-12">
+            <h2 className="text-4xl font-bold mb-6">Web Development Services</h2>
+            <p className="text-lg max-w-3xl mx-auto">
+              <b className="block mb-4">Elevate Your Digital Presence with Our Cutting-Edge Web Solutions</b>
               At PXB Media, we specialize in creating powerful, innovative web applications that drive your business forward. Our expert team combines creativity with technical prowess to deliver custom solutions that meet your unique needs. From responsive designs to complex web applications, we are committed to helping you achieve your digital goals and stand out in the online landscape.
             </p>
           </div>
         </div>
 
         {/* Feature A Section */}
-        <div className="w-full py-16 bg-element text-white">
-          <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left px-4 md:px-0">
+        <div className="w-full py-20 bg-element text-white">
+          <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left px-6 md:px-0 space-y-8 md:space-y-0 md:space-x-12">
             <div className="md:w-1/2">
-              <h3 className="text-3xl font-semibold mb-4">Custom Web Applications</h3>
-              <p className="text-base mb-4">
-                <b>Key Benefits of Custom Web Applications:</b><br/><br/>
+              <h3 className="text-3xl font-semibold mb-6">Custom Web Applications</h3>
+              <p className="text-base">
+                <b className="block mb-4">Key Benefits of Custom Web Applications:</b>
                 Our bespoke web applications are tailored to your specific business requirements, offering unparalleled flexibility and efficiency. We employ cutting-edge technologies and best practices to ensure your application is scalable, secure, and high-performing. From customer portals to complex management systems, we bring your vision to life with intuitive interfaces and robust functionality that streamline your operations and enhance user engagement.
               </p>
             </div>
             <div className="md:w-1/2">
               <div className="relative" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
-                <img src='/tf.connect-11.jpg' alt="Custom Web Applications" className="absolute top-0 left-0 w-full h-full object-cover rounded-lg" />
+                <img src='/tf.connect-11.jpg' alt="Custom Web Applications" className="absolute top-0 left-0 w-full h-full object-cover rounded-lg shadow-lg" />
               </div>
             </div>
           </div>
         </div>
 
         {/* Features Grid Section */}
-        <div className="w-full py-16 bg-black text-white">
-          <div className="container mx-auto px-4 md:px-0">
-            <h2 className="text-4xl font-bold mb-8 text-center">Our Web Development Expertise</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {featuresData.map((feature, index) => (
-                <div key={index} className="p-6">
-                  <img src={feature.icon} alt={`${feature.title} icon`} className="h-16 mb-2" />
-                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-base font-semibold mb-2">Key Points of {feature.title}:</p>
-                  <p className="text-sm">{feature.description}</p>
-                </div>
-              ))}
+        <div className="w-full py-20 bg-black text-white">
+          <div className="container mx-auto px-6 md:px-0">
+            <h2 className="text-4xl font-bold mb-12 text-center">Our Web Development Expertise</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+              {featuresData.map((feature, index) => {
+                const IconComponent = feature.icon;
+                return (
+                  <div key={index} className="p-8 bg-element rounded-lg shadow-md">
+                    <IconComponent className="h-16 w-16 mb-4 text-primary" />
+                    <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
+                    <p className="text-base font-semibold mb-3">Key Points:</p>
+                    <p className="text-sm">{feature.description}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
 
         {/* Feature B Section */}
-        <div className="w-full py-16 bg-element text-white">
-          <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left px-4 md:px-0">
+        <div className="w-full py-20 bg-element text-white">
+          <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left px-6 md:px-0 space-y-8 md:space-y-0 md:space-x-12">
             <div className="md:w-1/2">
               <div className="relative" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
-                <img src='/tf.connect-11.jpg' alt="Responsive Web Design" className="absolute top-0 left-0 w-full h-full object-cover rounded-lg" />
+                <img src='/tf.connect-11.jpg' alt="Responsive Web Design" className="absolute top-0 left-0 w-full h-full object-cover rounded-lg shadow-lg" />
               </div>
             </div>
             <div className="md:w-1/2">
-              <h3 className="text-3xl font-semibold mb-4 pl-2">Responsive Web Design</h3>
-              <p className="text-base mb-4 pl-2">
-                <b>Advantages of Responsive Web Design:</b><br/><br/>
-                In todays multi-device world, responsive design is crucial. Our approach ensures your website looks stunning and functions flawlessly across all screen sizes. We prioritize mobile-first design, fast loading times, and intuitive navigation to provide an exceptional user experience. This not only improves user engagement but also boosts your search engine rankings, helping you reach a wider audience and drive conversions.
+              <h3 className="text-3xl font-semibold mb-6">Responsive Web Design</h3>
+              <p className="text-base">
+                <b className="block mb-4">Advantages of Responsive Web Design:</b>
+                In today's multi-device world, responsive design is crucial. Our approach ensures your website looks stunning and functions flawlessly across all screen sizes. We prioritize mobile-first design, fast loading times, and intuitive navigation to provide an exceptional user experience. This not only improves user engagement but also boosts your search engine rankings, helping you reach a wider audience and drive conversions.
               </p>
             </div>
           </div>
         </div>
 
         {/* Statistics Section */}
-        <div className="w-full bg-primary py-16 text-center text-white">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="w-full bg-primary py-20 text-center text-white">
+          <div className="container mx-auto px-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               <div>
-                <h3 className="text-4xl font-bold mb-2">100+</h3>
-                <p className="text-lg">Successful Projects</p>
+                <h3 className="text-5xl font-bold mb-4">100+</h3>
+                <p className="text-xl">Successful Projects</p>
               </div>
               <div>
-                <h3 className="text-4xl font-bold mb-2">98%</h3>
-                <p className="text-lg">Client Satisfaction</p>
+                <h3 className="text-5xl font-bold mb-4">98%</h3>
+                <p className="text-xl">Client Satisfaction</p>
               </div>
               <div>
-                <h3 className="text-4xl font-bold mb-2">24/7</h3>
-                <p className="text-lg">Support Available</p>
+                <h3 className="text-5xl font-bold mb-4">24/7</h3>
+                <p className="text-xl">Support Available</p>
               </div>
             </div>
           </div>
         </div>
 
         {/* Feature C Section */}
-        <div className="w-full py-16 bg-element text-white">
-          <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left px-4 md:px-0">
+        <div className="w-full py-20 bg-element text-white">
+          <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left px-6 md:px-0 space-y-8 md:space-y-0 md:space-x-12">
             <div className="md:w-1/2">
-              <h3 className="text-3xl font-semibold mb-4">E-commerce Solutions</h3>
-              <p className="text-base mb-4">
-                <b>Highlights of Our E-commerce Solutions:</b><br/><br/>
+              <h3 className="text-3xl font-semibold mb-6">E-commerce Solutions</h3>
+              <p className="text-base">
+                <b className="block mb-4">Highlights of Our E-commerce Solutions:</b>
                 Our e-commerce platforms are built to drive sales and grow your online business. We integrate secure payment gateways, implement user-friendly product management systems, and optimize the checkout process for maximum conversions. Our solutions include features like inventory management, customer accounts, and detailed analytics to help you make data-driven decisions. We ensure your online store is not just a sales channel, but a powerful tool for customer engagement and brand building.
               </p>
             </div>
             <div className="md:w-1/2">
               <div className="relative" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
-                <img src='/tf.connect-11.jpg' alt="E-commerce Solutions" className="absolute top-0 left-0 w-full h-full object-cover rounded-lg" />
+                <img src='/tf.connect-11.jpg' alt="E-commerce Solutions" className="absolute top-0 left-0 w-full h-full object-cover rounded-lg shadow-lg" />
               </div>
             </div>
           </div>
         </div>
       </div>
-     
       <footer id='contact' className="bg-[#040407] text-gray-400 py-8">
   <div className="container mx-auto px-4">
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">

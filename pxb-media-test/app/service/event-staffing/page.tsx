@@ -1,41 +1,51 @@
 "use client";
 import React, { useState, useRef } from 'react';
+import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
+import PersonIcon from '@mui/icons-material/Person';
+import RoomServiceIcon from '@mui/icons-material/RoomService';
+import VideocamIcon from '@mui/icons-material/Videocam';
+import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
+import ComputerIcon from '@mui/icons-material/Computer';
+
 import { Button } from '@/components/ui/button';
 import QuoteModal from '@/components/modal/quotemodal';
 import { SocialIcon } from "react-social-icons";
 
+
+
 const featuresData = [
   {
-    icon: '/tf.connect-11.jpg',
+    icon: AdminPanelSettingsIcon,
     title: "Tournament Administrators",
     description: "Experienced admins who ensure smooth execution of esports tournaments, managing rules, resolving disputes, and maintaining competitive integrity."
   },
   {
-    icon: '/tf.connect-11.jpg',
+    icon: PersonIcon,
     title: "Player Managers",
     description: "Dedicated professionals who handle logistics, communication, and support for players, allowing them to focus on their performance during events."
   },
   {
-    icon: '/tf.connect-11.jpg',
+    icon: RoomServiceIcon,
     title: "Hospitality Staff",
     description: "Trained personnel who create a welcoming environment for attendees, manage VIP areas, and ensure guest comfort throughout the event."
   },
   {
-    icon: '/tf.connect-11.jpg',
+    icon: VideocamIcon,
     title: "Broadcast Staff",
     description: "Skilled technicians and producers who manage live streams, camera operations, and overall production quality for seamless event broadcasts."
   },
   {
-    icon: '/tf.connect-11.jpg',
+    icon: TheaterComedyIcon,
     title: "Stage Managers",
     description: "Experienced professionals who coordinate on-stage activities, manage talent, and ensure smooth transitions between segments of the event."
   },
   {
-    icon: '/tf.connect-11.jpg',
+    icon: ComputerIcon,
     title: "Technical Support",
     description: "Expert IT staff who handle hardware setup, network management, and rapid troubleshooting to keep the event running without technical hitches."
   }
 ];
+
 
 const ServicesComponent: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -126,31 +136,31 @@ const ServicesComponent: React.FC = () => {
         </div>
       </div>
 
-      <div className="w-full px-4 pt-16">
+      <div className="w-full px-4 py-20">
         {/* Event Staffing Services Section */}
-        <div className="w-full py-16 bg-black text-white">
-          <div className="container mx-auto text-center px-4 md:px-0 pb-8">
-            <h2 className="text-4xl font-bold mb-4">Event Staffing Services</h2>
-            <p className="text-lg">
-              <b>Elevate Your Esports Events with Our Professional Staffing Solutions</b><br/><br/>
+        <div className="w-full py-20 bg-black text-white">
+          <div className="container mx-auto text-center px-6 md:px-0">
+            <h2 className="text-4xl font-bold mb-6">Event Staffing Services</h2>
+            <p className="text-lg max-w-3xl mx-auto">
+              <b className="block mb-4">Elevate Your Esports Events with Our Professional Staffing Solutions</b>
               At PXB Media, we provide comprehensive event staffing services tailored specifically for esports tournaments and gaming events. Our team of skilled professionals ensures smooth operations, exceptional experiences for participants and attendees, and flawless execution of your event vision. From tournament administrators to broadcast technicians, we offer the expertise you need to make your event a resounding success.
             </p>
           </div>
         </div>
 
         {/* Tournament Administration Section */}
-        <div className="w-full py-16 bg-element text-white">
-          <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left px-4 md:px-0">
+        <div className="w-full py-20 bg-element text-white">
+          <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left px-6 md:px-0 space-y-8 md:space-y-0 md:space-x-12">
             <div className="md:w-1/2">
-              <h3 className="text-3xl font-semibold mb-4">Tournament Administration</h3>
-              <p className="text-base mb-4">
-                <b>Key Benefits of Our Tournament Administrators:</b><br/><br/>
+              <h3 className="text-3xl font-semibold mb-6">Tournament Administration</h3>
+              <p className="text-base">
+                <b className="block mb-4">Key Benefits of Our Tournament Administrators:</b>
                 Our experienced tournament administrators are the backbone of any successful esports event. They manage tournament rules, oversee match scheduling, resolve disputes, and ensure fair play. With their expertise, you can focus on delivering an exceptional experience to players and spectators while we handle the intricate details of tournament execution. From group stages to grand finals, our admins maintain the competitive integrity and smooth flow of your event.
               </p>
             </div>
             <div className="md:w-1/2">
               <div className="relative" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
-                <img src='/tf.connect-11.jpg' alt="Tournament Administration" className="absolute top-0 left-0 w-full h-full object-cover rounded-lg" />
+                <img src='/tf.connect-11.jpg' alt="Tournament Administration" className="absolute top-0 left-0 w-full h-full object-cover rounded-lg shadow-lg" />
               </div>
             </div>
           </div>
@@ -163,7 +173,7 @@ const ServicesComponent: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuresData.map((feature, index) => (
                 <div key={index} className="p-6">
-                  <img src={feature.icon} alt={`${feature.title} icon`} className="h-16 mb-2" />
+                  <feature.icon className="h-16 w-16 mb-2 text-primary" />
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-base font-semibold mb-2">Key Responsibilities:</p>
                   <p className="text-sm">{feature.description}</p>
@@ -174,17 +184,17 @@ const ServicesComponent: React.FC = () => {
         </div>
 
         {/* Player Management Section */}
-        <div className="w-full py-16 bg-element text-white">
-          <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left px-4 md:px-0">
+        <div className="w-full py-20 bg-element text-white">
+          <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left px-6 md:px-0 space-y-8 md:space-y-0 md:space-x-12">
             <div className="md:w-1/2">
               <div className="relative" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
-                <img src='/tf.connect-11.jpg' alt="Player Management" className="absolute top-0 left-0 w-full h-full object-cover rounded-lg" />
+                <img src='/tf.connect-11.jpg' alt="Player Management" className="absolute top-0 left-0 w-full h-full object-cover rounded-lg shadow-lg" />
               </div>
             </div>
             <div className="md:w-1/2">
-              <h3 className="text-3xl font-semibold mb-4 pl-2">Player Management</h3>
-              <p className="text-base mb-4 pl-2">
-                <b>Advantages of Our Player Management Services:</b><br/><br/>
+              <h3 className="text-3xl font-semibold mb-6">Player Management</h3>
+              <p className="text-base">
+                <b className="block mb-4">Advantages of Our Player Management Services:</b>
                 Our dedicated player managers act as the crucial link between tournament organizers and competitors. They handle player registration, coordinate schedules, manage practice areas, and ensure all player needs are met. By taking care of logistics and communication, our managers allow players to focus entirely on their performance. This personalized support enhances the player experience and contributes to the overall professionalism of your event.
               </p>
             </div>
@@ -192,38 +202,38 @@ const ServicesComponent: React.FC = () => {
         </div>
 
         {/* Statistics Section */}
-        <div className="w-full bg-primary py-16 text-center text-white">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="w-full bg-primary py-20 text-center text-white">
+          <div className="container mx-auto px-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               <div>
-                <h3 className="text-4xl font-bold mb-2">100+</h3>
-                <p className="text-lg">Events Staffed</p>
+                <h3 className="text-5xl font-bold mb-4">100+</h3>
+                <p className="text-xl">Events Staffed</p>
               </div>
               <div>
-                <h3 className="text-4xl font-bold mb-2">500+</h3>
-                <p className="text-lg">Skilled Professionals</p>
+                <h3 className="text-5xl font-bold mb-4">500+</h3>
+                <p className="text-xl">Skilled Professionals</p>
               </div>
               <div>
-                <h3 className="text-4xl font-bold mb-2">1,000,000+</h3>
-                <p className="text-lg">Attendees Served</p>
+                <h3 className="text-5xl font-bold mb-4">1,000,000+</h3>
+                <p className="text-xl">Attendees Served</p>
               </div>
             </div>
           </div>
         </div>
 
         {/* Broadcast Staff Section */}
-        <div className="w-full py-16 bg-element text-white">
-          <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left px-4 md:px-0">
+        <div className="w-full py-20 bg-element text-white">
+          <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left px-6 md:px-0 space-y-8 md:space-y-0 md:space-x-12">
             <div className="md:w-1/2">
-              <h3 className="text-3xl font-semibold mb-4">Broadcast Staff</h3>
-              <p className="text-base mb-4">
-                <b>Highlights of Our Broadcast Team:</b><br/><br/>
-                Our professional broadcast staff ensures your event reaches audiences worldwide with top-notch production quality. From camera operators and sound technicians to directors and producers, our team handles every aspect of your live broadcast. We utilize cutting-edge technology and industry best practices to deliver seamless streams, engaging graphics, and immersive viewer experiences. Whether its managing multiple camera feeds, coordinating with casters, or troubleshooting technical issues, our broadcast team guarantees your event shines on screen.
+              <h3 className="text-3xl font-semibold mb-6">Broadcast Staff</h3>
+              <p className="text-base">
+                <b className="block mb-4">Highlights of Our Broadcast Team:</b>
+                Our professional broadcast staff ensures your event reaches audiences worldwide with top-notch production quality. From camera operators and sound technicians to directors and producers, our team handles every aspect of your live broadcast. We utilize cutting-edge technology and industry best practices to deliver seamless streams, engaging graphics, and immersive viewer experiences. Whether it's managing multiple camera feeds, coordinating with casters, or troubleshooting technical issues, our broadcast team guarantees your event shines on screen.
               </p>
             </div>
             <div className="md:w-1/2">
               <div className="relative" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
-                <img src='/tf.connect-11.jpg' alt="Broadcast Staff" className="absolute top-0 left-0 w-full h-full object-cover rounded-lg" />
+                <img src='/tf.connect-11.jpg' alt="Broadcast Staff" className="absolute top-0 left-0 w-full h-full object-cover rounded-lg shadow-lg" />
               </div>
             </div>
           </div>
