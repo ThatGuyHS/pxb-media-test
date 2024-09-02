@@ -228,28 +228,44 @@ export default function Component() {
         </section>
 
         <section className="bg-[#040407] py-16 text-white">
-          <div className="container mx-auto px-4 md:px-0">
-            <h2 className="text-center mb-12 text-3xl font-bold md:text-4xl">
-              Trusted By
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center">
-              {[
-                "/Logo-esu-border.jpg",
-                "/SOL_Logo.svg",
-                "/Raketligan-White.png",
-                "/riotlogo.jpg",
-              ].map((logo, index) => (
-                <div key={index} className="flex justify-center">
-                  <img
-                    src={logo}
-                    alt={`Client Logo ${index + 1}`}
-                    className="h-12 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
-                  />
-                </div>
-              ))}
-            </div>
+  <div className="container mx-auto px-4 md:px-0">
+    <h2 className="text-center mb-12 text-3xl font-bold md:text-4xl">
+      Trusted By
+    </h2>
+    <div className="relative overflow-hidden">
+      <div className="flex overflow-x-auto scrollbar-hide gap-6 pb-4">
+        {[
+          { logo: "/riotwhite.png", url: "https://www.riotgames.com" },
+          { logo: "/dreamhack.png", url: "https://dreamhack.com" },
+          { logo: "/challengermodewhite.png", url: "https://www.challengermode.com" },
+          { logo: "fragbite.png", url: "https://fragbite.com" },
+          { logo: "sesf.png", url: "https://svenskesport.se" },
+          { logo: "/SOL_Logo.svg", url: "https://svenskaspel.se" },
+          { logo: "/Raketligan-White.png", url: "https://svenskaraketligan.se" },
+          { logo: "ahusbeach.png", url: "https://www.ahusbeach.com" },
+          { logo: "subzero.png", url: "https://subzeroegames.se" },
+          { logo: "gigstepwhite.png", url: "https://gigstep.se" },
+        ].map(({ logo, url }, index) => (
+          <div key={index} className="flex-shrink-0">
+            <a 
+              href={url} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="transition-opacity duration-300 hover:opacity-80 focus:opacity-80"
+            >
+              <img
+                src={logo}
+                alt={`Client Logo ${index + 1}`}
+                className="h-8 md:h-10 lg:h-12 w-auto object-contain filter grayscale transition-all duration-300"
+              />
+            </a>
           </div>
-        </section>
+        ))}
+      </div>
+      <div className="absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-[#040407] to-transparent z-10 pointer-events-none"></div>
+    </div>
+  </div>
+</section>
 
         <section className="bg-[#040407] py-16 md:py-24 text-white">
   <div className="container mx-auto px-4 md:px-0">
