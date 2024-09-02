@@ -116,14 +116,6 @@ const ArticleClientComponent: React.FC<{ initialData: ArticleData }> = ({ initia
           />
           <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-8 bg-gradient-to-t from-black via-black/80 to-transparent rounded-lg">
             <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-2 md:mb-4 text-shadow-lg leading-tight">{data.title}</h1>
-            <p className="text-sm sm:text-base md:text-xl text-shadow-md">
-              by {data.author} Published {data.date} in
-              {data.categories.map((category, index) => (
-                <span key={index} className="text-primary ml-1">
-                  {category}{index < data.categories.length - 1 ? ',' : ''}
-                </span>
-              ))}
-            </p>
           </div>
         </div>
       </div>
