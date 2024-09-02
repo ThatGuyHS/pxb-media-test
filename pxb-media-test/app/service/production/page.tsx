@@ -151,47 +151,37 @@ const LiveBroadcastProductionPage: React.FC = () => {
       <ServicePageComponent {...liveBroadcastContent} />
       
       <footer id='contact' className="bg-[#040407] text-gray-400 py-8">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div>
-              <h3 className="text-xl font-bold mb-4">About PXB Media</h3>
-              <p>Innovating in production, event staffing, and development to transform industries and improve lives.</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-4">Contact Us</h3>
-              <p>Email: hi@pxbmedia.com</p>
-              <div className="flex justify-center space-x-4 mt-4">
-                <SocialIcon
-                  url="https://facebook.com/svenskesport"
-                  bgColor="#151C38"
-                  fgColor="#3ABCF9"
-                />
-                <SocialIcon
-                  url="https://twitter.com/svenskesport"
-                  bgColor="#151C38"
-                  fgColor="#3ABCF9"
-                />
-                <SocialIcon
-                  url="https://discord.gg/RshFVxJpHp"
-                  bgColor="#151C38"
-                  fgColor="#3ABCF9"
-                />
-              </div>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-              <ul>
-                <li><a href="/service/production" className="hover:text-primary">Production</a></li>
-                <li><a href="/service/event-staffing" className="hover:text-primary">Event Staffing</a></li>
-                <li><a href="/service/development" className="hover:text-primary">Development</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="mt-8 text-center">
-            <p>&copy; {new Date().getFullYear()} PXB Media. All rights reserved.</p>
-          </div>
+  <div className="container mx-auto px-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div>
+        <h3 className="text-xl font-bold mb-4">About PXB Media</h3>
+        <p>Innovating in production, event staffing, and development to transform industries and improve lives.</p>
+      </div>
+      <div>
+        <h3 className="text-xl font-bold mb-4">Contact Us</h3>
+        <p>Email: hi@pxbmedia.com</p>
+        <div className="flex justify-center space-x-4 mt-4">
+          <SocialIcon
+            url="https://twitter.com/PXBMedia"
+            bgColor="#151C38"
+            fgColor="#3ABCF9"
+          />
         </div>
-      </footer>
+      </div>
+      <div>
+        <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+        <ul>
+          <li><a href="/service/production" className="hover:text-primary">Production</a></li>
+          <li><a href="/service/event-staffing" className="hover:text-primary">Event Staffing</a></li>
+          <li><a href="/service/development" className="hover:text-primary">Development</a></li>
+        </ul>
+      </div>
+    </div>
+    <div className="mt-8 text-center">
+      <p>&copy; {new Date().getFullYear()} PXB Media. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
     </div>
   );
 };

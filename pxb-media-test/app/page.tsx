@@ -357,17 +357,7 @@ export default function Component() {
         <p>Email: hi@pxbmedia.com</p>
         <div className="flex justify-center space-x-4 mt-4">
           <SocialIcon
-            url="https://facebook.com/svenskesport"
-            bgColor="#151C38"
-            fgColor="#3ABCF9"
-          />
-          <SocialIcon
-            url="https://twitter.com/svenskesport"
-            bgColor="#151C38"
-            fgColor="#3ABCF9"
-          />
-          <SocialIcon
-            url="https://discord.gg/RshFVxJpHp"
+            url="https://twitter.com/PXBMedia"
             bgColor="#151C38"
             fgColor="#3ABCF9"
           />
