@@ -116,7 +116,7 @@ const AboutUs = () => {
             </p>
           </div>
           <div className="md:w-1/2 mt-8 md:mt-0">
-            <img src='/tf.connect-11.jpg' alt="About Us" className="rounded-lg shadow-lg mx-auto pl-4" />
+            <img src='/subzero1.jpg' alt="About Us" className="rounded-lg shadow-lg mx-auto pl-4" />
           </div>
         </div>
       </section>
@@ -131,7 +131,7 @@ const AboutUs = () => {
             </p>
           </div>
           <div className="md:w-1/2 mt-8 md:mt-0">
-            <img src='/tf.connect-11.jpg' alt="Our Mission" className="rounded-lg shadow-lg mx-auto pl-4" />
+            <img src='/esportsm1.png' alt="Our Mission" className="rounded-lg shadow-lg mx-auto pl-4" />
           </div>
         </div>
       </section>
