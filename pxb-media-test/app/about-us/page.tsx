@@ -2,6 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { SocialIcon } from "react-social-icons";
+import QuoteModal from '@/components/modal/quotemodal';
 
 const teamMembers = [
  
@@ -103,6 +104,7 @@ const AboutUs = () => {
           </Button>
         </nav>
       </header>
+      <QuoteModal isOpen={modalIsOpen} onRequestClose={closeModal} />
 
       {/* Intro / About the Company */}
       <section className="bg-element py-20 text-center">
