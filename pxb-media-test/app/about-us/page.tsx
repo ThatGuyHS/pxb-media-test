@@ -7,25 +7,25 @@ const teamMembers = [
  
   {
     name: 'Viktor Erlandsson',
-    role: 'Founder',
+    role: 'Lead Producer',
     email: 'viktor@pxbmedia.com',
     image: '/headshot_viktor.jpg',
   },
   {
     name: 'Guido Andriol',
-    role: 'Head of Broadcast Tech & Co-Founder',
+    role: 'Lead Broadcast Technician',
     email: 'guido@pxbmedia.com',
     image: '/guiDO.jpg',
   },
   {
     name: 'Adam Peleback',
-    role: 'Web Developer / Co-owner',
+    role: 'Web Developer and copywriter',
     email: 'adam@pxbmedia.com',
     image: '/adam.png',
   },
   {
     name: 'Daniel Kauppinen',
-    role: 'Project Manager',
+    role: 'Lead Project Manager',
     email: 'daniel@pxbmedia.com',
     image: '/kappez.jpg',
   },
@@ -94,9 +94,6 @@ const AboutUs = () => {
                 <a className="block px-4 py-2 hover:bg-gray-800" href="/service/development">DEVELOPMENT</a>
               </div>
             </div>
-            <a className="px-4 py-2 hover:text-gray-300 hover:underline decoration-primary transition-colors duration-300" href="#contact">
-              CONTACT
-            </a>
             <a className="px-4 py-2 hover:text-gray-300 hover:underline decoration-primary transition-colors duration-300" href="#">
               ABOUT
             </a>
