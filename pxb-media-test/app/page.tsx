@@ -178,23 +178,23 @@ export default function Component() {
                   description:
                     "State-of-the-art esports studio equipped with the latest technology for immersive experiences.",
                   image: "/tf.connect-11.jpg",
-                  link: "/services/broadcast-production",
+                  link: "/service/production",
                 },
                 {
                   icon: <LaptopIcon fontSize="large" />,
                   title: "Web Development",
                   description:
                     "Crafting engaging content from video production to graphic design to showcase your brand.",
-                  image: "/tf.connect-11.jpg",
-                  link: "/services/web-development",
+                  image: "/pxbsite.png",
+                  link: "/service/development",
                 },
                 {
                   icon: <PeopleOutlineIcon fontSize="large" />,
                   title: "Esports Event Staffing",
                   description:
                     "Handling logistics from venue selection to live streaming for unforgettable events.",
-                  image: "/tf.connect-11.jpg",
-                  link: "/services/event-staffing",
+                  image: "/esportsm1.png",
+                  link: "/service/event-staffing",
                 },
               ].map((service, index) => (
                 <a
