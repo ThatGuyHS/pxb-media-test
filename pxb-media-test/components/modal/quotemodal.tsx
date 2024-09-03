@@ -121,7 +121,7 @@ const QuoteModal: React.FC<QuoteModalType> = ({ isOpen, onRequestClose }) => {
                 </div>
                 <div className="mb-4">
                     <label htmlFor="description" className="block text-sm font-bold mb-2">Basic Event or Service Description</label>
-                    <textarea placeholder='E.g.: I am hosting a LAN and I want to rent PCs and Screens, or I want a website built' id="description" name="description" rows={4} className="w-full p-2 rounded-md bg-gray-700 text-white"></textarea>
+                    <textarea placeholder='E.g.: I am hosting a LoL tournament with 100 players and need PC rentals and displays / I want a website built for my esports team. / We are planning a charity stream and need full production services.' id="description" name="description" rows={4} className="w-full p-2 rounded-md bg-gray-700 text-white"></textarea>
                 </div>
                 <Button  type="submit" className="w-full mt-4 bg-primary hover:bg-primaryAlt" variant="default">
                     Submit
