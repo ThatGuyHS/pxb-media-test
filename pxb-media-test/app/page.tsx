@@ -197,7 +197,7 @@ export default function Component() {
                   icon: <VideoCameraBackIcon fontSize="large" />,
                   title: "Broadcast Production",
                   description:
-                    "State-of-the-art esports studio equipped with the latest technology for immersive experiences.",
+                    "We offer comprehensive broadcast production services utilizing cutting-edge technology for high-quality live streaming, in-studio recordings, and remote productions.",
                   image: "/tf.connect-11.jpg",
                   link: "/service/production",
                 },
@@ -205,7 +205,7 @@ export default function Component() {
                   icon: <LaptopIcon fontSize="large" />,
                   title: "Web Development",
                   description:
-                    "Crafting engaging content from video production to graphic design to showcase your brand.",
+                    "We offer a wide range of web development services to help you create a strong online presence.",
                   image: "/pxbsite.png",
                   link: "/service/development",
                 },
@@ -213,7 +213,7 @@ export default function Component() {
                   icon: <PeopleOutlineIcon fontSize="large" />,
                   title: "Esports Event Staffing",
                   description:
-                    "Handling logistics from venue selection to live streaming for unforgettable events.",
+                    "We provide event staffing services to help you create unforgettable events, whether the help you need is on site or remote.",
                   image: "/esportsm1.png",
                   link: "/service/event-staffing",
                 },
