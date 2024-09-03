@@ -260,7 +260,7 @@ export default function Component() {
             { logo: "/challengermodewhite.png", url: "https://www.challengermode.com" },
             { logo: "fragbite.png", url: "https://fragbite.com" },
             { logo: "sesf.png", url: "https://svenskesport.se" },
-            { logo: "/SOL_Logo.svg", url: "https://svenskaspel.se" },
+            { logo: "/SOL_Logo.svg", url: "https://svenskaonlineligan.se" },
             { logo: "/Raketligan-White.png", url: "https://svenskaraketligan.se" },
             { logo: "ahusbeach.png", url: "https://www.ahusbeach.com" },
             { logo: "subzero.png", url: "https://subzeroegames.se" },
