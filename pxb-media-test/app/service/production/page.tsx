@@ -43,7 +43,7 @@ const LiveBroadcastProductionPage: React.FC = () => {
   };
 
   const liveBroadcastContent = {
-    bannerImage: '/tf.connect-11.jpg',
+    bannerImage: '/dh2.jpg',
     title: "Live Broadcast Production",
     description: "Elevate Your Content with Professional Live Broadcasting. At PXB Media, we specialize in delivering high-quality live broadcast productions that captivate audiences and elevate your brand. Our team of experts combines cutting-edge technology with creative storytelling to bring your vision to life. Whether you are hosting a corporate event, streaming a live performance, or producing a webinar series, we have the skills and experience to ensure your broadcast stands out in today's digital landscape. From pre-production planning to real-time execution and post-event analytics, we are committed to making your live broadcast a resounding success.",
     features: [
@@ -82,19 +82,19 @@ const LiveBroadcastProductionPage: React.FC = () => {
       title: "Multi-Camera Production",
       subtitle: "Key Benefits of Multi-Camera Production:",
       description: "Our multi-camera setup allows for dynamic and engaging broadcasts that keep viewers glued to their screens. By utilizing multiple camera angles, we can capture every important moment from the best perspective, whether it is a speaker on stage, audience reactions, or product demonstrations. This versatility enables smooth transitions between shots, creating a professional and polished look that rivals traditional television broadcasts. Additionally, our multi-camera approach provides redundancy, ensuring uninterrupted coverage even in the unlikely event of technical issues with one camera.",
-      image: '/tf.connect-11.jpg'
+      image: '/dh1.jpg'
     },
     featureB: {
       title: "Live Streaming Services",
       subtitle: "Advantages of Our Live Streaming Services:",
       description: "Our live streaming services ensure your content reaches audiences worldwide in real-time. We handle all technical aspects of streaming, including encoding, CDN distribution, and multi-platform integration. This allows you to focus on your content while we ensure smooth delivery across various devices and bandwidths. Our team monitors stream health throughout the broadcast, quickly addressing any issues to maintain a high-quality viewer experience. We also provide interactive features such as live chat moderation and real-time audience polling to boost engagement and create a more immersive experience for your viewers.",
-      image: '/tf.connect-11.jpg'
+      image: '/SOLplayoffs.jpg'
     },
     featureC: {
       title: "Custom Graphics and Overlays",
       subtitle: "Highlights of Our Custom Graphics and Overlays:",
       description: "Elevate your broadcast with our custom graphics and overlay solutions. Our design team works closely with you to create visually stunning elements that align with your brand and enhance your content. From lower thirds and animated transitions to full-screen graphics and interactive overlays, we bring a professional touch to every aspect of your broadcast. These custom elements not only improve the visual appeal of your stream but also provide valuable information to viewers, increasing engagement and retention. Our graphics are optimized for various streaming platforms, ensuring they look great across all devices and screen sizes.",
-      image: '/tf.connect-11.jpg'
+      image: '/subzero1.jpg'
     },
     statistics: [
       { value: "500+", label: "Successful Broadcasts" },
