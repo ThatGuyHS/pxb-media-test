@@ -167,7 +167,7 @@ export default function Component() {
           className="bg-[#040407] py-16 md:py-24 text-white"
         >
           <div className="container mx-auto px-4 md:px-0">
-            <h2 className="text-center mb-12 text-4xl font-bold md:text-5xl">
+            <h2 className="text-center mb-12 text-4xl font-bold">
               Our Services
             </h2>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -266,7 +266,7 @@ export default function Component() {
 
         <section className="bg-[#040407] py-16 md:py-24 text-white">
   <div className="container mx-auto px-4 md:px-0">
-    <h2 className="mb-12 text-4xl font-bold md:text-5xl text-center">
+    <h2 className="mb-12 text-4xl font-bold text-center">
       Our Cases
     </h2>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
