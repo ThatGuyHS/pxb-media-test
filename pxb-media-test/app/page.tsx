@@ -9,10 +9,11 @@ import { SocialIcon } from "react-social-icons";
 
 export default function Component() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
-  const dropdownRef = useRef<HTMLDivElement>(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [showQuoteButton, setShowQuoteButton] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const handleToggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -40,16 +41,28 @@ export default function Component() {
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
+    
+    const handleScroll = () => {
+      const heroSection = document.querySelector('section');
+      if (heroSection) {
+        const heroHeight = heroSection.offsetHeight;
+        setShowQuoteButton(window.scrollY > heroHeight);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
     <>
       <header className="bg-black text-white transition-colors duration-300 sticky top-0 z-50">
-        <nav className="container mx-auto flex flex-wrap items-center justify-between py-1 px-4 md:px-0">
-          <div className="flex items-center space-x-6">
+        <nav className="container mx-auto flex items-center justify-between py-4 px-4 md:px-0 h-[72px]"> {/* Adjusted height and padding */}
+          <div className="flex items-center">
             <a className="text-xl font-bold" href="/">
               <img
                 src="/vertical_logo.svg"
@@ -57,69 +70,77 @@ export default function Component() {
                 className="h-10"
               />
             </a>
+          </div>
+          <div className="flex items-center space-x-6">
             <button
               className="md:hidden rounded border px-4 py-2 text-sm hover:bg-white hover:text-black transition-colors duration-300"
               onClick={handleToggleMenu}
             >
               {menuOpen ? "CLOSE" : "MENU"}
             </button>
-          </div>
-          <div
-            ref={menuRef}
-            className={`${
-              menuOpen ? "flex" : "hidden"
-            } flex-col absolute bg-black w-full mt-2 pb-4 md:pb-0 md:w-auto md:static md:flex md:flex-row md:space-x-6`}
-          >
             <div
-              className="relative"
-              ref={dropdownRef}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
+              ref={menuRef}
+              className={`${
+                menuOpen ? "flex" : "hidden"
+              } md:flex flex-col md:flex-row md:space-x-6 absolute md:relative top-full left-0 md:top-auto md:left-auto bg-black w-full md:w-auto mt-2 pb-4 md:pb-0 md:mt-0`}
             >
-              <button className="px-4 py-2 hover:text-gray-300 hover:underline decoration-primary transition-colors duration-300">
-                SERVICES
-              </button>
               <div
-                className={`${
-                  servicesDropdownOpen ? "block" : "hidden"
-                } absolute left-0 w-48 bg-black border border-gray-700 rounded-md shadow-lg`}
+                className="relative"
+                ref={dropdownRef}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
               >
-                <div className="invisible absolute -top-4 left-0 w-full h-4"></div>
-                <a
-                  className="block px-4 py-2 hover:bg-gray-800"
-                  href="/service/production"
+                <button className="px-4 py-2 hover:text-gray-300 hover:underline decoration-primary transition-colors duration-300">
+                  SERVICES
+                </button>
+                <div
+                  className={`${
+                    servicesDropdownOpen ? "block" : "hidden"
+                  } absolute left-0 w-48 bg-black border border-gray-700 rounded-md shadow-lg`}
                 >
-                  PRODUCTION
-                </a>
-                <a
-                  className="block px-4 py-2 hover:bg-gray-800"
-                  href="/service/event-staffing"
-                >
-                  EVENT STAFFING
-                </a>
-                <a
-                  className="block px-4 py-2 hover:bg-gray-800"
-                  href="/service/development"
-                >
-                  DEVELOPMENT
-                </a>
+                  <div className="invisible absolute -top-4 left-0 w-full h-4"></div>
+                  <a
+                    className="block px-4 py-2 hover:bg-gray-800"
+                    href="/service/production"
+                  >
+                    PRODUCTION
+                  </a>
+                  <a
+                    className="block px-4 py-2 hover:bg-gray-800"
+                    href="/service/event-staffing"
+                  >
+                    EVENT STAFFING
+                  </a>
+                  <a
+                    className="block px-4 py-2 hover:bg-gray-800"
+                    href="/service/development"
+                  >
+                    DEVELOPMENT
+                  </a>
+                </div>
               </div>
+              <a
+                className="px-4 py-2 hover:text-gray-300 hover:underline decoration-primary transition-colors duration-300"
+                href="/about-us"
+              >
+                ABOUT
+              </a>
             </div>
-            <a
-              className="px-4 py-2 hover:text-gray-300 hover:underline decoration-primary transition-colors duration-300"
-              href="/about-us"
-            >
-              ABOUT
-            </a>
           </div>
-          <Button
-            onClick={openModal}
-            className="hidden text-[#E3E3E3] md:inline-flex bg-primary hover:bg-primaryAlt"
-            size="sm"
-            variant="default"
-          >
-            Get a quote
-          </Button>
+          <div className="flex items-center">
+            {showQuoteButton ? (
+              <Button
+                onClick={openModal}
+                className="text-[#E3E3E3] bg-primary hover:bg-primaryAlt h-10" // Adjusted height
+                size="sm"
+                variant="default"
+              >
+                Get a quote
+              </Button>
+            ) : (
+              <div className="w-[88px] h-10"></div> // Adjusted height
+            )}
+          </div>
         </nav>
       </header>
       <QuoteModal isOpen={modalIsOpen} onRequestClose={closeModal} />
