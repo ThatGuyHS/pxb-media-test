@@ -92,7 +92,7 @@ const dataCases = [
     ],
   },
   {
-    id: "svenkaonlineligan",
+    id: "svenskaonlineligan",
     title: "Svenska Onlineligan Season 7 Playoffs: Elevating Swedish Esports",
     author: "Adam Peleback",
     date: "20/09/2024",
