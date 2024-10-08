@@ -247,6 +247,34 @@ const dataCases = [
       "This case demonstrates PXB Medias versatility in handling projects of various scales and our ability to create tailored solutions for corporate clients. By bringing our broadcast expertise to ABAXs internal communications, we helped them elevate their messaging and engage their staff more effectively.",
     ],
   },
+  {
+    id: "lansforsakringarfifa",
+    title: "Länsförsäkringar Fifa Derby: Bringing live esports to Småland",
+    author: "Adam Peleback",
+    date: "22/01/2025",
+    categories: ["Corporate", "Offline event", "Fifa"],
+    intro:
+      "PXB Media helped conceptualize the FIFA Derby by Länsförsäkringar at GRO36 and provided a live broadcast.",
+    imageUrl: "/GRO362.jpg",
+    secondaryImageUrl: "/GRO361.jpg",
+    imageCredit: "GRO36",
+    servicesProvided: {
+      productionSetup: [
+        "Technical System Design",
+        "Equipment Rental"
+      ],
+      technicalOperations: [
+        "Technical Direction",
+        "Audio Engineering"
+      ],
+    },
+    paragraphs: [
+      "For Länsförsäkringar Jönköping, PXB Media took part in conceptualizing and creating a local derby between Värnamo and Jönköping in EA FC 2024.",
+      "At the beautiful venue of GRO36, we provided a live broadcast coverage for the derby between Värnamo and Jönköping Södra, in front of a live crowd.",
+      "There were 2 matches played, one between football players from the respective clubs, and one between the respective clubs professional esports teams, which gave the audience both a taste for professional esports and the excitement of seeing athletes compete in an unusual environment.",
+      "The main point of the event was to draw attention to Länsförsäkringars work to ensure a safe environment for all young people who enjoy games, by educating leaders in the community to help provide the support and attention that is needed to build a community to be proud of."
+    ],
+  },
 ];
 
 export async function GET(req, { params }) {
