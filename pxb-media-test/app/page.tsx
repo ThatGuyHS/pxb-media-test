@@ -354,15 +354,6 @@ export default function Component() {
         </a>
       ))}
     </div>
-    <div className="text-center mt-12">
-      <Button
-        size="lg"
-        className="bg-primary hover:bg-primaryAlt transition-colors duration-300 text-lg"
-        variant="default"
-      >
-        View All Projects
-      </Button>
-    </div>
   </div>
 </section>
       </main>
