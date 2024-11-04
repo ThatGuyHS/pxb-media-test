@@ -125,6 +125,12 @@ export default function Component() {
               >
                 ABOUT
               </a>
+              <a
+                className="px-4 py-2 hover:text-gray-300 hover:underline decoration-primary transition-colors duration-300"
+                href="/cases"
+              >
+               CASES
+              </a>
             </div>
           </div>
           <div className="flex items-center">
