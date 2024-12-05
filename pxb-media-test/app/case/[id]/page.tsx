@@ -43,17 +43,48 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const data = await getArticleData(params.id);
+  
+  // Format categories for keywords
+  const keywords = [...data.categories];
+  Object.keys(data.servicesProvided).forEach(category => {
+    keywords.push(category);
+    keywords.push(...data.servicesProvided[category]);
+  });
 
   return {
     title: {
-      absolute: data.title, // This will overwrite any parent title
+      absolute: `${data.title} | Case Study`,
     },
     description: data.intro,
+    keywords: keywords.join(', '),
+    authors: [{ name: data.author }],
     openGraph: {
-      images: [data.imageUrl], // Only use this page's image
+      images: [
+        {
+          url: data.imageUrl,
+          width: 1200,
+          height: 630,
+          alt: data.title,
+        },
+        {
+          url: data.secondaryImageUrl,
+          width: 1200,
+          height: 630,
+          alt: `${data.title} - Secondary Image`,
+        }
+      ],
       title: data.title,
       description: data.intro,
+      type: 'article',
+      publishedTime: data.date,
+      authors: [data.author],
     },
+    twitter: {
+      card: 'summary_large_image',
+      title: data.title,
+      description: data.intro,
+      images: [data.imageUrl],
+    }
   };
 }
 
