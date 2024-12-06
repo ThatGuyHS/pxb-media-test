@@ -34,7 +34,7 @@ const Summary = ({ events, onReset }: SummaryProps) => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-950 p-8">
-      <div className="max-w-4xl w-full space-y-12">
+      <div className="w-full space-y-12">
         <motion.div
           initial="hidden"
           animate="visible"
