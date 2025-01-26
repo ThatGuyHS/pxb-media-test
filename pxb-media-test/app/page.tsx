@@ -151,10 +151,16 @@ export default function Component() {
       </header>
       <QuoteModal isOpen={modalIsOpen} onRequestClose={closeModal} />
       <main className="no-scrollbar">
-        <section
-          className="relative h-screen bg-cover bg-center bg-fixed"
-          style={{ backgroundImage: "url('/tf.connect-11.jpg')" }}
-        >
+      <section className="relative h-screen">
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="absolute inset-0 w-full h-full object-cover"
+  >
+    <source src="/SOL.mp4" type="video/mp4" />
+  </video>
           <div className="absolute inset-0 bg-black opacity-50" />
           <div className="relative flex flex-col h-full items-center justify-center text-center px-4">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 animate-fadeIn">
