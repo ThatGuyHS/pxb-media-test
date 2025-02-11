@@ -15,6 +15,33 @@ export default function Component() {
   const menuRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+const [isAnimating, setIsAnimating] = useState(true);
+
+// Add the services array
+const services = [
+  "Live Streaming",
+  "Virtual Events",
+  "Hybrid Conferences",
+  "Audio Visual Support",
+  "Web Development",
+  "Broadcast Solutions",
+  "Technical Direction"
+];
+
+// Add the animation effect
+useEffect(() => {
+  const interval = setInterval(() => {
+    setIsAnimating(false);
+    setTimeout(() => {
+      setCurrentIndex((prev) => (prev + 1) % services.length);
+      setIsAnimating(true);
+    }, 500);
+  }, 3000);
+
+  return () => clearInterval(interval);
+}, []);
+
   const handleToggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -161,39 +188,52 @@ export default function Component() {
   >
     <source src="/SOL.mp4" type="video/mp4" />
   </video>
-          <div className="absolute inset-0 bg-black opacity-50" />
-          <div className="relative flex flex-col h-full items-center justify-center text-center px-4">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 animate-fadeIn">
-              Your Partner for All Things Live Production
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-200 mb-8 animate-fadeIn animation-delay-300">
-              Elevating your events with cutting-edge technology and expertise
-            </p>
-            <button
-              onClick={openModal}
-              className="h-11 rounded-md px-8 bg-primary text-white inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-[#E3E3E3] bg-primaryAlt hover:bg-primary transition-all duration-300 transform hover:scale-105 animate-fadeIn animation-delay-600"
-            >
-              Get a Free Quote
-            </button>
-          </div>
-          <div className="absolute inset-x-0 bottom-10 flex justify-center animate-bounce">
-            <a href="#services" className="text-white">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="36"
-                height="36"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M6 9l6 6 6-6" />
-              </svg>
-            </a>
-          </div>
-        </section>
+  <div className="absolute inset-0 bg-black opacity-50" />
+  <div className="relative flex flex-col h-full items-center justify-center text-center px-4">
+    <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 animate-fadeIn">
+      <div className="text-center uppercase">
+        <div className="mb-0">Your Partner for All Things</div>
+        <div className="h-[1.2em] relative">
+          <span
+            className={`absolute left-1/2 -translate-x-1/2 whitespace-nowrap transition-all duration-500 text-primary ${
+              isAnimating
+                ? 'translate-y-0 opacity-100'
+                : 'translate-y-8 opacity-0'
+            }`}
+          >
+            {services[currentIndex]}
+          </span>
+        </div>
+      </div>
+    </h1>
+    <p className="text-xl md:text-2xl text-gray-200 mb-8 animate-fadeIn animation-delay-300">
+      Elevating your events with cutting-edge technology and expertise
+    </p>
+    <button
+      onClick={openModal}
+      className="h-11 rounded-md px-8 bg-primary text-white inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-[#E3E3E3] bg-primaryAlt hover:bg-primary transition-all duration-300 transform hover:scale-105 animate-fadeIn animation-delay-600"
+    >
+      Get a Free Quote
+    </button>
+  </div>
+  <div className="absolute inset-x-0 bottom-10 flex justify-center animate-bounce">
+    <a href="#services" className="text-white">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="36"
+        height="36"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M6 9l6 6 6-6" />
+      </svg>
+    </a>
+  </div>
+</section>
 
         <section
           id="services"
