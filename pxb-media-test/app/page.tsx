@@ -191,20 +191,22 @@ useEffect(() => {
   <div className="absolute inset-0 bg-black opacity-50" />
   <div className="relative flex flex-col h-full items-center justify-center text-center px-4">
     <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 animate-fadeIn">
-      <div className="text-center uppercase">
-        <div className="mb-0">Your Partner for All Things</div>
-        <div className="h-[1.2em] relative">
-          <span
-            className={`absolute left-1/2 -translate-x-1/2 whitespace-nowrap transition-all duration-500 text-primary ${
-              isAnimating
-                ? 'translate-y-0 opacity-100'
-                : 'translate-y-8 opacity-0'
-            }`}
-          >
-            {services[currentIndex]}
-          </span>
-        </div>
+    <div className="text-center uppercase w-full px-4 md:px-0">
+      <div className="mb-2 text-2xl md:text-4xl lg:text-5xl">
+        Your Partner for All Things
       </div>
+      <div className="min-h-[3rem] md:min-h-[4rem] lg:min-h-[5rem] relative">
+        <span
+          className={`absolute left-1/2 -translate-x-1/2 whitespace-nowrap transition-all duration-500 text-primary text-2xl md:text-4xl lg:text-5xl
+            ${isAnimating
+              ? 'translate-y-0 opacity-100'
+              : 'translate-y-8 opacity-0'
+            }`}
+        >
+          {services[currentIndex]}
+        </span>
+      </div>
+    </div>
     </h1>
     <p className="text-xl md:text-2xl text-gray-200 mb-8 animate-fadeIn animation-delay-300">
       Elevating your events with cutting-edge technology and expertise
