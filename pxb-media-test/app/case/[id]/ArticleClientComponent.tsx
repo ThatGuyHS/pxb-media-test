@@ -108,7 +108,7 @@ const ArticleClientComponent: React.FC<{ initialData: ArticleData }> = ({ initia
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent opacity-80"></div>
       </div>
 
-      <div className="relative z-10" style={{ marginTop: '-30vh' }}>
+      <div className="relative z-10" style={{ marginTop: '-35vh' }}>
         <div className="w-11/12 max-w-4xl mx-auto relative">
           <img
             src={data.secondaryImageUrl}
@@ -121,7 +121,7 @@ const ArticleClientComponent: React.FC<{ initialData: ArticleData }> = ({ initia
         </div>
       </div>
 
-      <div className="container mx-auto px-4 md:px-6 py-12 case-container">
+      <div className="container mx-auto px-4 md:px-6 py-8 case-container">
         <div className="max-w-6xl mx-auto md:flex md:gap-8">
           {data.servicesProvided && (
             <div className="md:w-1/3 lg:w-1/4 mt-8 md:mt-0 hidden md:block">
