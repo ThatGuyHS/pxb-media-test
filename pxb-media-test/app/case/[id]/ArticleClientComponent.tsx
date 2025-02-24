@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import QuoteModal from '@/components/modal/quotemodal';
+import Footer from '@/components/Footer';
 import './case-styles.css';
 
 type ArticleData = {
@@ -172,6 +173,8 @@ const ArticleClientComponent: React.FC<{ initialData: ArticleData }> = ({ initia
           </div>
         </div>
       )}
+
+      <Footer />
     </div>
   );
 };

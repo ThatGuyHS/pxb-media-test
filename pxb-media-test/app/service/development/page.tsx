@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import QuoteModal from '@/components/modal/quotemodal';
 import { SocialIcon } from "react-social-icons";
 import ServicePageComponent from '@/components/component/service-page';
+import Footer from '@/components/Footer';
 import LaptopIcon from "@mui/icons-material/Laptop";
 import CodeIcon from "@mui/icons-material/Code";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
@@ -150,38 +151,7 @@ const WebDevelopmentServicesPage: React.FC = () => {
       
       <ServicePageComponent {...webDevelopmentContent}  />
       
-      <footer id='contact' className="bg-[#040407] text-gray-400 py-8">
-  <div className="container mx-auto px-4">
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-      <div>
-        <h3 className="text-xl font-bold mb-4">About PXB Media</h3>
-        <p>Innovating in production, event staffing, and development to transform industries and improve lives.</p>
-      </div>
-      <div>
-        <h3 className="text-xl font-bold mb-4">Contact Us</h3>
-        <p>Email: hi@pxbmedia.com</p>
-        <div className="flex justify-center space-x-4 mt-4">
-          <SocialIcon
-            url="https://twitter.com/PXBMedia"
-            bgColor="#151C38"
-            fgColor="#3ABCF9"
-          />
-        </div>
-      </div>
-      <div>
-        <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-        <ul>
-          <li><a href="/service/production" className="hover:text-primary">Production</a></li>
-          <li><a href="/service/event-staffing" className="hover:text-primary">Event Staffing</a></li>
-          <li><a href="/service/development" className="hover:text-primary">Development</a></li>
-        </ul>
-      </div>
-    </div>
-    <div className="mt-8 text-center">
-      <p>&copy; {new Date().getFullYear()} PXB Media. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
+      <Footer />
     </div>
   );
 };
