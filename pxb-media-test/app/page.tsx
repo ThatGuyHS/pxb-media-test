@@ -433,7 +433,7 @@ export default function Component() {
                 {
                   id: "abax",
                   img: "/abaximg.png",
-                  logo: "/abax.png",
+                  logo: "/abax.jpg",
                   title: "Abax Webinar",
                   desc: "PXB Media provided a live broadcast production for Abax&apos;s webinar.",
                 },
