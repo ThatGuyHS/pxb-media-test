@@ -23,7 +23,7 @@ const cases = [
     viewership: 50000,
     broadcastHours: 8,
     image: "/tf.connect-11.jpg",
-    description: "PXB Media provided a full production service for TF Connect's virtual event.",
+    description: "PXB Media provided a full production service for TF Connect&apos;s virtual event.",
     highlights: ['Full production service', 'Virtual event management', 'Live streaming'],
   },
   {
@@ -63,7 +63,7 @@ const cases = [
     viewership: 10000,
     broadcastHours: 2,
     image: "/abaximg.png",
-    description: "PXB Media provided a live broadcast production for Abax's webinar.",
+    description: "PXB Media provided a live broadcast production for Abax&apos;s webinar.",
     highlights: ['Live broadcast production', 'Webinar management', 'Interactive Q&A session'],
   },
 ]

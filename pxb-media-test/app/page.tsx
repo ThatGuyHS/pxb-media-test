@@ -40,7 +40,7 @@ export default function Component() {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [services.length]);
 
   const handleToggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -346,7 +346,7 @@ export default function Component() {
                 <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-primary rounded-full"></span>
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto mt-4">
-                We're proud to work with leading brands and organizations across various industries
+                We&apos;re proud to work with leading brands and organizations across various industries
               </p>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 md:gap-12">
@@ -390,7 +390,7 @@ export default function Component() {
                 <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-primary rounded-full"></span>
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto mt-4">
-                Explore our portfolio of successful projects and see how we've helped our clients achieve their goals
+                Explore our portfolio of successful projects and see how we&apos;ve helped our clients achieve their goals
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -407,7 +407,7 @@ export default function Component() {
                   img: "/tf.connect-11.jpg",
                   logo: "/tfconnect-logo.png",
                   title: "TF Connect",
-                  desc: "PXB Media provided a full production service for TF Connect's virtual event.",
+                  desc: "PXB Media provided a full production service for TF Connect&apos;s virtual event.",
                 },
                 {
                   id: "svenskaonlineligan",
@@ -435,7 +435,7 @@ export default function Component() {
                   img: "/abaximg.png",
                   logo: "/event-logo-6.png",
                   title: "Abax Webinar",
-                  desc: "PXB Media provided a live broadcast production for Abax's webinar.",
+                  desc: "PXB Media provided a live broadcast production for Abax&apos;s webinar.",
                 },
               ].map((project, index) => (
                 <a

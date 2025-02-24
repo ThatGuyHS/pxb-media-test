@@ -64,8 +64,9 @@ export default function Component() {
     {
       id: "tfconnect",
       img: "/tf.connect-11.jpg",
+      logo: "/tfconnect-logo.png",
       title: "TF Connect",
-      desc: "PXB Media provided a full production service for TF Connect's virtual event.",
+      desc: "PXB Media provided a full production service for TF Connect&apos;s virtual event.",
     },
     {
       id: "svenskaonlineligan",
@@ -88,8 +89,9 @@ export default function Component() {
     {
       id: "abax",
       img: "/abaximg.png",
+      logo: "/event-logo-6.png",
       title: "Abax Webinar",
-      desc: "PXB Media provided a live broadcast production for Abax's webinar.",
+      desc: "PXB Media provided a live broadcast production for Abax&apos;s webinar.",
     },
   ]
 
