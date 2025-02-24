@@ -1,0 +1,97 @@
+/* Cases page styling */
+
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 1600px) {
+  .cases-container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .cases-grid {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+}
+
+@media (min-width: 2000px) {
+  .cases-container {
+    max-width: 1800px;
+  }
+  
+  .cases-grid {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+}
+
+/* Case card styling */
+.case-card {
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(59, 188, 249, 0.2);
+}
+
+.case-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem 0.75rem 0 0;
+  height: 240px;
+}
+
+.case-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.case-card:hover .case-image {
+  transform: scale(1.05);
+}
+
+.case-content {
+  padding: 1.5rem;
+}
+
+.case-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.case-card:hover .case-title {
+  color: #3ABCF9;
+}
+
+.case-description {
+  font-size: 0.875rem;
+  color: #d1d5db;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.case-link {
+  display: flex;
+  align-items: center;
+  color: #3ABCF9;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.case-link-icon {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.case-card:hover .case-link-icon {
+  transform: translateX(4px);
+} 

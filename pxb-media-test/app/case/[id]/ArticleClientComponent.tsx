@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import QuoteModal from '@/components/modal/quotemodal';
+import './case-styles.css';
 
 type ArticleData = {
   id: string;
@@ -55,7 +56,7 @@ const ArticleClientComponent: React.FC<{ initialData: ArticleData }> = ({ initia
   return (
     <div className="bg-black text-white font-custom">
       <header ref={headerRef} className={`bg-black text-white transition-all duration-300 sticky top-0 z-50 ${isScrolled ? 'bg-opacity-90' : ''}`}>
-        <nav className="container mx-auto flex flex-wrap items-center justify-between py-1 px-4 md:px-0">
+        <nav className="container mx-auto flex flex-wrap items-center justify-between py-1 px-4 md:px-6">
           <div className="flex items-center space-x-6">
             <a className="text-xl font-bold" href="/">
               <img src="/vertical_logo.svg" alt="PXB Media Logo" className="h-10" />
@@ -102,7 +103,7 @@ const ArticleClientComponent: React.FC<{ initialData: ArticleData }> = ({ initia
         <img
           src={data.imageUrl}
           alt="Banner Image"
-          className="w-full h-[50vh] md:h-[70vh] object-cover"
+          className="w-full h-[50vh] md:h-[70vh] object-cover case-hero-image"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent opacity-80"></div>
       </div>
@@ -112,7 +113,7 @@ const ArticleClientComponent: React.FC<{ initialData: ArticleData }> = ({ initia
           <img
             src={data.secondaryImageUrl}
             alt="Featured Image"
-            className="w-full object-cover shadow-lg rounded-lg"
+            className="w-full object-cover shadow-lg rounded-lg case-image"
           />
           <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-8 bg-gradient-to-t from-black via-black/80 to-transparent rounded-lg">
             <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-2 md:mb-4 text-shadow-lg leading-tight">{data.title}</h1>
@@ -120,44 +121,48 @@ const ArticleClientComponent: React.FC<{ initialData: ArticleData }> = ({ initia
         </div>
       </div>
 
-      <div className="px-8 py-12 pt-20 max-w-4xl mx-auto md:flex md:gap-8">
-        {data.servicesProvided && (
-          <div className="md:w-1/3 mt-8 md:mt-0 hidden md:block">
-            <div className="bg-black bg-opacity-70 p-4 rounded-lg sticky top-20">
-              <h3 className="text-primary text-lg font-bold mb-2">SERVICES PROVIDED</h3>
-              {Object.entries(data.servicesProvided).map(([category, services]) => (
-                <div className='pb-4' key={category}>
-                  <h4 className="bg-primary px-2 text-white flex items-center font-bold mb-1 h-8">{formatCategoryName(category)}</h4>
-                  <ul className="text-sm text-gray-300 list-disc list-inside mb-2">
-                    {services.map((service, index) => (
-                      <li key={index}>{service}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+      <div className="container mx-auto px-4 md:px-6 py-12 pt-20 case-container">
+        <div className="max-w-6xl mx-auto md:flex md:gap-8">
+          {data.servicesProvided && (
+            <div className="md:w-1/3 lg:w-1/4 mt-8 md:mt-0 hidden md:block">
+              <div className="service-box sticky top-20">
+                <h3 className="text-primary text-lg font-bold mb-4">SERVICES PROVIDED</h3>
+                {Object.entries(data.servicesProvided).map(([category, services]) => (
+                  <div className='service-category' key={category}>
+                    <h4 className="service-title">{formatCategoryName(category)}</h4>
+                    <ul className="service-list">
+                      {services.map((service, index) => (
+                        <li key={index}>{service}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        <div className="md:w-2/3">
-          <p className="text-lg mb-8">{data.intro}</p>
-          <p className="text-sm text-gray-400 mb-8">Image Credit: {data.imageCredit}</p>
-          <div className="space-y-6 text-base leading-relaxed">
-            {data.paragraphs.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
+          <div className="md:w-2/3 lg:w-3/4 case-content">
+            <div className="max-w-3xl">
+              <p className="text-lg mb-8 leading-relaxed">{data.intro}</p>
+              <p className="text-sm text-gray-400 mb-8">Image Credit: {data.imageCredit}</p>
+              <div className="space-y-6">
+                {data.paragraphs.map((paragraph, index) => (
+                  <p key={index} className="case-paragraph">{paragraph}</p>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       {data.servicesProvided && (
-        <div className="md:hidden px-8 mt-8">
-          <div className="bg-black bg-opacity-70 p-4 rounded-lg">
-            <h3 className="text-primary text-lg font-bold mb-2">SERVICES PROVIDED</h3>
+        <div className="md:hidden container mx-auto px-4 md:px-6 mt-8 mb-12">
+          <div className="service-box">
+            <h3 className="text-primary text-lg font-bold mb-4">SERVICES PROVIDED</h3>
             {Object.entries(data.servicesProvided).map(([category, services]) => (
-              <div className='pb-4' key={category}>
-                <h4 className="bg-primary px-2 text-white flex items-center font-bold mb-1 h-8">{formatCategoryName(category)}</h4>
-                <ul className="text-sm text-gray-300 list-disc pl-4 mb-2">
+              <div className='service-category' key={category}>
+                <h4 className="service-title">{formatCategoryName(category)}</h4>
+                <ul className="service-list">
                   {services.map((service, index) => (
                     <li key={index}>{service}</li>
                   ))}

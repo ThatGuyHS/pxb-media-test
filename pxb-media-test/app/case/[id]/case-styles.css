@@ -1,0 +1,77 @@
+/* Case page specific styles */
+
+.case-content {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.case-content p {
+  max-width: 70ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1600px) {
+  .case-container {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .case-hero-image {
+    height: 70vh;
+    max-height: 800px;
+  }
+}
+
+/* Improve readability on ultra-wide screens */
+@media (min-width: 2000px) {
+  .case-container {
+    max-width: 1600px;
+  }
+}
+
+/* Improve service box styling */
+.service-box {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-category {
+  margin-bottom: 1rem;
+}
+
+.service-title {
+  background-color: #00ABF5;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #e0e0e0;
+}
+
+/* Improve paragraph readability */
+.case-paragraph {
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #e0e0e0;
+}
+
+/* Add subtle animation for image hover */
+.case-image {
+  transition: transform 0.3s ease;
+}
+
+.case-image:hover {
+  transform: scale(1.02);
+} 
