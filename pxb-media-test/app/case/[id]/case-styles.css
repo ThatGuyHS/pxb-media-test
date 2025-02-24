@@ -4,6 +4,8 @@
   max-width: 100%;
   overflow-wrap: break-word;
   word-wrap: break-word;
+  position: relative;
+  z-index: 10;
 }
 
 .case-content p {
@@ -12,11 +14,35 @@
   margin-right: auto;
 }
 
+/* Adjust the positioning of the featured image and content */
+.case-intro {
+  margin-top: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+/* Ensure proper spacing between the featured image and content */
+.case-container {
+  position: relative;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0.5rem 0.5rem 0 0;
+  margin-top: 2rem;
+}
+
+@media (min-width: 1200px) {
+  .case-container {
+    margin-top: 3rem;
+  }
+}
+
 @media (min-width: 1600px) {
   .case-container {
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 5rem;
+    padding-top: 2rem;
   }
   
   .case-hero-image {
@@ -29,6 +55,8 @@
 @media (min-width: 2000px) {
   .case-container {
     max-width: 1600px;
+    margin-top: 7rem;
+    padding-top: 3rem;
   }
 }
 
@@ -39,6 +67,14 @@
   border-radius: 0.5rem;
   padding: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 100px;
+}
+
+@media (min-width: 1600px) {
+  .service-box {
+    top: 120px;
+  }
 }
 
 .service-category {
@@ -70,6 +106,8 @@
 /* Add subtle animation for image hover */
 .case-image {
   transition: transform 0.3s ease;
+  position: relative;
+  z-index: 5;
 }
 
 .case-image:hover {
