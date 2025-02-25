@@ -193,7 +193,7 @@ export default function Component() {
           <div className="space-y-8">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 animate-fadeIn">
               <div className="text-center uppercase w-full px-4 md:px-0">
-                <div className="mb-4 text-2xl md:text-4xl lg:text-5xl font-light tracking-wide">
+                <div className="mb-4 text-2xl md:text-4xl lg:text-5xl font-bold tracking-wide">
                   Your Partner for All Things
                 </div>
                 <div className="min-h-[3rem] md:min-h-[4rem] lg:min-h-[5rem] relative">
@@ -407,7 +407,7 @@ export default function Component() {
                   img: "/tf.connect-11.jpg",
                   logo: "/tfconnect-logo.png",
                   title: "TF Connect",
-                  desc: "PXB Media provided a full production service for TF Connect&apos;s virtual event.",
+                  desc: "PXB Media provided a full production service for TF Connects virtual event.",
                 },
                 {
                   id: "svenskaonlineligan",
@@ -435,7 +435,7 @@ export default function Component() {
                   img: "/abaximg.png",
                   logo: "/abax.jpg",
                   title: "Abax Webinar",
-                  desc: "PXB Media provided a live broadcast production for Abax&apos;s webinar.",
+                  desc: "PXB Media provided a live broadcast production for Abaxs webinar.",
                 },
               ].map((project, index) => (
                 <a
