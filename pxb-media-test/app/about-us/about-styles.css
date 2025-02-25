@@ -1,0 +1,206 @@
+/* About Us Page Styles */
+
+.about-section {
+  padding: 8rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 50%, rgba(59, 188, 249, 0.05) 0%, transparent 50%);
+  z-index: 0;
+}
+
+.about-section.alt {
+  background-color: #0a0a0f;
+  padding: 10rem 0;
+}
+
+.about-section.alt::before {
+  background: radial-gradient(circle at 80% 50%, rgba(59, 188, 249, 0.05) 0%, transparent 50%);
+}
+
+.about-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 2rem;
+}
+
+.about-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.about-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary);
+  border-radius: 2px;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #e0e0e0;
+  max-width: 600px;
+  margin-bottom: 1.5rem;
+}
+
+.about-image-container {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 2rem;
+}
+
+.about-image-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(59, 188, 249, 0.2);
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.about-image-container:hover .about-image {
+  transform: scale(1.05);
+}
+
+.team-section {
+  padding: 8rem 0;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.team-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+}
+
+.team-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary);
+  border-radius: 2px;
+}
+
+.team-card {
+  background: linear-gradient(145deg, #0c0c12 0%, #151520 100%);
+  border-radius: 12px;
+  padding: 2.5rem;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(59, 188, 249, 0.1);
+  border-color: rgba(59, 188, 249, 0.2);
+}
+
+.team-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary);
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-avatar {
+  transform: scale(1.05);
+}
+
+.team-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.team-role {
+  font-size: 1rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.team-email {
+  font-size: 0.9rem;
+  color: #b0b0b0;
+  transition: color 0.3s ease;
+}
+
+.team-email:hover {
+  color: var(--primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-title, .team-title {
+    font-size: 2.5rem;
+  }
+  
+  .about-section {
+    padding: 5rem 0;
+  }
+  
+  .about-section.alt {
+    padding: 6rem 0;
+  }
+  
+  .about-content {
+    padding: 0 1rem;
+  }
+  
+  .about-text {
+    font-size: 1rem;
+  }
+  
+  .about-image-container {
+    margin: 0 1rem;
+  }
+  
+  .team-avatar {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .team-section {
+    padding: 5rem 0;
+  }
+  
+  .team-card {
+    padding: 2rem;
+  }
+} 

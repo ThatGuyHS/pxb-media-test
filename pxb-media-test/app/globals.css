@@ -6,6 +6,12 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --primary: #3ABCF9;
+  --primaryAlt: #1a8fd1;
+  --element: #040407;
+  --elementAlt: #0a0a0f;
+  --text: #E3E3E3;
+  --textAlt: #b0b0b0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -263,9 +269,6 @@ html {
     font-display: swap;
   }
 }
-
- 
-
 
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {

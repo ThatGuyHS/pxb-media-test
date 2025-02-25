@@ -1,10 +1,9 @@
 "use client";
-import React, { useState, useRef } from 'react';
-import { Button } from '@/components/ui/button';
+import React, { useState } from 'react';
 import QuoteModal from '@/components/modal/quotemodal';
-import { SocialIcon } from "react-social-icons";
 import ServicePageComponent from '@/components/component/service-page';
 import Footer from '@/components/Footer';
+import ServiceHeader from '@/components/ServiceHeader';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import GroupIcon from '@mui/icons-material/Group';
 import StreamIcon from '@mui/icons-material/Stream';
@@ -13,35 +12,10 @@ import LanguageIcon from '@mui/icons-material/Language';
 import MovieFilterIcon from '@mui/icons-material/MovieFilter';
 
 const LiveBroadcastProductionPage: React.FC = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
-  const dropdownRef = useRef<HTMLDivElement>(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-
-  const handleToggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
 
   const openModal = () => setModalIsOpen(true);
   const closeModal = () => setModalIsOpen(false);
-
-  const handleMouseEnter = () => {
-    setServicesDropdownOpen(true);
-  };
-
-  const handleMouseLeave = () => {
-    setServicesDropdownOpen(false);
-  };
-
-  const handleClickOutside = (event: any) => {
-    if (menuRef.current && !menuRef.current.contains(event.target)) {
-      setMenuOpen(false);
-    }
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-      setServicesDropdownOpen(false);
-    }
-  };
 
   const liveBroadcastContent = {
     bannerImage: '/dh2.jpg',
@@ -106,47 +80,7 @@ const LiveBroadcastProductionPage: React.FC = () => {
 
   return (
     <div className="bg-black text-white font-custom">
-      <header className="bg-black text-white transition-colors duration-300 sticky top-0 z-50">
-        <nav className="container mx-auto flex flex-wrap items-center justify-between py-1 px-4 md:px-0">
-          <div className="flex items-center space-x-6">
-            <a className="text-xl font-bold" href="/">
-              <img src="/vertical_logo.svg" alt="PXB Media Logo" className="h-10" />
-            </a>
-            <button
-              className="md:hidden rounded border px-4 py-2 text-sm hover:bg-white hover:text-black transition-colors duration-300"
-              onClick={handleToggleMenu}
-            >
-              {menuOpen ? 'CLOSE' : 'MENU'}
-            </button>
-          </div>
-          <div ref={menuRef} className={`${menuOpen ? 'flex' : 'hidden'} flex-col absolute bg-black w-full mt-2 pb-4 md:pb-0 md:w-auto md:static md:flex md:flex-row md:space-x-6`}>
-            <div
-              className="relative"
-              ref={dropdownRef}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              <button
-                className="px-4 py-2 hover:text-gray-300 hover:underline decoration-primary transition-colors duration-300"
-              >
-                SERVICES
-              </button>
-              <div className={`${servicesDropdownOpen ? 'block' : 'hidden'} absolute left-0 w-48 bg-black border border-gray-700 rounded-md shadow-lg`}>
-                <div className="invisible absolute -top-4 left-0 w-full h-4"></div>
-                <a className="block px-4 py-2 hover:bg-gray-800" href="/service/production">PRODUCTION</a>
-                <a className="block px-4 py-2 hover:bg-gray-800" href="/service/event-staffing">EVENT STAFFING</a>
-                <a className="block px-4 py-2 hover:bg-gray-800" href="/service/development">DEVELOPMENT</a>
-              </div>
-            </div>
-            <a className="px-4 py-2 hover:text-gray-300 hover:underline decoration-primary transition-colors duration-300" href="/about-us">
-              ABOUT
-            </a>
-          </div>
-          <Button onClick={openModal} className="hidden text-[#E3E3E3] md:inline-flex color-primary hover:bg-primaryAlt" size="sm" variant="default">
-            Get a quote
-          </Button>
-        </nav>
-      </header>
+      <ServiceHeader openModal={openModal} />
       <QuoteModal isOpen={modalIsOpen} onRequestClose={closeModal} />
       
       <ServicePageComponent {...liveBroadcastContent} />
