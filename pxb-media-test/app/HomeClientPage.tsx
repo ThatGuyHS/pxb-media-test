@@ -188,7 +188,7 @@ export default function HomeClientPage() {
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src="/SOL.webm" type="video/webm" />
+            <source src="/SOL .webm" type="video/webm" />
             Your browser does not support the video tag.
           </video>
         )}
