@@ -180,15 +180,25 @@ export default function HomeClientPage() {
       <QuoteModal isOpen={modalIsOpen} onRequestClose={closeModal} />
       <main className="no-scrollbar">
       <section className="relative h-screen">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/SOL.mp4" type="video/mp4" />
-        </video>
+        {typeof window !== 'undefined' && (
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="/SOL.webm" type="video/webm" />
+            Your browser does not support the video tag.
+          </video>
+        )}
+        {typeof window === 'undefined' && (
+          <img 
+            src="/dh1.jpg" 
+            alt="Background" 
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
         <div className="relative flex flex-col h-full items-center justify-center text-center px-4 max-w-5xl mx-auto">
           <div className="space-y-8">

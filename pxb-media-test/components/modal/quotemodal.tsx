@@ -1,8 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Modal from 'react-modal';
 import { Button } from '@/components/ui/button';
-
-Modal.setAppElement('body');  // Make sure to set your app element
 
 type QuoteModalType = {
     isOpen: any
@@ -10,6 +8,12 @@ type QuoteModalType = {
 }
 
 const QuoteModal: React.FC<QuoteModalType> = ({ isOpen, onRequestClose }) => {
+    // Add useEffect to set app element only on client side
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            Modal.setAppElement('body');
+        }
+    }, []);
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
