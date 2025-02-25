@@ -87,8 +87,8 @@ export default function Component() {
 
   return (
     <>
-      <header className="bg-black/90 backdrop-blur-sm text-white transition-colors duration-300 sticky top-0 z-50 border-b border-gray-800/50">
-        <nav className="container mx-auto flex items-center justify-between py-4 px-4 md:px-6 h-[72px]">
+      <header className="bg-[#040407] text-white transition-colors duration-300 sticky top-0 z-50 border-b border-gray-800/50">
+        <nav className="container mx-auto flex items-center justify-between py-3 px-4 md:px-6 h-[64px]">
           <div className="flex items-center">
             <a className="text-xl font-bold" href="/">
               <img
@@ -109,7 +109,7 @@ export default function Component() {
               ref={menuRef}
               className={`${
                 menuOpen ? "flex" : "hidden"
-              } md:flex flex-col md:flex-row md:space-x-6 absolute md:relative top-full left-0 md:top-auto md:left-auto bg-black/95 backdrop-blur-md w-full md:w-auto mt-2 pb-4 md:pb-0 md:mt-0 border-b md:border-none border-gray-800/50 z-50`}
+              } md:flex flex-col md:flex-row md:space-x-6 absolute md:relative top-full left-0 md:top-auto md:left-auto bg-[#040407] w-full md:w-auto mt-2 pb-4 md:pb-0 md:mt-0 border-b md:border-none border-gray-800/50 z-50`}
             >
               <div
                 className="relative"
@@ -123,7 +123,7 @@ export default function Component() {
                 <div
                   className={`${
                     servicesDropdownOpen ? "block" : "hidden"
-                  } absolute left-0 w-48 bg-black/95 backdrop-blur-md border border-gray-800/50 rounded-md shadow-lg shadow-primary/10`}
+                  } absolute left-0 w-48 bg-[#040407] border border-gray-800/50 rounded-md shadow-lg shadow-primary/10`}
                 >
                   <div className="invisible absolute -top-4 left-0 w-full h-4"></div>
                   <a
@@ -531,7 +531,7 @@ export default function Component() {
                   style={{ height: 36, width: 36 }}
                 />
                 <SocialIcon
-                  url="https://linkedin.com/company/pxbmedia"
+                  url="https://www.linkedin.com/company/86271755"
                   bgColor="#151C38"
                   fgColor="#3ABCF9"
                   className="hover:scale-110 transition-transform duration-300"

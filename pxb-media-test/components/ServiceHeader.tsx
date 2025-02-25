@@ -45,7 +45,7 @@ const ServiceHeader: React.FC<ServiceHeaderProps> = ({ openModal }) => {
 
   return (
     <header className={`bg-black text-white transition-all duration-300 sticky top-0 z-50 ${isScrolled ? 'bg-opacity-90 backdrop-blur-sm shadow-lg shadow-black/20' : ''}`}>
-      <nav className="container mx-auto flex flex-wrap items-center justify-between py-4 px-4 md:px-6">
+      <nav className="container mx-auto flex flex-wrap items-center justify-between py-3 px-4 md:px-6">
         <div className="flex items-center space-x-6">
           <Link href="/" className="text-xl font-bold">
             <img src="/vertical_logo.svg" alt="PXB Media Logo" className="h-10" />

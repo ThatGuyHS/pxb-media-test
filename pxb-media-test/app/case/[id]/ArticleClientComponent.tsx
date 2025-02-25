@@ -56,8 +56,8 @@ const ArticleClientComponent: React.FC<{ initialData: ArticleData }> = ({ initia
 
   return (
     <div className="bg-black text-white font-custom">
-      <header ref={headerRef} className={`bg-black text-white transition-all duration-300 sticky top-0 z-50 ${isScrolled ? 'bg-opacity-90 backdrop-blur-sm' : ''}`}>
-        <nav className="container mx-auto flex flex-wrap items-center justify-between py-1 px-4 md:px-6">
+      <header ref={headerRef} className={`bg-[#040407] text-white transition-all duration-300 sticky top-0 z-50 ${isScrolled ? 'bg-opacity-90 backdrop-blur-sm' : ''}`}>
+        <nav className="container mx-auto flex flex-wrap items-center justify-between py-3 px-4 md:px-6">
           <div className="flex items-center space-x-6">
             <a className="text-xl font-bold" href="/">
               <img src="/vertical_logo.svg" alt="PXB Media Logo" className="h-10" />
@@ -109,15 +109,19 @@ const ArticleClientComponent: React.FC<{ initialData: ArticleData }> = ({ initia
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent opacity-80"></div>
       </div>
 
-      <div className="relative z-10" style={{ marginTop: '-35vh' }}>
-        <div className="w-11/12 max-w-4xl mx-auto relative">
+      <div className="container mx-auto px-4 md:px-6 relative z-10" style={{ marginTop: '-40vh' }}>
+        <div className="max-w-4xl">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-8 text-shadow-lg leading-tight">{data.title}</h1>
+        </div>
+        
+        <div className="w-full max-w-4xl mx-auto relative mt-6">
           <img
             src={data.secondaryImageUrl}
             alt="Featured Image"
             className="w-full object-cover shadow-lg rounded-lg case-image"
           />
           <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-8 bg-gradient-to-t from-black via-black/80 to-transparent rounded-lg">
-            <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-2 md:mb-4 text-shadow-lg leading-tight">{data.title}</h1>
+            {/* Title moved outside of this container */}
           </div>
         </div>
       </div>
@@ -126,18 +130,20 @@ const ArticleClientComponent: React.FC<{ initialData: ArticleData }> = ({ initia
         <div className="max-w-6xl mx-auto md:flex md:gap-8">
           {data.servicesProvided && (
             <div className="md:w-1/3 lg:w-1/4 mt-8 md:mt-0 hidden md:block">
-              <div className="service-box">
-                <h3 className="text-primary text-lg font-bold mb-4">SERVICES PROVIDED</h3>
-                {Object.entries(data.servicesProvided).map(([category, services]) => (
-                  <div className='service-category' key={category}>
-                    <h4 className="service-title">{formatCategoryName(category)}</h4>
-                    <ul className="service-list">
-                      {services.map((service, index) => (
-                        <li key={index}>{service}</li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
+              <div className="sticky-sidebar">
+                <h3 className="services-provided-title">SERVICES PROVIDED</h3>
+                <div className="service-box">
+                  {Object.entries(data.servicesProvided).map(([category, services]) => (
+                    <div className='service-category' key={category}>
+                      <h4 className="service-title">{formatCategoryName(category)}</h4>
+                      <ul className="service-list">
+                        {services.map((service, index) => (
+                          <li key={index}>{service}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           )}
@@ -145,7 +151,7 @@ const ArticleClientComponent: React.FC<{ initialData: ArticleData }> = ({ initia
           <div className="md:w-2/3 lg:w-3/4 case-content">
             <div className="max-w-3xl">
               <p className="text-lg mb-8 leading-relaxed case-intro">{data.intro}</p>
-              <p className="text-sm text-gray-400 mb-8">Image Credit: {data.imageCredit}</p>
+              <p className="text-sm text-gray-400 mb-8 text-left image-credit">{`Image Credit: ${data.imageCredit}`}</p>
               <div className="space-y-6">
                 {data.paragraphs.map((paragraph, index) => (
                   <p key={index} className="case-paragraph">{paragraph}</p>
@@ -158,18 +164,20 @@ const ArticleClientComponent: React.FC<{ initialData: ArticleData }> = ({ initia
 
       {data.servicesProvided && (
         <div className="md:hidden container mx-auto px-4 md:px-6 mt-8 mb-12">
-          <div className="service-box">
-            <h3 className="text-primary text-lg font-bold mb-4">SERVICES PROVIDED</h3>
-            {Object.entries(data.servicesProvided).map(([category, services]) => (
-              <div className='service-category' key={category}>
-                <h4 className="service-title">{formatCategoryName(category)}</h4>
-                <ul className="service-list">
-                  {services.map((service, index) => (
-                    <li key={index}>{service}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+          <div className="sticky-sidebar">
+            <h3 className="services-provided-title">SERVICES PROVIDED</h3>
+            <div className="service-box">
+              {Object.entries(data.servicesProvided).map(([category, services]) => (
+                <div className='service-category' key={category}>
+                  <h4 className="service-title">{formatCategoryName(category)}</h4>
+                  <ul className="service-list">
+                    {services.map((service, index) => (
+                      <li key={index}>{service}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       )}
