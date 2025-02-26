@@ -468,10 +468,12 @@ export default function HomeClientPage() {
                         className="h-8 w-8 object-contain"
                       />
                     </div>
+                    <div className="absolute bottom-0 left-0 p-4 md:hidden group-hover:opacity-0 transition-opacity duration-300">
+                      <h3 className="text-xl font-bold text-white group-hover:text-primary transition-colors duration-300">{project.title}</h3>
+                    </div>
                   </div>
-                  <div className="absolute inset-x-0 bottom-0 p-6">
-                    <div className="transform transition-all duration-300 translate-y-2 group-hover:translate-y-0">
-                      <h3 className="text-xl font-bold mb-2 text-white group-hover:text-primary transition-colors duration-300">{project.title}</h3>
+                  <div className="absolute inset-x-0 bottom-0 p-6 pt-12">
+                    <div className="transform transition-all duration-300 translate-y-2 group-hover:translate-y-0 mt-2 hidden md:block">
                       <p className="text-sm text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">{project.desc}</p>
                       <div className="mt-4 flex items-center text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
                         <span className="mr-2">View Case</span>
