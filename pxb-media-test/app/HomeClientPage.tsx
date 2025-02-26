@@ -410,15 +410,15 @@ export default function HomeClientPage() {
                   id: "dreamhack",
                   img: "/dh1.jpg",
                   logo: "/dreamhack-logo.png",
-                  title: "Dreamhack Summer and Winter",
+                  title: "DreamHack events",
                   desc: "We have provided broadcasting services for Dreamhack LAN stage, BYOC admins and admins for free play areas.",
                 },
                 {
                   id: "tfconnect",
                   img: "/tf.connect-11.jpg",
                   logo: "/tfconnect-logo.png",
-                  title: "TF Connect",
-                  desc: "PXB Media provided a full production service for TF Connects virtual event.",
+                  title: "TFConnect Charity",
+                  desc: "PXB Media provided a full production service for TF Connects virtual charity event.",
                 },
                 {
                   id: "svenskaonlineligan",
