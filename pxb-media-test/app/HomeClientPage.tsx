@@ -473,7 +473,7 @@ export default function HomeClientPage() {
                     </div>
                   </div>
                   <div className="absolute inset-x-0 bottom-0 p-6 pt-12">
-                    <div className="transform transition-all duration-300 translate-y-2 group-hover:translate-y-0 mt-2 hidden md:block">
+                    <div className="transform transition-all duration-300 translate-y-2 group-hover:translate-y-0 mt-2">
                       <p className="text-sm text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">{project.desc}</p>
                       <div className="mt-4 flex items-center text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
                         <span className="mr-2">View Case</span>
