@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Brand Guidelines | PXB Media',
     description: 'Official brand guidelines for PXB Media. Learn how to properly use our logo, colors, typography, and other brand elements.',
-    images: ['/pxbsite.png'],
+    images: ['/pxbmediasite.png'],
   }
 };
 
