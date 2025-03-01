@@ -69,7 +69,7 @@ const QuoteModal: React.FC<QuoteModalType> = ({ isOpen, onRequestClose }) => {
                 },
                 overlay: {
                     backgroundColor: 'rgba(0, 0, 0, 0.75)', // Semi-transparent overlay
-                    zIndex: 50  // Ensure overlay is above other content but below modal
+                    zIndex: 10000  // Increased z-index to ensure it's above all other elements
                 }
             }}
         >

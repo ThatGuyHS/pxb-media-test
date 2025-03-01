@@ -1,0 +1,255 @@
+/* Brand Guidelines Page Styles */
+
+.brand-header {
+  position: relative;
+  padding: 2rem 0;
+  background-color: #040407;
+  overflow: hidden;
+}
+
+.brand-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/grid-pattern.svg');
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.brand-section {
+  position: relative;
+  padding: 3rem 0;
+  background-color: #080B16;
+  overflow: hidden;
+}
+
+.brand-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/grid-pattern.svg');
+  opacity: 0.05;
+  z-index: 0;
+}
+
+.brand-section.alt {
+  background-color: #040407;
+}
+
+.section-title {
+  position: relative;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: white;
+  z-index: 1;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.75rem;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background-color: #00ABF5;
+  border-radius: 2px;
+}
+
+.section-description {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #E3E3E3;
+  max-width: 800px;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Logo Section Styles */
+.logo-display {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.logo-display:hover {
+  border-color: rgba(0, 171, 245, 0.3);
+  box-shadow: 0 0 20px rgba(0, 171, 245, 0.1);
+}
+
+.download-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #00ABF5;
+  color: white;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #0066F1;
+}
+
+/* Color Section Styles */
+.color-card {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.color-card:hover {
+  transform: translateY(-5px);
+}
+
+.color-sample {
+  height: 100px;
+  width: 100%;
+}
+
+.color-info {
+  padding: 1rem;
+}
+
+.color-name {
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.color-hex {
+  font-family: monospace;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+  color: #E3E3E3;
+}
+
+.color-rgb {
+  font-family: monospace;
+  font-size: 0.875rem;
+  color: #E3E3E3;
+}
+
+/* Typography Section Styles */
+.typography-sample {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Button Section Styles */
+.button-category {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.button-sample {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-button {
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  min-width: 150px;
+}
+
+.brand-button.primary {
+  background-color: #00ABF5;
+  color: white;
+}
+
+.brand-button.primary.hover {
+  background-color: #0066F1;
+}
+
+.brand-button.primary.alt {
+  background-color: transparent;
+  border: 2px solid #00ABF5;
+  color: #00ABF5;
+}
+
+.brand-button.secondary {
+  background-color: #F53769;
+  color: white;
+}
+
+.brand-button.secondary.hover {
+  background-color: #CD186A;
+}
+
+.brand-button.secondary.alt {
+  background-color: transparent;
+  border: 2px solid #F53769;
+  color: #F53769;
+}
+
+.brand-button.tertiary {
+  background-color: #151C38;
+  color: white;
+}
+
+.brand-button.tertiary.hover {
+  background-color: #080B16;
+}
+
+.brand-button.tertiary.alt {
+  background-color: transparent;
+  border: 2px solid #151C38;
+  color: #E3E3E3;
+}
+
+/* Voice Section Styles */
+.voice-guidelines {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.voice-guidelines ul li span {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #00ABF5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section-title::after {
+    width: 60px;
+    height: 3px;
+  }
+  
+  .color-sample {
+    height: 80px;
+  }
+  
+  .typography-sample h1 {
+    font-size: 2.5rem;
+  }
+  
+  .typography-sample h2 {
+    font-size: 2rem;
+  }
+  
+  .typography-sample h3 {
+    font-size: 1.5rem;
+  }
+} 

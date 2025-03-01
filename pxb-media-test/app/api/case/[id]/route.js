@@ -99,7 +99,7 @@ const dataCases = [
     categories: ["Esports", "Broadcasting", "Case Study"],
     intro:
       "PXB Media transformed the Svenska Onlineligan Season 7 Playoffs into a professional, studio-based esports spectacle.",
-    imageUrl: "/SOLplayoffs.jpg",
+    imageUrl: "/SOLSlutspel-155.jpg",
     secondaryImageUrl: "/SOLplayoffs2.jpg",
     imageCredit: "Simon Aatig",
     servicesProvided: {

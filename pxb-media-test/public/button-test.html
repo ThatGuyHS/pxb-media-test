@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0B0B16;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            text-align: center;
+            max-width: 600px;
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+        .test-button {
+            background-color: #00ABF5;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            position: relative;
+            z-index: 9999;
+        }
+        .test-button:hover {
+            background-color: #0066F1;
+        }
+        .debug-text {
+            margin-top: 20px;
+            color: #999;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Button Click Test</h1>
+        <p>This is a simple test page to verify that button clicks are working correctly.</p>
+        
+        <button class="test-button" onclick="handleClick()">
+            Click Me
+        </button>
+        
+        <div class="debug-text">
+            Try clicking the button above. If you see an alert, the button is working.
+        </div>
+    </div>
+
+    <script>
+        function handleClick() {
+            console.log('Button clicked');
+            alert('Button clicked successfully!');
+        }
+    </script>
+</body>
+</html> 

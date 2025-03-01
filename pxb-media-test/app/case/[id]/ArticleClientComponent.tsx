@@ -91,6 +91,12 @@ const ArticleClientComponent: React.FC<{ initialData: ArticleData }> = ({ initia
             <a className="px-4 py-2 hover:text-gray-300 hover:underline decoration-primary transition-colors duration-300" href="/about-us">
               ABOUT
             </a>
+            <a
+                className="px-4 py-2 hover:text-primary hover:underline decoration-primary transition-colors duration-300"
+                href="/cases"
+              >
+               CASES
+              </a>
           </div>
           <Button onClick={openModal} className="hidden text-[#E3E3E3] md:inline-flex color-primary hover:bg-primaryAlt" size="sm" variant="default">
             Get a quote

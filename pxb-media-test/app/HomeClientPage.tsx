@@ -415,7 +415,7 @@ export default function HomeClientPage() {
                 },
                 {
                   id: "tfconnect",
-                  img: "/tf.connect-11.jpg",
+                  img: "/tf.connect-27.jpg",
                   logo: "/tfconnect-logo.png",
                   title: "TFConnect Charity",
                   desc: "PXB Media provided a full production service for TF Connects virtual charity event.",
