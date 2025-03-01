@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import QuoteModal from '@/components/modal/quotemodal';
 import Footer from '@/components/Footer';
 import ServiceHeader from '@/components/ServiceHeader';
+import Image from 'next/image';
 import './brand-styles.css';
 
 export default function BrandClientPage() {
@@ -167,7 +168,7 @@ export default function BrandClientPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
             <div className="logo-display bg-black p-8 rounded-lg flex flex-col items-center justify-center">
-              <img src="/vertical_logo.svg" alt="PXB Media Vertical Logo" className="h-32 mb-6" />
+              <Image src="/vertical_logo.svg" alt="PXB Media Vertical Logo" className="h-32 mb-6" width={128} height={128} />
               <p className="text-center text-lg font-medium">Vertical Logo</p>
               <button
                 className="mt-4 download-button relative z-50"
@@ -184,7 +185,7 @@ export default function BrandClientPage() {
               </button>
             </div>
             <div className="logo-display bg-black p-8 rounded-lg flex flex-col items-center justify-center">
-              <img src="/horizontal_logo.svg" alt="PXB Media Horizontal Logo" className="h-16 mb-6" />
+              <Image src="/horizontal_logo.svg" alt="PXB Media Horizontal Logo" className="h-16 mb-6" width={200} height={64} />
               <p className="text-center text-lg font-medium">Horizontal Logo</p>
               <button
                 className="mt-4 download-button relative z-50"
@@ -205,7 +206,7 @@ export default function BrandClientPage() {
           <div className="logo-guidelines mt-12">
             <h3 className="text-2xl font-bold mb-4">Logo Usage Guidelines</h3>
             <ul className="list-disc pl-6 space-y-2">
-              <li>Always maintain clear space around the logo equal to the height of the "P" in the logo</li>
+              <li>Always maintain clear space around the logo equal to the height of the &ldquo;P&rdquo; in the logo</li>
               <li>Do not stretch, distort, or alter the proportions of the logo</li>
               <li>Do not change the colors of the logo</li>
               <li>Do not place the logo on busy backgrounds that reduce legibility</li>
@@ -390,7 +391,7 @@ export default function BrandClientPage() {
                 </li>
                 <li>
                   <span className="font-bold">Passionate</span>
-                  <p>We show enthusiasm for our work and commitment to our clients' success.</p>
+                  <p>We show enthusiasm for our work and commitment to our clients&apos; success.</p>
                 </li>
               </ul>
             </div>
