@@ -424,9 +424,7 @@ export default function BrandClientPage() {
       <section className="brand-section alt">
         <div className="container mx-auto px-6 py-12 text-center">
           <h2 className="section-title mx-auto">Need Help?</h2>
-          <p className="section-description max-w-2xl mx-auto">
-            If you have any questions about using our brand assets or need additional resources, please contact our marketing team.
-          </p>
+         
           
           {/* New Contact Us Button Implementation */}
           <a 
