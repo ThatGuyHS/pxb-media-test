@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: 'Official brand guidelines for PXB Media. Learn how to properly use our logo, colors, typography, and other brand elements.',
     images: [
       {
-        url: '/pxbsite.png',
+        url: '/pxbmediasite.PNG',
         width: 1200,
         height: 630,
         alt: 'PXB Media Brand Guidelines',
