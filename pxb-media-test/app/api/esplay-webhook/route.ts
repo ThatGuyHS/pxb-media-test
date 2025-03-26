@@ -3,7 +3,7 @@ import crypto from 'crypto';
 import { hasProcessedEntry, addProcessedEntry } from '../../lib/db';
 
 // Re-enabled webhook secret for authentication
-const WEBHOOK_SECRET = process.env.ESPLAY_WEBHOOK_SECRET || '123';
+const WEBHOOK_SECRET = process.env.ESPLAY_WEBHOOK_SECRET || '';
 
 // Optional: RSA private key for decryption (if encryption is enabled)
 // In a production environment, this should be stored securely

@@ -1,66 +1,77 @@
-import { Database } from 'better-sqlite3';
-import fs from 'fs';
-import path from 'path';
+// Serverless-compatible storage for processed entries
+// Uses in-memory Map but can be extended to use Vercel KV, Redis, etc.
 
-// Create the data directory if it doesn't exist
-const DATA_DIR = path.join(process.cwd(), 'data');
-if (!fs.existsSync(DATA_DIR)) {
-  fs.mkdirSync(DATA_DIR, { recursive: true });
-}
+// In-memory store for development and testing
+// This will reset on server restart, but works in all environments
+const processedEntries = new Map<string, {
+  ssn: string;
+  processed_at: string;
+  payload: string;
+}>();
 
-const DB_PATH = path.join(DATA_DIR, 'webhook-entries.db');
-
-// Initialize the database with better-sqlite3
-let db: Database;
-
-// This function ensures we have a database connection and the necessary tables
-export function getDB(): Database {
-  if (!db) {
-    // Import dynamically to avoid issues with server-side rendering
-    const BetterSQLite3 = require('better-sqlite3');
-    db = new BetterSQLite3(DB_PATH);
-    
-    // Enable foreign keys
-    db.pragma('journal_mode = WAL');
-    
-    // Create the processed_entries table if it doesn't exist
-    db.exec(`
-      CREATE TABLE IF NOT EXISTS processed_entries (
-        ssn TEXT PRIMARY KEY,
-        processed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        payload TEXT
-      )
-    `);
-  }
-  
-  return db;
-}
-
-// Check if an entry with the given SSN has been processed before
+/**
+ * Check if an entry with the given SSN has been processed before
+ */
 export function hasProcessedEntry(ssn: string): boolean {
-  const db = getDB();
-  const stmt = db.prepare('SELECT 1 FROM processed_entries WHERE ssn = ?');
-  const result = stmt.get(ssn);
-  return !!result;
+  return processedEntries.has(ssn);
 }
 
-// Add a new processed entry to the database
+/**
+ * Add a new processed entry to the storage
+ */
 export function addProcessedEntry(ssn: string, payload: any): void {
-  const db = getDB();
-  const stmt = db.prepare('INSERT OR REPLACE INTO processed_entries (ssn, payload) VALUES (?, ?)');
-  stmt.run(ssn, JSON.stringify(payload));
+  processedEntries.set(ssn, {
+    ssn,
+    processed_at: new Date().toISOString(),
+    payload: JSON.stringify(payload)
+  });
 }
 
-// Get all processed entries
+/**
+ * Get all processed entries
+ */
 export function getAllProcessedEntries(): any[] {
-  const db = getDB();
-  const stmt = db.prepare('SELECT * FROM processed_entries ORDER BY processed_at DESC');
-  return stmt.all();
+  return Array.from(processedEntries.values())
+    .sort((a, b) => new Date(b.processed_at).getTime() - new Date(a.processed_at).getTime());
 }
 
-// Close the database connection when the server is shutting down
+/**
+ * No-op function kept for compatibility
+ */
 export function closeDB(): void {
-  if (db) {
-    db.close();
-  }
-} 
+  // No-op for in-memory store
+}
+
+/**
+ * Note: For a production implementation, consider:
+ * 1. Vercel KV (Redis-based key-value store): https://vercel.com/docs/storage/vercel-kv
+ * 2. Vercel Postgres: https://vercel.com/docs/storage/vercel-postgres
+ * 3. External database service like PlanetScale, Supabase, etc.
+ * 
+ * Example Vercel KV implementation (uncomment and install @vercel/kv):
+ * 
+ * import { kv } from '@vercel/kv';
+ * 
+ * export async function hasProcessedEntry(ssn: string): Promise<boolean> {
+ *   const entry = await kv.get(`webhook:${ssn}`);
+ *   return !!entry;
+ * }
+ * 
+ * export async function addProcessedEntry(ssn: string, payload: any): Promise<void> {
+ *   await kv.set(`webhook:${ssn}`, {
+ *     ssn,
+ *     processed_at: new Date().toISOString(),
+ *     payload: JSON.stringify(payload)
+ *   });
+ * }
+ * 
+ * export async function getAllProcessedEntries(): Promise<any[]> {
+ *   // This is simplified - would need proper implementation with scan/keys
+ *   // or a separate index key
+ *   const keys = await kv.keys('webhook:*');
+ *   const entries = await Promise.all(keys.map(key => kv.get(key)));
+ *   return entries.sort((a, b) => 
+ *     new Date(b.processed_at).getTime() - new Date(a.processed_at).getTime()
+ *   );
+ * }
+ */ 
