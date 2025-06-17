@@ -18,6 +18,18 @@ const PRIVATE_KEY = process.env.ESPLAY_PRIVATE_KEY || '';
 const EBAS_API_URL = 'https://ebas.esportunited.com/apis/submit_member_with_lookup.json';
 const EBAS_API_KEY = 'I3FdaFNaw6t4Xm+ZbmVs4NFJcW+IfmrS';
 
+// CORS origin to allow
+const ALLOWED_ORIGIN = 'https://pxb-julkalender.vercel.app';
+
+// Helper to add CORS headers
+function withCors(response: NextResponse) {
+  response.headers.set('Access-Control-Allow-Origin', ALLOWED_ORIGIN);
+  response.headers.set('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
+  response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  response.headers.set('Access-Control-Allow-Credentials', 'true');
+  return response;
+}
+
 // Function to transform Esplay data to EBAS format
 function transformToEbas(esplayData: any) {
   // Extract SSN without country code (assuming format like SE198912190470)
@@ -75,6 +87,11 @@ async function submitToEbas(ebasData: any): Promise<{ success: boolean, response
       response: { error: 'Failed to submit to EBAS API' }
     };
   }
+}
+
+// Handle preflight OPTIONS requests
+export async function OPTIONS() {
+  return withCors(new NextResponse(null, { status: 204 }));
 }
 
 export async function POST(request: NextRequest) {
@@ -169,20 +186,20 @@ export async function POST(request: NextRequest) {
     
     // Return response including EBAS API result
     console.log('✅ Webhook processed successfully');
-    return NextResponse.json({ 
+    return withCors(NextResponse.json({ 
       status: 'success', 
       message: 'Event processed successfully',
       ebas_result: ebasResult
-    });
+    }));
     
   } catch (error) {
     console.error('❌ Error processing webhook:', error);
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+    return withCors(NextResponse.json({ error: 'Internal server error' }, { status: 500 }));
   }
 }
 
 // Only allow POST requests
 export async function GET() {
   console.log('⚠️ GET request received, method not allowed');
-  return NextResponse.json({ error: 'Method not allowed' }, { status: 405 });
+  return withCors(NextResponse.json({ error: 'Method not allowed' }, { status: 405 }));
 } 
