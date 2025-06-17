@@ -1,13 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import crypto from 'crypto';
+import { hasProcessedEntry, addProcessedEntry } from '../../lib/db';
 
-// Store previously processed entries based on SSN to handle duplicates
-// In a production environment, this should be replaced with a database or cache
-const processedEntries = new Set<string>();
-
-// Temporarily disable webhook secret for testing
-// const WEBHOOK_SECRET = process.env.ESPLAY_WEBHOOK_SECRET || '';
-const WEBHOOK_SECRET = '';
+// Re-enabled webhook secret for authentication
+const WEBHOOK_SECRET = process.env.ESPLAY_WEBHOOK_SECRET || '';
 
 // Optional: RSA private key for decryption (if encryption is enabled)
 // In a production environment, this should be stored securely
@@ -35,15 +31,16 @@ function transformToEbas(esplayData: any) {
   // Extract SSN without country code (assuming format like SE198912190470)
   const ssn = esplayData.ssn.substring(2); // Remove country code (e.g., "SE")
   
- 
-  const renewalDate = new Date()
+  // Format the renewal date in yyyy-mm-dd format as required by EBAS
+  const renewalDate = new Date();
+  const formattedRenewalDate = renewalDate.toISOString().split('T')[0]; // Format as yyyy-mm-dd
   
   return {
     api_key: EBAS_API_KEY,
     member: {
       firstname: esplayData.first_name,
       lastname: esplayData.last_name,
-      renewed: renewalDate,
+      renewed: formattedRenewalDate, // Now using properly formatted date
       gender_id: "1", // Default value as it's required
       co: [],
       socialsecuritynumber: ssn,
@@ -98,8 +95,7 @@ export async function POST(request: NextRequest) {
   console.log('📥 Esplay webhook received:', new Date().toISOString());
   
   try {
-    // Authentication check completely removed for testing
-    /* 
+    // Authentication check with webhook secret
     if (WEBHOOK_SECRET) {
       console.log('🔐 Checking webhook secret authentication');
       const authHeader = request.headers.get('Authorization');
@@ -111,8 +107,6 @@ export async function POST(request: NextRequest) {
     } else {
       console.log('⚠️ No webhook secret configured, skipping authentication');
     }
-    */
-    console.log('⚠️ Authentication disabled for testing');
 
     let payload;
     
@@ -160,8 +154,8 @@ export async function POST(request: NextRequest) {
     
     console.log(`✨ Processing event: ${payload.event}`);
     
-    // Check if we've already processed this entry (duplicate check)
-    if (processedEntries.has(payload.ssn)) {
+    // Check if we've already processed this entry using SQLite database
+    if (hasProcessedEntry(payload.ssn)) {
       console.log(`⚠️ Duplicate entry received for SSN: ${payload.ssn}`);
       // Still return 200 for duplicates as per requirements
       return NextResponse.json({ status: 'success', message: 'Duplicate entry processed' });
@@ -179,10 +173,9 @@ export async function POST(request: NextRequest) {
     // Submit to EBAS API
     const ebasResult = await submitToEbas(ebasData);
     
-    // Store the SSN to prevent duplicate processing
-    // In a production environment, store this in a database
-    processedEntries.add(payload.ssn);
-    console.log(`📝 Added SSN to processed entries. Current count: ${processedEntries.size}`);
+    // Store the SSN in SQLite database to prevent duplicate processing
+    addProcessedEntry(payload.ssn, payload);
+    console.log(`📝 Added SSN to processed entries database`);
     
     // Return response including EBAS API result
     console.log('✅ Webhook processed successfully');
