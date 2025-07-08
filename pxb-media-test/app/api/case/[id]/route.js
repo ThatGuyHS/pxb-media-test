@@ -275,6 +275,54 @@ const dataCases = [
       "The main point of the event was to draw attention to Länsförsäkringars work to ensure a safe environment for all young people who enjoy games, by educating leaders in the community to help provide the support and attention that is needed to build a community to be proud of."
     ],
   },
+  {
+    id: "esportsm2025",
+    title: "E-sport SM 2025: Advancing Swedish Esports Excellence",
+    author: "Adam Peleback",
+    date: "15/03/2025",
+    categories: ["Esports", "Event Production", "Case Study"],
+    intro:
+      "PXB Media delivered an innovative and comprehensive production for E-sport SM 2025, setting new standards for Swedish esports championships.",
+    imageUrl: "/esportsm1.png",
+    secondaryImageUrl: "/esportsm2.png",
+    imageCredit: "PXB Media",
+    servicesProvided: {
+      broadcastProduction: [
+        "Broadcast and Event Project Management",
+        "Technical Direction",
+        "Technical Ops Management",
+        "Replay Operations",
+        "In-game Direction",
+        "IMAG Playout",
+        "Replay Observing",
+        "Audio Engineering",
+        "Motion Graphics Design",
+        "Overlay Design & Implementation",
+        "Broadcast Equipment Rental",
+        "Multi-platform Streaming"
+      ],
+      leagueOperations: [
+        "Competition Management",
+        "Game Server Administration",
+        "Player Support",
+        "Tournament Structure Design"
+      ],
+      eventManagement: [
+        "Stage Management",
+        "Talent Management",
+        "Audience Experience Design",
+        "VIP Area Management"
+      ]
+    },
+    paragraphs: [
+      "For E-sport SM 2025, PXB Media elevated the Swedish Championships in Esports to new heights with an innovative production approach that combined cutting-edge technology with immersive audience experiences.",
+      "Our Production and Project Management team implemented a comprehensive strategy that integrated multiple broadcast platforms, ensuring the event reached audiences across various digital channels. Technical Directors led our broadcast team in managing complex technical operations, from replay systems to IMAG playout, while our design team created custom motion graphics and overlays that enhanced viewer engagement.",
+      "A significant advancement in this year's production was the introduction of multi-platform streaming, allowing viewers to choose their preferred viewing experience. This innovation was complemented by our enhanced motion graphics package, which provided real-time statistics, player information, and match highlights in an engaging format.",
+      "Behind the scenes, our league operations team managed an expanded tournament structure across multiple games, implementing new systems for fair play and competitive integrity. The team also designed and managed dedicated player support areas, ensuring competitors could perform at their best.",
+      "Our event management services included the design and operation of an enhanced stage setup, VIP areas for special guests, and interactive audience zones. These elements combined to create an immersive environment that celebrated Swedish esports talent while providing an engaging experience for all attendees.",
+      "This case demonstrates PXB Media's continued evolution in esports production, showcasing our ability to innovate while maintaining the highest standards of quality. By combining technical excellence with creative vision, we helped establish E-sport SM 2025 as a benchmark for future Swedish esports championships.",
+    ],
+  },
 ];
 
 export async function GET(req, { params }) {

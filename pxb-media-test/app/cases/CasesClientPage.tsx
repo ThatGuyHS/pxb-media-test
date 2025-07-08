@@ -61,6 +61,12 @@ export default function CasesClientPage() {
   
   const cases = [
     {
+      id: "esportsm2025",
+      img: "/esportsm1.png",
+      title: "E-sport SM 2025",
+      desc: "PXB Media delivered an innovative and comprehensive production for E-sport SM 2025, setting new standards for Swedish esports championships.",
+    },
+    {
       id: "dreamhack",
       img: "/dh1.jpg",
       title: "Dreamhack Summer and Winter",
