@@ -7,9 +7,7 @@ const WEBHOOK_SECRET = process.env.ESPLAY_WEBHOOK_SECRET_LILMIX || 'armless-dand
 
 // Rate limiting and concurrency control
 const REQUEST_QUEUE = new Map<string, Promise<any>>();
-const MAX_CONCURRENT_REQUESTS = 3; // Reduced for faster processing
-const REQUEST_TIMEOUT = 9000; // 9 seconds to stay under Vercel's 10s limit
-const EBAS_TIMEOUT = 7500; // 7.5 seconds for EBAS API calls
+const MAX_CONCURRENT_REQUESTS = 3;
 let activeRequests = 0;
 
 // Optional: RSA private key for decryption (if encryption is enabled)
@@ -31,13 +29,6 @@ function withCors(response: NextResponse) {
   response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   response.headers.set('Access-Control-Allow-Credentials', 'true');
   return response;
-}
-
-// Helper to create a timeout promise
-function createTimeout(ms: number): Promise<never> {
-  return new Promise((_, reject) => {
-    setTimeout(() => reject(new Error('Request timeout')), ms);
-  });
 }
 
 // Helper to wait for available slot in request queue
@@ -83,26 +74,19 @@ function transformToEbas(esplayData: any) {
   };
 }
 
-// Function to submit data to EBAS API with timeout
+// Function to submit data to EBAS API
 async function submitToEbas(ebasData: any): Promise<{ success: boolean, response: any }> {
   try {
     console.log('🔄 [LILMIX] Submitting to EBAS API...');
     console.log('📤 [LILMIX] EBAS Payload:', JSON.stringify(ebasData, null, 2));
     
-    // Create fetch request with timeout
-    const fetchPromise = fetch(EBAS_API_URL, {
+    const response = await fetch(EBAS_API_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(ebasData),
     });
-    
-    // Race between fetch and timeout
-    const response = await Promise.race([
-      fetchPromise,
-      createTimeout(EBAS_TIMEOUT) // 7.5 second timeout for EBAS API
-    ]);
     
     const responseData = await response.json();
     console.log('📥 [LILMIX] EBAS Response:', JSON.stringify(responseData, null, 2));
@@ -113,17 +97,6 @@ async function submitToEbas(ebasData: any): Promise<{ success: boolean, response
     };
   } catch (error) {
     console.error('❌ [LILMIX] EBAS API Error:', error);
-    if (error instanceof Error && error.message === 'Request timeout') {
-      console.log('⚠️ [LILMIX] EBAS API timed out, but continuing with success response to prevent webhook retry');
-      return {
-        success: true, // Return success to prevent webhook retries
-        response: { 
-          warning: 'EBAS API timeout - data may need manual processing',
-          timeout: true,
-          submitted_at: new Date().toISOString()
-        }
-      };
-    }
     return {
       success: false,
       response: { error: 'Failed to submit to EBAS API' }
@@ -137,28 +110,13 @@ export async function OPTIONS() {
 }
 
 export async function POST(request: NextRequest) {
-  const startTime = Date.now();
   console.log('📥 [LILMIX] Esplay webhook received:', new Date().toISOString());
   
   try {
-    // Wrap the entire processing in a timeout
-    return await Promise.race([
-      processWebhookRequest(request),
-      createTimeout(REQUEST_TIMEOUT)
-    ]);
+    return await processWebhookRequest(request);
   } catch (error) {
     console.error('❌ [LILMIX] Webhook processing failed:', error);
-    if (error instanceof Error && error.message === 'Request timeout') {
-      console.error(`⏰ [LILMIX] Request timed out after ${REQUEST_TIMEOUT}ms (Vercel 10s limit)`);
-      return withCors(NextResponse.json({ 
-        error: 'Request timeout', 
-        message: 'Processing took too long'
-      }, { status: 504 }));
-    }
     return withCors(NextResponse.json({ error: 'Internal server error' }, { status: 500 }));
-  } finally {
-    const duration = Date.now() - startTime;
-    console.log(`⏱️ [LILMIX] Request completed in ${duration}ms`);
   }
 }
 
@@ -282,22 +240,21 @@ async function processUserData(payload: any): Promise<NextResponse> {
   // Transform data for EBAS API
   const ebasData = transformToEbas(payload);
   
-  // Submit to EBAS API (with timeout handling)
+  // Submit to EBAS API
   const ebasResult = await submitToEbas(ebasData);
   
-  // Check if EBAS timed out but still return success to prevent retries
-  if (ebasResult.response?.timeout) {
-    console.log(`⚠️ [LILMIX] EBAS API timed out, but webhook processed successfully`);
+  // Check EBAS result and return appropriate response
+  if (!ebasResult.success) {
+    console.log(`❌ [LILMIX] EBAS API failed, returning error response`);
     return withCors(NextResponse.json({ 
-      status: 'success', 
-      message: 'User data received and stored, EBAS submission timed out',
+      status: 'error', 
+      message: 'EBAS API submission failed',
       user_processed: true,
-      ebas_timeout: true,
       ebas_result: ebasResult
-    }));
+    }, { status: 502 })); // Bad gateway
   }
-  
-  // Return response including EBAS API result
+
+  // Return success response only if EBAS succeeded
   return withCors(NextResponse.json({ 
     status: 'success', 
     message: 'Event processed successfully',
