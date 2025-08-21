@@ -8,7 +8,8 @@ const WEBHOOK_SECRET = process.env.ESPLAY_WEBHOOK_SECRET_LILMIX || 'armless-dand
 // Rate limiting and concurrency control
 const REQUEST_QUEUE = new Map<string, Promise<any>>();
 const MAX_CONCURRENT_REQUESTS = 3; // Reduced for faster processing
-const REQUEST_TIMEOUT = 8000; // 8 seconds to stay under Vercel's 10s limit
+const REQUEST_TIMEOUT = 9000; // 9 seconds to stay under Vercel's 10s limit
+const EBAS_TIMEOUT = 7500; // 7.5 seconds for EBAS API calls
 let activeRequests = 0;
 
 // Optional: RSA private key for decryption (if encryption is enabled)
@@ -100,7 +101,7 @@ async function submitToEbas(ebasData: any): Promise<{ success: boolean, response
     // Race between fetch and timeout
     const response = await Promise.race([
       fetchPromise,
-      createTimeout(6000) // 6 second timeout for EBAS API
+      createTimeout(EBAS_TIMEOUT) // 7.5 second timeout for EBAS API
     ]);
     
     const responseData = await response.json();
@@ -113,9 +114,14 @@ async function submitToEbas(ebasData: any): Promise<{ success: boolean, response
   } catch (error) {
     console.error('❌ [LILMIX] EBAS API Error:', error);
     if (error instanceof Error && error.message === 'Request timeout') {
+      console.log('⚠️ [LILMIX] EBAS API timed out, but continuing with success response to prevent webhook retry');
       return {
-        success: false,
-        response: { error: 'EBAS API timeout - request took too long' }
+        success: true, // Return success to prevent webhook retries
+        response: { 
+          warning: 'EBAS API timeout - data may need manual processing',
+          timeout: true,
+          submitted_at: new Date().toISOString()
+        }
       };
     }
     return {
@@ -269,20 +275,33 @@ async function processUserData(payload: any): Promise<NextResponse> {
   console.log(`🎮 [LILMIX] Steam ID: ${payload.steamid || 'Not provided'}`);
   console.log(`🕒 [LILMIX] Joined at: ${new Date(payload.joined_association * 1000).toISOString()}`);
   
+  // Always store the SSN first to prevent duplicate processing
+  addProcessedEntry(payload.ssn, payload);
+  console.log(`📝 [LILMIX] Added SSN to processed entries database`);
+  
   // Transform data for EBAS API
   const ebasData = transformToEbas(payload);
   
-  // Submit to EBAS API
+  // Submit to EBAS API (with timeout handling)
   const ebasResult = await submitToEbas(ebasData);
   
-  // Store the SSN in SQLite database to prevent duplicate processing
-  addProcessedEntry(payload.ssn, payload);
-  console.log(`📝 [LILMIX] Added SSN to processed entries database`);
+  // Check if EBAS timed out but still return success to prevent retries
+  if (ebasResult.response?.timeout) {
+    console.log(`⚠️ [LILMIX] EBAS API timed out, but webhook processed successfully`);
+    return withCors(NextResponse.json({ 
+      status: 'success', 
+      message: 'User data received and stored, EBAS submission timed out',
+      user_processed: true,
+      ebas_timeout: true,
+      ebas_result: ebasResult
+    }));
+  }
   
   // Return response including EBAS API result
   return withCors(NextResponse.json({ 
     status: 'success', 
     message: 'Event processed successfully',
+    user_processed: true,
     ebas_result: ebasResult
   }));
 }
